@@ -21,8 +21,9 @@ assignees: ''
 ### Acceptance Criteria
 
 <!-- Please be as detailed as you can in describing the acceptance criteria. -->
+
 <!--
-- [ ] ...
+- [ ] acceptance criteria here
 -->
 
 ### Sub-tasks
@@ -31,6 +32,6 @@ assignees: ''
 <!-- Please detail or provide references to sub-tasks. Copy and paste the following to-do template if needed. -->
 
 ```[tasklist]
-- [ ] 
-- [ ]  
+- [ ] example 1
+- [ ] example 2
 ```
