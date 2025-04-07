@@ -1,7 +1,7 @@
 ---
 name: Propose objective
 about: Objective for the VEDA ODD team
-title: 'ODD PI 25.2 Objective X: ...'
+title: 'ODD PI 25.3 Objective X: ...'
 labels: objective
 assignees: ''
 
