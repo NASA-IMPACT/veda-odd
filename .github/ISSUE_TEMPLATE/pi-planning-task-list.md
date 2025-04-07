@@ -16,5 +16,6 @@ assignees: ''
 - [ ] Each objective should have an objective statement, motivation, tasks, risk, LOE, owner (see [Example 25.2 objectives](https://docs.google.com/presentation/d/1A0lc_i4ycgM-uU8p7UAWfTR5I1h1-pMJXKDT8zDa1rk/edit?usp=sharing)).
 - [ ] Create a sprint by sprint gantt chart (see last slide of [25.2 objectives](https://docs.google.com/presentation/d/1A0lc_i4ycgM-uU8p7UAWfTR5I1h1-pMJXKDT8zDa1rk/edit?usp=sharing)).
 - [ ] Meet about proposed plan with the project lead at IMPACT (i.e. Brian). This meeting is usually coordinated by the NASA project coordinator for all VEDA sub teams.
+- [ ] Increment the PI number in the [objective template](https://github.com/NASA-IMPACT/veda-odd/blob/main/.github/ISSUE_TEMPLATE/objective.md)
 - [ ] Create objective tickets (delegate to owners of each objective).
 ```
