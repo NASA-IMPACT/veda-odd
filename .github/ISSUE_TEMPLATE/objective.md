@@ -31,7 +31,5 @@ assignees: ''
 
 <!-- Please detail or provide references to sub-tasks. Copy and paste the following to-do template if needed. -->
 
-```[tasklist]
 - [ ] example 1
 - [ ] example 2
-```
