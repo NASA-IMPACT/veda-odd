@@ -2,7 +2,7 @@
 name: Propose objective
 about: Objective for the VEDA ODD team
 title: 'ODD PI 25.3 Objective X: ...'
-labels: objective
+labels: pi-25.3-objective
 assignees: ''
 
 ---
@@ -25,11 +25,3 @@ assignees: ''
 <!--
 - [ ] acceptance criteria here
 -->
-
-### Sub-tasks
-
-
-<!-- Please detail or provide references to sub-tasks. Copy and paste the following to-do template if needed. -->
-
-- [ ] example 1
-- [ ] example 2
