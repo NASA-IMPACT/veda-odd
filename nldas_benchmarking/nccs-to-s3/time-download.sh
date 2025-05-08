@@ -1,0 +1,2 @@
+curl -r 10485760-20971520 -o /dev/null https://portal.nccs.nasa.gov/lisdata_pub/NLDAS/.timechunk24/NLDAS_FOR0010_H.A20010102.030.beta.nc \
+  -w "Speed: %{speed_download} bytes/sec\nTime: %{time_total} seconds\n"
