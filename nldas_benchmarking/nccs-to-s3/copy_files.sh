@@ -23,9 +23,16 @@ EOF
 sudo yum install -y parallel
 
 # stream copying files
-nohup bash -c 'cat nc_files_${timechunks}.txt | parallel --ungroup -j 12 "
+nohup bash -c 'cat nc_files_${timechunks}.txt | parallel --ungroup -j 2 "
   echo \"Transferring: {}\" >&2
   rclone -P copyurl \
     \"${base_url}/{}\" \
     s3:nasa-eodc-scratch/NLDAS/netcdf/.timechunk${timechunks}/{}
+    --low-level-retries 10 \
+    --retries 3 \
+    --transfers 4 \
+    --multi-thread-streams 4 \
+    --buffer-size 32M \
+    --timeout 2m \
+    --contimeout 1m
 "' > rclone_transfer.log 2>&1 &
