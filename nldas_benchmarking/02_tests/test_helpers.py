@@ -6,7 +6,41 @@ import numpy as np
 import xarray as xr
 from log_monitor import S3FSLogMonitor
 from titiler.xarray.io import Reader
+from rio_tiler.io.xarray import XarrayReader
+from rio_tiler.models import ImageData
 
+import signal
+import functools
+
+class TimeoutException(Exception):
+    pass
+
+def timeout(seconds):
+    def decorator(func):
+        @functools.wraps(func)
+        def wrapper(*args, **kwargs):
+            def handler(signum, frame):
+                raise TimeoutException("Function timed out after {} seconds".format(seconds))
+            
+            signal.signal(signal.SIGALRM, handler)
+            signal.alarm(seconds)
+            try:
+                result = func(*args, **kwargs)
+            finally:
+                signal.alarm(0)
+            return result
+        return wrapper
+    return decorator
+
+def list_test_files(
+    s3fsfs: s3fs.S3FileSystem,
+    bucket: str = 'nasa-veda-scratch',
+    directory: str = 'NLDAS/netcdf/test_files',
+    file_pattern: str = '*_Tair.nc',
+) -> list[str]:
+    test_files = s3fsfs.glob(f's3://{bucket}/{directory}/{file_pattern}')
+    return test_files
+    
 def select_random_spatial_range(
     spatial_size: Union[int, float],
     precision: Union[int, float],
@@ -59,22 +93,28 @@ def load_series(test_file: str, s3fsfs: s3fs.S3FileSystem, random_lat_range: sli
     s3_request_info = monitor.get_summary_table()
     return test_info, s3_request_info
 
-def create_tile(test_file: str, s3fsfs: s3fs.S3FileSystem, random_time: str, xyz: tuple(0,0,0)):
+
+@timeout(60)  # Set timeout to 60 seconds
+def tile_with_timeout(src: XarrayReader, tile: tuple, time_idx: int) -> ImageData:
+    return src.tile(*tile, indexes=time_idx)
+
+def load_tile(test_file: str, minzoom: int, time_idx: int = 1, variable: str = 'Tair'):
     monitor = S3FSLogMonitor()
     
     test_file_name = test_file.split('/')[-1]
     print(f"starting test for {test_file_name}")
     open_start_time = datetime.now()
-    ds = xr.open_dataset(
-        s3fsfs.open(f's3://{test_file}', **s3fs_open_kwargs),
-        **backend_open_kwargs
-    )
+    src = Reader(src_path=test_file, variable=variable)
     open_end_time = datetime.now()
-    da = ds.Tair.sel(time=random_time)
-    da.tile(*xyz)
+    tile = src.tms.tile(src.bounds[0], src.bounds[1], minzoom)
+    try:
+        tile_with_timeout(src, tile, time_idx)
+    except TimeoutException as e:
+        print(e)
     tile_time = (datetime.now() - open_end_time).total_seconds()
     open_time = (open_end_time - open_start_time).total_seconds()
-    ds.close()
+    src.close()
+    da = src.input
     test_info = {
         'filename': test_file_name,
         'chunk_shape': da.encoding['preferred_chunks'],
