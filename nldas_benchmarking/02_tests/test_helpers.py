@@ -61,19 +61,20 @@ backend_open_kwargs = {
     'cache': False, # If True, cache data loaded from the underlying datastore in memory as NumPy arrays when accessed to avoid reading from the underlying data- store multiple times. Defaults to True unless you specify the chunks argument to use dask, in which case it defaults to False. 
     'decode_cf': False
 }
-s3fs_open_kwargs = {
-    'default_fill_cache': False,
-    'default_block_cache': 5 * 10**7, # 50MB is the default but setting here so I remember to configure this
-}
 
-def load_series(test_file: str, s3fsfs: s3fs.S3FileSystem, random_lat_range: slice, random_lon_range: slice):
+def load_series(
+    test_file: str,
+    s3fsfs: s3fs.S3FileSystem,
+    random_lat_range: slice,
+    random_lon_range: slice
+):
     monitor = S3FSLogMonitor()
     
     test_file_name = test_file.split('/')[-1]
     print(f"starting test for {test_file_name}")
     open_start_time = datetime.now()
     ds = xr.open_dataset(
-        s3fsfs.open(f's3://{test_file}', **s3fs_open_kwargs),
+        s3fsfs.open(f's3://{test_file}'),
         **backend_open_kwargs
     )
     open_end_time = datetime.now()
@@ -85,7 +86,7 @@ def load_series(test_file: str, s3fsfs: s3fs.S3FileSystem, random_lat_range: sli
     test_info = {
         'filename': test_file_name,
         'chunk_shape': da.encoding['preferred_chunks'],
-        'chunk_size (MB)': np.prod(da.encoding['chunksizes']) * da.dtype.itemsize / 1024 / 1024,
+        'chunk_size (mb)': np.prod(da.encoding['chunksizes']) * da.dtype.itemsize / 1024 / 1024,
         'open (seconds)': open_time,
         'load': load_time,
         'total_time': open_time + load_time
