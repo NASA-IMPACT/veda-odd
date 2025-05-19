@@ -20,9 +20,10 @@ Cloud-based data storage and distribution is most commonly implemented using clo
 
 All major cloud providers offer a cloud object storage solution with varying performance characteristics. NASA's Earthdata System has decided on Amazon Web Service's (AWS) Simple Storage Solution (S3), so we will focus our attention on recommendations suitable for storage and retrieval on AWS S3.
 
-The following recommendations for storing and retrieving data from S3 should be taken into consideration:
-* A minimum latency of 100ms [Best practices design patterns: optimizing Amazon S3 performance](https://docs.aws.amazon.com/AmazonS3/latest/userguide/optimizing-performance.html)
-* Use byte-range fetches, with a recommended request size of 8-16MB[^1]. To maximize throughput, use concurrent connections to saturate the network. AWS suggests 1 concurrent request per 85-90 MB/s desired throughput. Source: [Performance design patterns for Amazon S3](https://docs.aws.amazon.com/AmazonS3/latest/userguide/optimizing-performance-design-patterns.html#optimizing-performance-parallelization).
+Please consider the following when storing and retrieving data from S3:
+
+* S3 has a minimum latency of 100ms [Best practices design patterns: optimizing Amazon S3 performance](https://docs.aws.amazon.com/AmazonS3/latest/userguide/optimizing-performance.html)
+* It is recommended to use byte-range fetches with a request size of 8-16MB[^1]. To maximize throughput, use concurrent connections to saturate the network. AWS suggests 1 concurrent request per 85-90 MB/s desired throughput. Source: [Performance design patterns for Amazon S3](https://docs.aws.amazon.com/AmazonS3/latest/userguide/optimizing-performance-design-patterns.html#optimizing-performance-parallelization).
 
 
 ## Methodology
@@ -88,4 +89,4 @@ Also, when possible, S3 byte range request sizes should be closer aligned to the
 * **Dataset Optimization:** Timeseries and tile generation using a virtual dataset, prepared with kerchunk or icechunk. Timeseries generation would be compared with
 
 
-[1]: For small requests (<4MB) total duration is dominated by latency. For requests >8mb, throughput is bandwidth limited, so duration will increase proportionately to size. Source: [Exploiting Cloud Object Storage for High-Performance Analytics](https://www.vldb.org/pvldb/vol16/p2769-durner.pdf).
+[^1]: For small requests (<4MB) total duration is dominated by latency. For requests >8mb, throughput is bandwidth limited, so duration will increase proportionately to size. Source: [Exploiting Cloud Object Storage for High-Performance Analytics](https://www.vldb.org/pvldb/vol16/p2769-durner.pdf).
