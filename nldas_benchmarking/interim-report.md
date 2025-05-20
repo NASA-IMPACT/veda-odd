@@ -33,7 +33,11 @@ Whenever recommending a chunk size and shape, we must first determine what types
 For this initial report we test:
 
 * time series generation for a single file, for 0.01, 1 and 5 spatial degrees squared.
-* tile generation for a single timestep, for tiles at zoom 0, 4, and 8
+* tile generation for a single timestep, for tiles at zoom 0, 4, and 8.
+
+### Infrastructure
+
+These tests were run on the [VEDA JupyterHub](https://hub.openveda.cloud/) using an instance with 7.4GB RAM and 3.7 vCPUs and the default notebook image.
 
 ### Libraries
 
