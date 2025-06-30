@@ -1,0 +1,11 @@
+[project]
+name = "reports"
+version = "0.1.0"
+description = "Quarterly reporting utilities for the VEDA ODD team"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "matplotlib>=3.10.3",
+    "pandas>=2.3.0",
+    "pygithub>=2.6.1",
+]
