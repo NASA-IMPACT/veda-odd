@@ -10,7 +10,7 @@ def main():
     commits_per_repo = df["repository"].value_counts()
 
     plt.figure(figsize=(12, 8))
-    fig, ax = plt.subplots(1, 1, figsize=(12, 10))
+    fig, ax = plt.subplots(1, 1, figsize=(16, 10))
     ax.barh(
         commits_per_repo.index,
         commits_per_repo.values,
@@ -19,7 +19,6 @@ def main():
         edgecolor="black",
         linewidth=1.2,
     )
-    ax.set_title("Commits per Repository", fontsize=16, fontweight="bold", pad=20)
     ax.set_xlabel("Number of Commits", fontsize=12)
     ax.grid(axis="x", alpha=0.3)
 
@@ -28,7 +27,22 @@ def main():
             v + 0.5, i, str(v), ha="left", va="center", fontweight="bold", fontsize=11
         )
 
-    plt.tight_layout()
+    fig.suptitle(
+        "Commits per Repository",
+        fontsize=16,
+        fontweight="bold",
+        horizontalalignment="center",
+        x=0.5,
+        y=0.93,
+    )
+    ax.set_title(
+        "Merged pull requests are counted as one commit",
+        fontsize=12,
+        style="italic",
+        horizontalalignment="center",
+        x=0.5,
+    )
+    plt.subplots_adjust(left=0.2)
     plt.savefig(f"output/{QUARTER_START}-{QUARTER_END}_commits_per_repo_hist.png")
 
 

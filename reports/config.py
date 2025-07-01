@@ -10,6 +10,7 @@ REPOS = [
     ("zarr-developers", "VirtualiZarr"),
     ("virtual-zarr", "virtual-tiff"),
     ("pydata", "xarray"),
+    ("developmentseed", "async-tiff"),
     ("developmentseed", "titiler"),
     ("developmentseed", "titiler-cmr"),
     ("developmentseed", "titiler-stacapi"),

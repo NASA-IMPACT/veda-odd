@@ -29,19 +29,30 @@ def get_commits_for_author(
     Returns:
         List of commit objects
     """
-    try:
-        # Get commits with filters using the existing repository connection
-        commits = repository.get_commits(
-            author=author, since=start_date, until=end_date
-        )
+    # Get commits with filters using the existing repository connection
+    commits = repository.get_commits(author=author, since=start_date, until=end_date)
+    # Group commits by PR
+    prs = []
+    pr_commits = []
+    standalone_commits = []
 
-        # Convert PaginatedList to regular list
-        commit_list = list(commits)
-        return commit_list
+    for commit in commits:
+        # Get PRs associated with this commit
+        pulls = commit.get_pulls()
 
-    except Exception as e:
-        print(f"    Error getting commits for author {author}: {e}")
-        return []
+        if pulls.totalCount == 1:
+            # Commit is part of one or more PRs
+            if (number := pulls[0].number) not in prs:
+                pr_commits.append(commit)
+                prs.append(number)
+        elif pulls.totalCount == 0:
+            # Commit is not part of any PR (direct to branch)
+            standalone_commits.append(commit)
+        else:
+            raise ValueError(f"Unexpected pulls.totalCount: {pulls.totalCount}")
+    # Convert PaginatedList to regular list
+    commit_list = pr_commits + standalone_commits
+    return commit_list
 
 
 def get_commit_details(commit) -> dict:
@@ -67,6 +78,11 @@ def main(token: str = None):
         g = Github(auth=auth)
     else:
         g = Github()  # Unauthenticated (lower rate limits)
+
+    if len(USERS) < 1:
+        raise ValueError(
+            "No users were included in the config. See README for instructions on populating the USER list."
+        )
 
     # Iterate through repositories first
     for owner, repo in REPOS:
