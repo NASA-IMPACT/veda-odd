@@ -26,23 +26,29 @@ def main():
         ax.text(
             v + 0.5, i, str(v), ha="left", va="center", fontweight="bold", fontsize=11
         )
-
-    fig.suptitle(
+    plt.subplots_adjust(left=0.2)
+    # Bold title
+    fig.text(
+        0.5,
+        0.93,
         "Commits per Repository",
         fontsize=16,
         fontweight="bold",
         horizontalalignment="center",
-        x=0.5,
-        y=0.93,
+        transform=fig.transFigure,
     )
-    ax.set_title(
+
+    # Regular subtitle
+    fig.text(
+        0.5,
+        0.90,
         "Merged pull requests are counted as one commit",
         fontsize=12,
-        style="italic",
+        style="normal",
         horizontalalignment="center",
-        x=0.5,
+        transform=fig.transFigure,
     )
-    plt.subplots_adjust(left=0.2)
+
     plt.savefig(f"output/{QUARTER_START}-{QUARTER_END}_commits_per_repo_hist.png")
 
 
