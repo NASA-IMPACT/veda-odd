@@ -8,7 +8,7 @@ from datetime import datetime
 from typing import List
 import os
 import pandas as pd
-from config import USERS, REPOS, QUARTER_START, QUARTER_END
+from config import USERS, REPOS, TIME_RANGE
 
 
 def get_commits_for_author(
@@ -68,8 +68,8 @@ def get_commit_details(commit) -> dict:
 
 
 def main(token: str = None):
-    quarter_start = datetime.strptime(QUARTER_START, "%Y%m%d")
-    quarter_end = datetime.strptime(QUARTER_END, "%Y%m%d")
+    time_start = datetime.strptime(TIME_RANGE[0], "%Y%m%d")
+    time_end = datetime.strptime(TIME_RANGE[1], "%Y%m%d")
     all_commits = []
 
     # Initialize GitHub client once
@@ -92,41 +92,40 @@ def main(token: str = None):
         repository = g.get_repo(f"{owner}/{repo}")
 
         # Iterate through all users and their emails for this repository
-        for username, emails, start_date_str, end_date_str in USERS:
+        for name, username, start_date_str, end_date_str in USERS:
             # Parse dates for this user
             start_date = (
                 datetime.strptime(start_date_str, "%Y%m%d")
                 if start_date_str
-                else quarter_start
+                else time_start
             )
             end_date = (
-                datetime.strptime(end_date_str, "%Y%m%d")
-                if end_date_str
-                else quarter_end
+                datetime.strptime(end_date_str, "%Y%m%d") if end_date_str else time_end
             )
 
             print(f"  Processing user: {username}")
-            for email in emails:
-                commits = get_commits_for_author(
-                    repository=repository,
-                    author=email,
-                    start_date=start_date,
-                    end_date=end_date,
+            commits = get_commits_for_author(
+                repository=repository,
+                author=username,
+                start_date=start_date,
+                end_date=end_date,
+            )
+            for commit in commits:
+                commit_details = get_commit_details(commit)
+                commit_details.update(
+                    {
+                        "organization": owner,
+                        "repository": repo,
+                    }
                 )
-                for commit in commits:
-                    commit_details = get_commit_details(commit)
-                    commit_details.update(
-                        {
-                            "organization": owner,
-                            "repository": repo,
-                        }
-                    )
-                    all_commits.append(commit_details)
+                all_commits.append(commit_details)
 
     g.close()
 
     df = pd.DataFrame(all_commits)
-    csv_filename = f"output/{QUARTER_START}-{QUARTER_END}.csv"
+    csv_filename = (
+        f"output/{time_start.strftime('%Y-%m-%d')}-{time_end.strftime('%Y-%m-%d')}.csv"
+    )
     df.to_csv(csv_filename, index=False)
 
     return df

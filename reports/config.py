@@ -1,4 +1,4 @@
-TIME_RANGE = ("20250701", "20250731")
+TIME_RANGE = ("20250701", "20250801")
 
 # Name, username, start date, end date
 USERS = [
@@ -10,6 +10,8 @@ USERS = [
     ("Chunk Daniels", "chuckwondo", None, None),
     ("Sean Harkins", "sharkinsspatial", None, None),
     ("Henry Rodman", "hrodmn", None, None),
+    ("Julius Busecke", "jbusecke", "20250623", None),
+    ("Negin Sobhani", "negin513", "20250729", None),
     # Science support
     ("Alex Mandel", "wildintellect", None, None),
     ("Julia Signell", "jsignell", None, None),
@@ -28,6 +30,7 @@ REPOS = [
     ("developmentseed", "geozarr-examples"),
     ("developmentseed", "lonboard"),
     ("developmentseed", "mursst-cmr-subscription"),
+    ("developmentseed", "mursst-icechunk-updater"),
     ("developmentseed", "rio-stac"),
     ("developmentseed", "tilebench"),
     ("developmentseed", "titiler"),
@@ -60,8 +63,10 @@ REPOS = [
     ("stac-utils", "pgstac"),
     ("stac-utils", "pystac"),
     ("stac-utils", "pystac-client"),
+    ("virtual-zarr", "hrrr-parser"),
     ("virtual-zarr", "virtual-tiff"),
     ("virtual-zarr", "obspec-utils"),
+    ("virtual-zarr", "nldas-icechunk"),
     ("zarr-developers", "zarr-python"),
     ("zarr-developers", "geozarr-spec"),
     ("zarr-developers", "VirtualiZarr"),

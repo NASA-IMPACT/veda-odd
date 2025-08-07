@@ -1,10 +1,16 @@
 import pandas as pd
 import matplotlib.pyplot as plt
-from config import QUARTER_START, QUARTER_END
+from datetime import datetime
+
+from config import TIME_RANGE
 
 
 def main():
-    csv_filename = f"output/{QUARTER_START}-{QUARTER_END}.csv"
+    time_start = datetime.strptime(TIME_RANGE[0], "%Y%m%d")
+    time_end = datetime.strptime(TIME_RANGE[1], "%Y%m%d")
+    csv_filename = (
+        f"output/{time_start.strftime('%Y-%m-%d')}-{time_end.strftime('%Y-%m-%d')}.csv"
+    )
     df = pd.read_csv(csv_filename)
 
     commits_per_repo = df["repository"].value_counts()
@@ -49,7 +55,7 @@ def main():
         transform=fig.transFigure,
     )
 
-    plt.savefig(f"output/{QUARTER_START}-{QUARTER_END}_commits_per_repo_hist.png")
+    plt.savefig(f"output/{TIME_RANGE[0]}-{TIME_RANGE[1]}_commits_per_repo_hist.png")
 
 
 if __name__ == "__main__":
