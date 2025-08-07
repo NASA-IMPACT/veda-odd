@@ -8,6 +8,6 @@
 
 ## Generating data
 
-1. Copy email addressed from [the private google doc](https://docs.google.com/document/d/1EKswOI8TUYBF0Np-FHQyi3tjr_2yTrcufR2El--lOSk/edit?usp=sharing) to config.py
+1. Add any new contributors to config.py
 2. Add any new repositories to config.py
 3. Run `uv run main.py`
