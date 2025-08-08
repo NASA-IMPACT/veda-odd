@@ -26,7 +26,7 @@ USERS = [
 
 REPOS = [
     ("apache", "arrow-rs"),
-    ("boettiger-lab", "earthdatalogin),
+    ("boettiger-lab", "earthdatalogin"),
     ("conda-forge", "r-lasr-feedstock"),
     ("cloudnativegeo", "cloud-optimized-geospatial-formats-guide"),
     ("developmentseed", "async-tiff"),
