@@ -29,7 +29,6 @@ REPOS = [
     ("developmentseed", "eoAPI-cdk"),
     ("developmentseed", "geozarr-examples"),
     ("developmentseed", "lonboard"),
-    ("developmentseed", "mursst-cmr-subscription"),
     ("developmentseed", "mursst-icechunk-updater"),
     ("developmentseed", "rio-stac"),
     ("developmentseed", "tilebench"),
