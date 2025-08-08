@@ -18,11 +18,16 @@ USERS = [
     ("Sheyenne Kirkland", "smk0033", None, None),
     ("Zac Deziel", "zacdezgeo", None, None),
     ("Nathan Zimmermann", "moradology", None, None),
+    # JupyterHub
+    ("Sanjay Bhangar", "batpad", None, None),
+    ("Tarashish Mishra", "sunu", None, None)
 ]
 
 
 REPOS = [
     ("apache", "arrow-rs"),
+    ("boettiger-lab", "earthdatalogin),
+    ("conda-forge", "r-lasr-feedstock"),
     ("cloudnativegeo", "cloud-optimized-geospatial-formats-guide"),
     ("developmentseed", "async-tiff"),
     ("developmentseed", "eoAPI"),
@@ -51,10 +56,12 @@ REPOS = [
     ("pangeo-data", "pangeo-docker-images"),
     ("pangeo-data", "pangeo.io"),
     ("NASAWaterInsight", "NLDAS-3"),
+    ("nasa", "python_cmr"),
     ("NASA-IMPACT", "veda-odd"),
     ("NASA-IMPACT", "veda-ui"),
     ("NASA-IMPACT", "veda-docs"),
     ("NASA-IMPACT", "zarr-visualization-report"),
+    ("nasa-openscapes", "earthdata-cloud-cookbook"),
     ("nsidc", "earthaccess"),
     ("nsidc", "cloud-optimized-icesat2"),
     ("numbagg", "numbagg"),
