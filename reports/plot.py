@@ -25,7 +25,8 @@ def main():
         edgecolor="black",
         linewidth=1.2,
     )
-    ax.set_xlabel("Number of Commits", fontsize=12)
+    ax.set_xlabel("Number of Commits", fontsize=16)
+    ax.tick_params(axis="y", labelsize=16)
     ax.grid(axis="x", alpha=0.3)
 
     for i, v in enumerate(commits_per_repo.values):
@@ -33,12 +34,14 @@ def main():
             v + 0.5, i, str(v), ha="left", va="center", fontweight="bold", fontsize=11
         )
     plt.subplots_adjust(left=0.2)
-    # Bold title
+
+    # Bold title with date range
+    date_range = f"{time_start.strftime('%Y-%m-%d')} to {time_end.strftime('%Y-%m-%d')}"
     fig.text(
         0.5,
         0.93,
-        "Commits per Repository",
-        fontsize=16,
+        f"Commits per Repository ({date_range})",
+        fontsize=24,
         fontweight="bold",
         horizontalalignment="center",
         transform=fig.transFigure,
@@ -49,7 +52,7 @@ def main():
         0.5,
         0.90,
         "Merged pull requests are counted as one commit",
-        fontsize=12,
+        fontsize=16,
         style="normal",
         horizontalalignment="center",
         transform=fig.transFigure,

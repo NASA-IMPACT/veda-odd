@@ -8,6 +8,8 @@
 
 ## Generating data
 
-1. Add any new contributors to config.py
-2. Add any new repositories to config.py
-3. Run `uv run main.py`
+1. Update the dates in config.py
+2. Add any new contributors to config.py
+3. Add any new repositories to config.py
+4. Run `uv run main.py`
+5. Run `uv run plot.py`
