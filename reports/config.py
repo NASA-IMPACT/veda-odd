@@ -1,4 +1,4 @@
-TIME_RANGE = ("20250701", "20250801")
+TIME_RANGE = ("20250801", "20250901")
 
 # Name, username, start date, end date
 USERS = [
@@ -20,7 +20,7 @@ USERS = [
     ("Nathan Zimmermann", "moradology", None, None),
     # JupyterHub
     ("Sanjay Bhangar", "batpad", None, None),
-    ("Tarashish Mishra", "sunu", None, None)
+    ("Tarashish Mishra", "sunu", None, None),
 ]
 
 
@@ -29,12 +29,12 @@ REPOS = [
     ("boettiger-lab", "earthdatalogin"),
     ("conda-forge", "r-lasr-feedstock"),
     ("cloudnativegeo", "cloud-optimized-geospatial-formats-guide"),
+    ("datafusion-contrib", "arrow-zarr"),
     ("developmentseed", "async-tiff"),
     ("developmentseed", "eoAPI"),
     ("developmentseed", "eoAPI-cdk"),
     ("developmentseed", "geozarr-examples"),
     ("developmentseed", "lonboard"),
-    ("developmentseed", "mursst-icechunk-updater"),
     ("developmentseed", "rio-stac"),
     ("developmentseed", "tilebench"),
     ("developmentseed", "titiler"),
@@ -45,7 +45,6 @@ REPOS = [
     ("developmentseed", "warp-resample-profiling"),
     ("developmentseed", "obspec"),
     ("developmentseed", "obstore"),
-    ("earth-mover", "icechunk-nasa"),
     ("earth-mover", "icechunk"),
     ("flatgeobuf", "flatgeobuf"),
     ("geoarrow", "deck.gl-layers"),
@@ -55,12 +54,7 @@ REPOS = [
     ("holoviz", "hvplot"),
     ("pangeo-data", "pangeo-docker-images"),
     ("pangeo-data", "pangeo.io"),
-    ("NASAWaterInsight", "NLDAS-3"),
     ("nasa", "python_cmr"),
-    ("NASA-IMPACT", "veda-odd"),
-    ("NASA-IMPACT", "veda-ui"),
-    ("NASA-IMPACT", "veda-docs"),
-    ("NASA-IMPACT", "zarr-visualization-report"),
     ("nasa-openscapes", "earthdata-cloud-cookbook"),
     ("nsidc", "earthaccess"),
     ("nsidc", "cloud-optimized-icesat2"),
@@ -77,7 +71,6 @@ REPOS = [
     ("virtual-zarr", "hrrr-parser"),
     ("virtual-zarr", "virtual-tiff"),
     ("virtual-zarr", "obspec-utils"),
-    ("virtual-zarr", "nldas-icechunk"),
     ("zarr-developers", "zarr-python"),
     ("zarr-developers", "geozarr-spec"),
     ("zarr-developers", "VirtualiZarr"),
