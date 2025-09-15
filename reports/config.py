@@ -1,4 +1,4 @@
-TIME_RANGE = ("20250801", "20250901")
+TIME_RANGE = ("20250701", "20250915")
 
 # Name, username, start date, end date
 USERS = [
@@ -52,6 +52,7 @@ REPOS = [
     ("geopandas", "geopandas"),
     ("georust", "geo-svg"),
     ("holoviz", "hvplot"),
+    ("jupyterhub", "repo2docker"),
     ("pangeo-data", "pangeo-docker-images"),
     ("pangeo-data", "pangeo.io"),
     ("nasa", "python_cmr"),
@@ -75,5 +76,4 @@ REPOS = [
     ("zarr-developers", "geozarr-spec"),
     ("zarr-developers", "VirtualiZarr"),
     ("2i2c-org", "jupyterhub-fancy-profiles"),
-    ("2i2c-org", "infrastructure"),
 ]
