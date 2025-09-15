@@ -15,7 +15,6 @@ def main():
 
     commits_per_repo = df["repository"].value_counts()
 
-    plt.figure(figsize=(12, 8))
     fig, ax = plt.subplots(1, 1, figsize=(16, 10))
     ax.barh(
         commits_per_repo.index,
@@ -26,14 +25,14 @@ def main():
         linewidth=1.2,
     )
     ax.set_xlabel("Number of Commits", fontsize=16)
-    ax.tick_params(axis="y", labelsize=16)
+    ax.tick_params(axis="y", labelsize=15)
     ax.grid(axis="x", alpha=0.3)
 
     for i, v in enumerate(commits_per_repo.values):
         ax.text(
             v + 0.5, i, str(v), ha="left", va="center", fontweight="bold", fontsize=11
         )
-    plt.subplots_adjust(left=0.2)
+    plt.subplots_adjust(left=0.3)
 
     # Bold title with date range
     date_range = f"{time_start.strftime('%Y-%m-%d')} to {time_end.strftime('%Y-%m-%d')}"
