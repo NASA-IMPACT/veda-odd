@@ -8,6 +8,7 @@ assignees: ''
 ---
 
 ```[tasklist]
+- [ ] Solicit information from VEDA instances on their dataset needs using https://github.com/NASA-IMPACT/titiler-multidim-user-survey/blob/main/.github/ISSUE_TEMPLATE/dataset-needs.md or something comparable
 - [ ] Complete a brainstorming exercise, such as dumping all ideas and known needs into a document. Include DS VEDA lead. This can start at any time.
 - [ ] Organize those into various categories of work, such as "Dataset generation", "Community, or "titiler-xarray". This will help identify associated or dependent tasks as well as help team members identify which categories of work they are most interested in.
 - [ ] Priotize ideas based on need for VEDA or technical context.
