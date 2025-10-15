@@ -187,7 +187,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>Service Integration Roadmap</h1>
+        <h1>ODD Roadmap</h1>
         
         <div class="legend">
             <div class="legend-items">
@@ -213,7 +213,7 @@
         <div class="roadmaps">
             <!-- Level 1: Service Granules in CMR -->
             <div class="roadmap">
-                <div class="roadmap-title">Level 1: Service Granules in CMR</div>
+                <div class="roadmap-title">Service Category 1: Services for CMR Granules</div>
                 <table>
                     <thead>
                         <tr>
@@ -231,7 +231,7 @@
                             <td>
                                 <div class="item">
                                     <div class="item-sub">
-                                        <span class="status-badge status-complete">✅ Complete</span> titiler-cmr /tiles API
+                                        <span class="status-badge status-complete">✅ Complete</span> titiler-cmr /tiles API + VEDA UI integration
                                     </div>
                                 </div>
                             </td>
@@ -241,7 +241,7 @@
                             <td>
                                 <div class="item">
                                     <div class="item-sub">
-                                        <span class="status-badge status-complete">✅ Complete</span> titiler-cmr /timeseries/statistics API
+                                        <span class="status-badge status-complete">✅ Complete</span> titiler-cmr /timeseries/statistics API + VEDA UI integration
                                     </div>
                                 </div>
                             </td>
@@ -254,11 +254,14 @@
                                         <span class="status-badge status-complete">✅ Complete</span> Demonstrated with GPM IMERG and TROPESS O3
                                     </div>
                                     <div class="item-sub">
-                                        <span class="status-badge status-in-progress">🚧 26.1</span> Compatibility testing will produce a compatible list
+                                        <span class="status-badge status-in-progress">🚧 26.1</span> Continue building + using tools to compile a list of compatible datasets
                                     </div>
                                     <div class="item-sub">
-                                        <span class="status-badge status-planned">26.2+</span> Test integration with rollout of requester pays buckets; consider EDL integration
+                                        <span class="status-badge status-planned">26.2+</span> Test integration of new datasets as requester-pays is enabled for more buckets. Consider EDL integration as a workaround.
                                     </div>
+                                    <div class="item-sub">
+                                        <span class="status-badge status-planned">26.2+</span> Develop support for more datasets, informed by compatibility testing in 26.1.
+                                    </div>                                    
                                 </div>
                             </td>
                         </tr>
@@ -267,10 +270,10 @@
                             <td>
                                 <div class="item">
                                     <div class="item-sub">
-                                        <span class="status-badge status-in-progress">🚧 26.1</span> Service Tracing
+                                        <span class="status-badge status-in-progress">🚧 26.1</span> Monitoring + Performance evaluation via service tracing (OpenTelemetry)
                                     </div>
                                     <div class="item-sub">
-                                        <span class="status-badge status-planned">26.1</span> MCP deployment
+                                        <span class="status-badge status-planned">26.1</span> MCP Production deployment
                                     </div>
                                     <div class="item-sub">
                                         <span class="status-badge status-planned">26.1</span> Consolidated benchmarking for advising on zoom levels, AOIs and temporal parameters
@@ -286,7 +289,7 @@
                                         <span class="status-badge status-planned">26.2</span> Share list with NASA product teams for potential integration (i.e. Worldview)
                                     </div>
                                     <div class="item-sub">
-                                        <span class="status-badge status-planned">26.2+</span> Move towards self-service
+                                        <span class="status-badge status-planned">26.2+</span> Continued documentation to support self-service use of titiler-cmr.
                                     </div>
                                 </div>
                             </td>
@@ -295,9 +298,9 @@
                 </table>
             </div>
             
-            <!-- Level 2: Service Virtual Data Cubes -->
+            <!-- Service Category 2: Services for Virtual Data Cubes -->
             <div class="roadmap">
-                <div class="roadmap-title">Level 2: Service Virtual Data Cubes (Data Cube Stores)</div>
+                <div class="roadmap-title">Service Category 2: Services for Virtual Data Cubes</div>
                 <table>
                     <thead>
                         <tr>
@@ -314,8 +317,14 @@
                                         <span class="status-badge status-complete">✅ Complete</span> Lazy loading/intelligent subsetting/intelligent access
                                     </div>
                                     <div class="item-sub">
+                                        <span class="status-badge status-planned">26.1</span> Support adoption of Virtual Zarr through library maintenance, improved documentation, and user support
+                                    </div>                                    
+                                    <div class="item-sub">
                                         <span class="status-badge status-planned">26.2</span> Support for arbitrary grids (variable chunking)
                                     </div>
+                                    <div class="item-sub">
+                                        <span class="status-badge status-planned">26.2</span> Explore virtualization methods for alternate grid structures (i.e., healpix, cubegrid)
+                                    </div>                                    
                                 </div>
                             </td>
                         </tr>
@@ -324,11 +333,17 @@
                             <td>
                                 <div class="item">
                                     <div class="item-sub">
-                                        <span class="status-badge status-in-planned">26.1</span> Identify additional I/O parameters to allow for per-dataset optimizations
+                                        <span class="status-badge status-planned">26.1</span> Virtual container (Icechunk) integration in titiler-multidim to support /tiles endpoints
+                                    </div>                                    
+                                    <div class="item-sub">
+                                        <span class="status-badge status-planned">26.1</span> Identify additional I/O parameters to allow for per-dataset optimizations
                                     </div>
                                     <div class="item-sub">
-                                        <span class="status-badge status-planned">26.2</span> Additional performance improvements (e.g. obstore integration)
-                                    </div>
+                                        <span class="status-badge status-planned">26.1</span> Test VEDA UI integration of /tiles for a virtual dataset (NLDAS)
+                                    </div>                                    
+                                    <div class="item-sub">
+                                        <span class="status-badge status-planned">26.2</span> Add additional I/O parameters and additional performance improvements (e.g. obstore integration)
+                                    </div>                         
                                 </div>
                             </td>
                         </tr>
@@ -339,6 +354,9 @@
                                     <div class="item-sub">
                                         <span class="status-badge status-planned">26.1</span> Develop the timeseries/statistics endpoint in titiler-multidim
                                     </div>
+                                    <div class="item-sub">
+                                        <span class="status-badge status-planned">26.2</span> Integrate the timeseries/statistics endpoint into VEDA UI
+                                    </div>                                    
                                 </div>
                             </td>
                         </tr>
@@ -347,23 +365,29 @@
                             <td>
                                 <div class="item">
                                     <div class="item-sub">
-                                        <span class="status-badge status-complete">✅ Complete</span> NLDAS, RASI, HRRR, MUR SST as proof of concept
+                                        <span class="status-badge status-complete">✅ Complete</span> Prototyped virtual (Icechunk) stores for NLDAS, RASI, HRRR, MUR SST
                                     </div>
                                     <div class="item-sub">
-                                        <span class="status-badge status-planned">26.1</span> NLDAS delivered for Water Insight
+                                        <span class="status-badge status-planned">26.1</span> Demonstrate publication and tiling of NLDAS virtual store  (💧 Water Insight)
                                     </div>
                                     <div class="item-sub">
-                                        <span class="status-badge status-planned">26.1</span> Architecture + documentation for generalizing STAC publication and VEDA UI /tiles and /timeseries/statistics integrations
+                                        <span class="status-badge status-planned">26.1</span> Architecture + documentation for generalizing STAC publication and VEDA UI /tiles integration
                                     </div>
                                     <div class="item-sub">
-                                        <span class="status-badge status-planned">26.2</span> HydroGlobe 5km and 10km for Water Insight
+                                        <span class="status-badge status-planned">26.2</span> HydroGlobe 5km and 10km virtual stores (💧 Water Insight)
                                     </div>
                                     <div class="item-sub">
-                                        <span class="status-badge status-planned">26.2</span> CarbonTracker-CH₄, EPA Gridded CH₄ Emissions Inventory for GHGCenter
+                                        <span class="status-badge status-planned">26.2</span> CarbonTracker-CH₄, EPA Gridded CH₄ Emissions Inventory virtual stores (🏭 GHGCenter)
                                     </div>
                                     <div class="item-sub">
-                                        <span class="status-badge status-planned">26.3</span> TROPESS NOx, TROPESS O3, JPL MOMO Chem, GEOS CF
+                                        <span class="status-badge status-planned">26.3</span> Documentation for STAC publication and VEDA UI /timeseries/statistics integration
                                     </div>
+                                    <div class="item-sub">
+                                        <span class="status-badge status-planned">26.3</span> CarbonTracker-CH₄, EPA Gridded CH₄ Emissions Inventory tiles and timeseries integrations (🏭 GHGCenter)
+                                    </div>                                    
+                                    <div class="item-sub">
+                                        <span class="status-badge status-planned">26.3</span> TROPESS NOx, TROPESS O3, JPL MOMO Chem, GEOS CF virtual stores, tiles and timeseries integrations (💨 Air Quality)
+                                    </div>                                   
                                 </div>
                             </td>
                         </tr>
@@ -372,7 +396,7 @@
                             <td>
                                 <div class="item">
                                     <div class="item-sub">
-                                        <span class="status-badge status-planned">26.2</span> Integrate open telemetry
+                                        <span class="status-badge status-planned">26.2</span> Monitoring + Performance evaluation via service tracing (OpenTelemetry)
                                     </div>
                                     <div class="item-sub">
                                         <span class="status-badge status-planned">26.3</span> MCP deployment
@@ -385,7 +409,7 @@
                             <td>
                                 <div class="item">
                                     <div class="item-sub">
-                                        <span class="status-badge status-planned">26.2</span> Create template data ingestion pipeline for virtualizing datasets
+                                        <span class="status-badge status-planned">26.1</span> Create template data ingestion pipeline for virtualizing datasets
                                     </div>
                                     <div class="item-sub">
                                         <span class="status-badge status-planned">26.3+</span> Moving towards self-service integration
@@ -397,9 +421,9 @@
                 </table>
             </div>
             
-            <!-- Level 3: Service L2 Store -->
+            <!-- Service Category 3: Services for "L2" Stores -->
             <div class="roadmap">
-                <div class="roadmap-title">Level 3: Service "L2" Store</div>
+                <div class="roadmap-title">Service Category 3: Services for "L2" Stores</div>
                 <table>
                     <thead>
                         <tr>
@@ -443,10 +467,10 @@
                             <td>
                                 <div class="item">
                                     <div class="item-sub">
-                                        <span class="status-badge status-planned">26.1</span> HLS used in prototype
+                                        <span class="status-badge status-planned">26.1</span> Prototype HLS store
                                     </div>
                                     <div class="item-sub">
-                                        <span class="status-badge status-planned">26.3+</span> NISAR or Opera as prototype
+                                        <span class="status-badge status-planned">26.3+</span> Prototype NISAR and/or Opera stores
                                     </div>
                                 </div>
                             </td>
@@ -456,7 +480,7 @@
                             <td>
                                 <div class="item">
                                     <div class="item-sub">
-                                        <span class="status-badge status-future">26.4 or FY 27</span> Operational deployment available, documentation
+                                        <span class="status-badge status-future">26.4 or FY 27</span> Operational deployment + documentation
                                     </div>
                                 </div>
                             </td>
@@ -466,7 +490,7 @@
                             <td>
                                 <div class="item">
                                     <div class="item-sub">
-                                        <span class="status-badge status-future">26.4 or FY 27</span> Work towards self-service within VEDA and broader community
+                                        <span class="status-badge status-future">26.4 or FY 27</span> Develop ecosystem, moving towards self-service adoption within VEDA and broader community
                                     </div>
                                 </div>
                             </td>
