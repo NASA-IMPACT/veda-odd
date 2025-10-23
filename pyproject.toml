@@ -4,9 +4,10 @@ version = "0.1.0"
 description = "Optimized data delivery for NASA VEDA and EODC"
 readme = "README.md"
 dependencies = []
+requires-python = ">= 3.11"
 
-[tool.uv]
-dev-dependencies = [
+[dependency-groups]
+dev = [
     "mike>=2.1.3",
     "mkdocs-material[imaging]>=9.6.3",
     "mkdocs-jupyter>=0.25.0",

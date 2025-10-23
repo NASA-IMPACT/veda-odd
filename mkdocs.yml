@@ -10,13 +10,6 @@ extra:
 
 nav:
   - "index.md"
-  - Titiler ecosystem:
-    - Overview: "titiler/ecosystem/overview.md"
-    - API Reference:
-      - "titiler/api/index.md"
-      - TiTiler Core: "titiler/api/titiler-core.md"
-      - TiTiler CMR: "titiler/api/titiler-cmr.md"
-      - TiTiler Multidim: "titiler/api/titiler-multidim.md"
 
 theme:
   language: en
