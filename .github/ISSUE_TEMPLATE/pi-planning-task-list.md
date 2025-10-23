@@ -1,8 +1,8 @@
 ---
 name: Task List for PI Planning
-about: List of tasks for a thorough PI planning process 
+about: List of tasks for a thorough PI planning process
 title: 'PI Planning 25.x Tasks'
-labels: 
+labels:
 assignees: ''
 
 ---
