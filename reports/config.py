@@ -1,4 +1,4 @@
-TIME_RANGE = ("20250701", "20250915")
+TIME_RANGE = ("20251006", "20251106")
 
 # Name, username, start date, end date
 USERS = [
