@@ -6,7 +6,6 @@ Welcome to the documentation for the Optimized Data Delivery (ODD) team, working
 
 For a digest of what the team plans to work on this next year, please visit our [Fiscal Year (FY) 2026 Roadmap](./fy26-roadmap.md).
 
-
 ## TiTiler Ecosystem Documentation
 
 We work extensively with the TiTiler ecosystem - a powerful suite of Python tools for creating dynamic tile servers from geospatial datasets. These docs should help familiarize new and existing team members with the titiler ecoysystem.
