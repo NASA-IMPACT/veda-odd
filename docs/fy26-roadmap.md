@@ -17,7 +17,7 @@ For a higher-level vision, see also: [Optimized Data Delivery Roadmap for NASA -
 
 ---
 
-![Services for CMR Granules](../category1-granules.svg)
+![Services for CMR Granules](./category1-granules.svg)
 
 ## Roadmap 1: Services for CMR Granules
 
@@ -49,7 +49,7 @@ For a higher-level vision, see also: [Optimized Data Delivery Roadmap for NASA -
 
 ## Roadmap 2: Services for Virtual Data Cubes
 
-![Services for Virtual Datacubes](../category2-datacubes.svg)
+![Services for Virtual Datacubes](./category2-datacubes.svg)
 
 ### Access
 - **✅ Complete** Lazy loading/intelligent subsetting/intelligent access
@@ -87,7 +87,7 @@ For a higher-level vision, see also: [Optimized Data Delivery Roadmap for NASA -
 
 ---
 
-![Services for Non-Datacubes](../category3-l2stores.svg)
+![Services for Non-Datacubes](./category3-l2stores.svg)
 
 ## Roadmap 3: Services for Non-Datacubes
 

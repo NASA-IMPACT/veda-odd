@@ -21,7 +21,7 @@ TiTiler is a FastAPI-based framework designed to create dynamic tile servers for
 
     Learn about the components and architecture of the TiTiler ecosystem
 
-    [:octicons-arrow-right-24: Explore Ecosystem](ecosystem/overview.md)
+    [:octicons-arrow-right-24: Explore Ecosystem](./ecosystem/overview.md)
 
 -   **📚 API Reference**
 
@@ -29,7 +29,7 @@ TiTiler is a FastAPI-based framework designed to create dynamic tile servers for
 
     Interactive API documentation for all TiTiler applications
 
-    [:octicons-arrow-right-24: API Documentation](api/index.md)
+    [:octicons-arrow-right-24: API Documentation](./api/index.md)
 
 </div>
 
