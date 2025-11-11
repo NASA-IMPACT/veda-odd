@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-      - fixup-docs
 
 jobs:
   build:
@@ -21,4 +20,4 @@ jobs:
           enable-cache: true
 
       - name: Deploy docs
-        run: uv run mkdocs gh-deploy --force --strict --no-history
+        run: uv run mkdocs gh-deploy --force --strict
