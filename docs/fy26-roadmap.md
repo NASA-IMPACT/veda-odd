@@ -44,7 +44,7 @@ For a higher-level vision, see also: [Optimized Data Delivery Roadmap for NASA -
 ### Dataset Support
 - **✅ Complete** Demonstrated with GPM IMERG, TROPESS O3 and MiCASA
 - **🚧 26.1** Compile a list of compatible datasets
-- **🚧 26.1** Develop support for EDL-based credential access, as an aternative to requester-pays and role-based access.
+- **🚧 26.1** Develop support for EDL-based credential access, as an aternative to requester-pays and role-based access. To support NISAR (ASF) and GEDI L4B (ORNL DAAC) specifically.
 - **📅 26.2+** Test integration of new datasets as requester-pays is enabled for more buckets.
 
 ### Performance + Operations
