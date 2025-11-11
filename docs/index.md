@@ -2,6 +2,10 @@
 
 Welcome to the documentation for the Optimized Data Delivery (ODD) team, working on the Visualization, Exploration and Data Analysis (VEDA) and Earth Observation Data on the Cloud (EODC) projects.
 
+## ODD FY26 Roadmap
+
+For a digest of what the team plans to work on this next year, please visit our [Fiscal Year (FY) 2026 Roadmap](./fy26-roadmap.md).
+
 
 ## TiTiler Ecosystem Documentation
 
@@ -21,7 +25,7 @@ TiTiler is a FastAPI-based framework designed to create dynamic tile servers for
 
     Learn about the components and architecture of the TiTiler ecosystem
 
-    [:octicons-arrow-right-24: Explore Ecosystem](./ecosystem/overview.md)
+    [:octicons-arrow-right-24: Explore Ecosystem](./titiler/ecosystem/overview.md)
 
 -   **📚 API Reference**
 
@@ -29,7 +33,7 @@ TiTiler is a FastAPI-based framework designed to create dynamic tile servers for
 
     Interactive API documentation for all TiTiler applications
 
-    [:octicons-arrow-right-24: API Documentation](./api/index.md)
+    [:octicons-arrow-right-24: API Documentation](./titiler/api/index.md)
 
 </div>
 

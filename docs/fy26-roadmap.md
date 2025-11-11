@@ -1,6 +1,6 @@
-# ODD Roadmap
+# ODD Fiscal Year (FY) 2026 Roadmap
 
-If you are interested in a better understanding of ODD services, and what datasets will be supported when, this document is for you.
+If you are interested in a better understanding of the ODD service roadmap, and what datasets will be supported when, this document is for you.
 
 This document provides a roadmap for the VEDA Optimized Data Delivery Team (ODD), broken into 3 categories: (1) services for granules in CMR; (2) services for datacubes; (3) services non-datacube stores.
 
