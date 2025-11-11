@@ -10,6 +10,7 @@ extra:
 
 nav:
   - "index.md"
+  - FY26 Roadmap: "fy26-roadmap.md"
   - Titiler ecosystem:
     - Overview: "titiler/ecosystem/overview.md"
     - API Reference:
