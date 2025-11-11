@@ -1,17 +1,15 @@
-TIME_RANGE = ("20250701", "20250915")
+TIME_RANGE = ("20251006", "20251106")
 
 # Name, username, start date, end date
 USERS = [
     # ODD
     ("Max Jones", "maxrjones", None, None),
-    ("Davis Bennett", "d-v-b", "20250425", None),
     ("Kyle Barron", "kylebarron", None, None),
     ("Aimee Barciauskas", "abarciauskas-bgse", None, None),
-    ("Chunk Daniels", "chuckwondo", None, None),
+    ("Chuck Daniels", "chuckwondo", None, None),
     ("Sean Harkins", "sharkinsspatial", None, None),
     ("Henry Rodman", "hrodmn", None, None),
     ("Julius Busecke", "jbusecke", "20250623", None),
-    ("Negin Sobhani", "negin513", "20250729", None),
     # Science support
     ("Alex Mandel", "wildintellect", None, None),
     ("Julia Signell", "jsignell", None, None),
@@ -45,6 +43,7 @@ REPOS = [
     ("developmentseed", "warp-resample-profiling"),
     ("developmentseed", "obspec"),
     ("developmentseed", "obstore"),
+    ("developmentseed", "zarr-datafusion-search"),
     ("earth-mover", "icechunk"),
     ("flatgeobuf", "flatgeobuf"),
     ("geoarrow", "deck.gl-layers"),
@@ -55,6 +54,7 @@ REPOS = [
     ("jupyterhub", "repo2docker"),
     ("pangeo-data", "pangeo-docker-images"),
     ("pangeo-data", "pangeo.io"),
+    ("maap-project", "gedi-geoparquet"),
     ("nasa", "python_cmr"),
     ("nasa-openscapes", "earthdata-cloud-cookbook"),
     ("nsidc", "earthaccess"),
