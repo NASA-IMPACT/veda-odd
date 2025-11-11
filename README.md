@@ -9,8 +9,6 @@ git clone https://github.com/NASA-IMPACT/veda-odd.git
 cd veda-odd
 # Serve the documentation
 uv run -- mkdocs serve
-
-# Deploy the documentation
-# This will build the site and push it to the gh-pages branch of this repo
-uv run mkdocs gh-deploy
 ```
+
+The documentation is deployed automatically via GitHub pages and the [deploy workflow](.github/workflows/deploy.yml).

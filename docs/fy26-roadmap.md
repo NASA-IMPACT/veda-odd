@@ -126,4 +126,4 @@ For a higher-level vision, see also: [Optimized Data Delivery Roadmap for NASA -
 
 ## Roadmap for Service Category 4: Foundational Work (including Technical Debt)
 
-- **🔄 26.1+** Establish areas for consolidation in the [TiTiler ecosystem](./titiler/ecosystem/overview.md). Similar features across applications should rely on shared upstream libraries. The ODD team continuously identifying similar features and proactively DRY up codebases.
+- **🔄 26.1+** Establish areas for consolidation in the TiTiler ecosystem. Similar features across applications should rely on shared upstream libraries. The ODD team continuously identifying similar features and proactively DRY up codebases.
