@@ -2,7 +2,7 @@
 
 If you are interested in a better understanding of ODD services, and what datasets will be supported when, this document is for you.
 
-This document provides a roadmap for the VEDA Optimized Data Delivery Team (ODD), broken into 3 categories: (1) services for granules in CMR; (2) services for virtual datacubes; and (3) services for "L2" stores.
+This document provides a roadmap for the VEDA Optimized Data Delivery Team (ODD), broken into 3 categories: (1) services for granules in CMR; (2) services for datacubes; (3) services non-datacube stores.
 
 For a higher-level vision, see also: [Optimized Data Delivery Roadmap for NASA - July 2025](https://docs.google.com/presentation/d/1Ouo_9qJJuDBdrzDHpt2P-o1wGBPS1nvTjLRFAFGsYkU/edit?usp=sharing).
 
@@ -16,6 +16,8 @@ For a higher-level vision, see also: [Optimized Data Delivery Roadmap for NASA -
 - **🔮 Future** - Planned for future timeline
 
 ---
+
+![Services for CMR Granules](../category1-granules.svg)
 
 ## Roadmap 1: Services for CMR Granules
 
@@ -46,6 +48,8 @@ For a higher-level vision, see also: [Optimized Data Delivery Roadmap for NASA -
 ---
 
 ## Roadmap 2: Services for Virtual Data Cubes
+
+![Services for Virtual Datacubes](../category2-datacubes.svg)
 
 ### Access
 - **✅ Complete** Lazy loading/intelligent subsetting/intelligent access
@@ -83,7 +87,9 @@ For a higher-level vision, see also: [Optimized Data Delivery Roadmap for NASA -
 
 ---
 
-## Roadmap 3: Services for "L2" Stores
+![Services for Non-Datacubes](../category3-l2stores.svg)
+
+## Roadmap 3: Services for Non-Datacubes
 
 ### Access
 - **🚧 26.1-26.3** Prototyping creating a query engine using a Zarr provider for data fusion

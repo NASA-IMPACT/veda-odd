@@ -1,3 +1,5 @@
 .venv/
 uv.lock
 .python-version
+site/
+*__pycache__/
