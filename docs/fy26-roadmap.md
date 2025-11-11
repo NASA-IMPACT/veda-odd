@@ -58,7 +58,7 @@ For a higher-level vision, see also: [Optimized Data Delivery Roadmap for NASA -
 
 ---
 
-![Services for Virtual Datacubes](./category2-datacubes.svg)
+![Services for Datacubes](./category2-datacubes.svg)
 
 ## Roadmap for Service Category 2: Services for Datacubes
 
