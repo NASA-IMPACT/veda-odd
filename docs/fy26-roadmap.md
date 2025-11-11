@@ -19,7 +19,7 @@ For a higher-level vision, see also: [Optimized Data Delivery Roadmap for NASA -
 
 ![Services for CMR Granules](./category1-granules.svg)
 
-## Roadmap 1: Services for CMR Granules
+## Roadmap for Service Category 1: Services for CMR Granules
 
 ### Access
 *N/A*
@@ -47,9 +47,9 @@ For a higher-level vision, see also: [Optimized Data Delivery Roadmap for NASA -
 
 ---
 
-## Roadmap 2: Services for Virtual Data Cubes
-
 ![Services for Virtual Datacubes](./category2-datacubes.svg)
+
+## Roadmap for Service Category 2: Services for Datacubes
 
 ### Access
 - **✅ Complete** Lazy loading/intelligent subsetting/intelligent access
@@ -87,9 +87,9 @@ For a higher-level vision, see also: [Optimized Data Delivery Roadmap for NASA -
 
 ---
 
-![Services for Non-Datacubes](./category3-l2stores.svg)
+![Services for Non-Datacubes](./category3-nondatacubes.svg)
 
-## Roadmap 3: Services for Non-Datacubes
+## Roadmap for Service Category 3: Services for Non-Datacubes
 
 ### Access
 - **🚧 26.1-26.3** Prototyping creating a query engine using a Zarr provider for data fusion
