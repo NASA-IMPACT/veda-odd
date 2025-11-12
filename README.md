@@ -10,3 +10,5 @@ cd veda-odd
 # Serve the documentation
 uv run -- mkdocs serve
 ```
+
+The documentation is deployed automatically via GitHub pages and the [deploy workflow](.github/workflows/deploy.yml).
