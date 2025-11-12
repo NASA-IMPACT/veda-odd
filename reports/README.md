@@ -14,7 +14,7 @@
 4. Run `uv run main.py`
 5. Run `uv run plot.py`
 
-## Running a report to get download stats from pypi
+## Running a report on pypi package download stats
 
 Pypi stats only go back 180 days. After installing the pypistats package you can run a command to get daily downloads:
 
@@ -24,19 +24,19 @@ pypistats overall virtualizarr -sd 2025-05-15 -ed 2025-11-11 --daily -f tsv --mi
 And then generate more informative stats using the analyze_downloads.py script:
 
 ```bash
-  # With default cutoff date (2025-07-21)
-  python analyze_downloads.py virtualizarr-report.tsv
+# With default cutoff date (2025-07-21)
+python analyze_downloads.py virtualizarr-report.tsv
 
-  # With custom cutoff date
-  python analyze_downloads.py virtualizarr-report.tsv --cutoff-date 2025-08-15
+# With custom cutoff date
+python analyze_downloads.py virtualizarr-report.tsv --cutoff-date 2025-08-15
 
-  # Show help
-  python analyze_downloads.py --help
-  ```
+# Show help
+python analyze_downloads.py --help
+```
 
-  Using the previous pypi command as an example, the following is output from the script:
+Using the previous pypi command as an example, the following is output from the script:
 
-  ```bash
+```bash
 $ python analyze_downloads.py virtualizarr-report.tsv
   Download Analysis
 ============================================================
