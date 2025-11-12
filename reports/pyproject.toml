@@ -8,4 +8,5 @@ dependencies = [
     "matplotlib>=3.10.3",
     "pandas>=2.3.0",
     "pygithub>=2.6.1",
+    "pypistats>=1.11.0"
 ]
