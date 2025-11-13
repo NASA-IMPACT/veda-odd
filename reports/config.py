@@ -1,15 +1,17 @@
-TIME_RANGE = ("20251006", "20251106")
+TIME_RANGE = ("20241001", "20250930")
 
 # Name, username, start date, end date
 USERS = [
     # ODD
     ("Max Jones", "maxrjones", None, None),
+    ("Davis Bennett", "d-v-b", "20250425", None),
     ("Kyle Barron", "kylebarron", None, None),
     ("Aimee Barciauskas", "abarciauskas-bgse", None, None),
     ("Chuck Daniels", "chuckwondo", None, None),
     ("Sean Harkins", "sharkinsspatial", None, None),
     ("Henry Rodman", "hrodmn", None, None),
     ("Julius Busecke", "jbusecke", "20250623", None),
+    ("Negin Sobhani", "negin513", "20250729", None),
     # Science support
     ("Alex Mandel", "wildintellect", None, None),
     ("Julia Signell", "jsignell", None, None),
