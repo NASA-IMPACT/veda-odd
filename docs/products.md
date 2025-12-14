@@ -16,7 +16,6 @@ This is a non-exhaustive list of guides, reports, and other materials built by t
 
 - [Zarr Visualization Report](https://github.com/NASA-IMPACT/zarr-visualization-report)
 - [Data in the Cloud 101 Module for Open Source Geospatial Workflows in the Cloud Workshop](https://agu2025.workshops.geojupyter.org/modules/data-in-the-cloud/)
-- [2025 ICESAT-2 hackweek module on cloud computing](https://icesat-2-2024.hackweek.io/tutorials/cloud-computing/00-goals-and-outline.html)
 - [Zarr DataFusion Search Examples](https://github.com/developmentseed/zarr-datafusion-search-examples)
 
 ## Software
@@ -35,6 +34,12 @@ ODD also regularly contributes to these guides, tools, and libraries, which were
 - [VirtualiZarr](https://github.com/zarr-developers/virtualizarr)
 - [Zarr](https://github.com/zarr-developers/zarr)
 - [GeoZarr](https://github.com/zarr-developers/geozarr-spec)
+
+## Similar external resources
+
+If you are interested in the tools that VEDA ODD has contributed to, you may also enjoy these completely externally built materials:
+
+- [2025 ICESAT-2 hackweek module on cloud computing](https://icesat-2-2024.hackweek.io/tutorials/cloud-computing/00-goals-and-outline.html)
 
 ## Acknowledgements
 
