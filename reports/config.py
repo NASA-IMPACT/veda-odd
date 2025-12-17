@@ -1,4 +1,4 @@
-TIME_RANGE = ("20251006", "20251106")
+TIME_RANGE = ("20251106", "20251215")
 
 # Name, username, start date, end date
 USERS = [
@@ -29,6 +29,7 @@ REPOS = [
     ("cloudnativegeo", "cloud-optimized-geospatial-formats-guide"),
     ("datafusion-contrib", "arrow-zarr"),
     ("developmentseed", "async-tiff"),
+    ("developmentseed", "datacube-guide"),
     ("developmentseed", "eoAPI"),
     ("developmentseed", "eoAPI-cdk"),
     ("developmentseed", "geozarr-examples"),
@@ -43,6 +44,7 @@ REPOS = [
     ("developmentseed", "warp-resample-profiling"),
     ("developmentseed", "obspec"),
     ("developmentseed", "obstore"),
+    ("developmentseed", "virtualizarr-data-pipelines"),
     ("developmentseed", "zarr-datafusion-search"),
     ("earth-mover", "icechunk"),
     ("flatgeobuf", "flatgeobuf"),
@@ -72,6 +74,9 @@ REPOS = [
     ("virtual-zarr", "hrrr-parser"),
     ("virtual-zarr", "virtual-tiff"),
     ("virtual-zarr", "obspec-utils"),
+    ("zarr-conventions", "spatial"),
+    ("zarr-conventions", "geo-proj"),
+    ("zarr-conventions", "multiscales"),
     ("zarr-developers", "zarr-python"),
     ("zarr-developers", "geozarr-spec"),
     ("zarr-developers", "VirtualiZarr"),
