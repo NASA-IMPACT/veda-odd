@@ -4,8 +4,9 @@ on:
   push:
     branches:
       - main
-      - fixup-docs
-      - ab/fy26-roadmap
+  pull_request:
+    branches:
+      - main
 
 jobs:
   build:

@@ -1,136 +1,157 @@
 #!/usr/bin/env python3
 """
-Query GitHub API for commits to a given repository
+Query GitHub API for commits to repositories in parallel.
 """
 
 from github import Github, Auth
 from datetime import datetime
 from typing import List
+from concurrent.futures import ThreadPoolExecutor, as_completed
 import os
 import pandas as pd
-from config import USERS, REPOS, TIME_RANGE
+from config import (
+    get_time_range,
+    get_current_pi,
+    get_repos_for_pi,
+    get_contributors_for_pi,
+)
 
 
-def get_commits_for_author(
-    repository,
+def get_commits_for_repo_author(
+    g: Github,
+    owner: str,
+    repo: str,
     author: str,
     start_date: datetime,
     end_date: datetime,
-) -> List:
+) -> List[dict]:
     """
-    Query GitHub API for commits by a specific author within a date range
+    Query GitHub API for commits by a specific author in a repo.
 
-    Args:
-        repository: GitHub repository object (already connected)
-        author: GitHub username/email to filter commits by
-        start_date: Start date for commit search (inclusive)
-        end_date: End date for commit search (inclusive)
-
-    Returns:
-        List of commit objects
+    Returns list of commit detail dicts (not commit objects) to avoid
+    thread safety issues with PyGithub objects.
     """
-    # Get commits with filters using the existing repository connection
-    commits = repository.get_commits(author=author, since=start_date, until=end_date)
-    # Group commits by PR
-    prs = []
-    pr_commits = []
-    standalone_commits = []
-
-    for commit in commits:
-        # Get PRs associated with this commit
-        pulls = commit.get_pulls()
-
-        if pulls.totalCount == 1:
-            # Commit is part of one or more PRs
-            if (number := pulls[0].number) not in prs:
-                pr_commits.append(commit)
-                prs.append(number)
-        elif pulls.totalCount == 0:
-            # Commit is not part of any PR (direct to branch)
-            standalone_commits.append(commit)
-        else:
-            raise ValueError(f"Unexpected pulls.totalCount: {pulls.totalCount}")
-    # Convert PaginatedList to regular list
-    commit_list = pr_commits + standalone_commits
-    return commit_list
-
-
-def get_commit_details(commit) -> dict:
-    """Extract detailed commit information"""
-    return {
-        "sha": commit.sha,
-        "message": commit.commit.message.split("\n")[0],
-        "author": commit.commit.author.name,
-        "committer": commit.commit.committer.name,
-        "url": commit.html_url,
-        "total_changes": commit.stats.total if commit.stats else 0,
-    }
-
-
-def main(token: str = None):
-    time_start = datetime.strptime(TIME_RANGE[0], "%Y%m%d")
-    time_end = datetime.strptime(TIME_RANGE[1], "%Y%m%d")
-    all_commits = []
-
-    # Initialize GitHub client once
-    if token:
-        auth = Auth.Token(token)
-        g = Github(auth=auth)
-    else:
-        g = Github()  # Unauthenticated (lower rate limits)
-
-    if len(USERS) < 1:
-        raise ValueError(
-            "No users were included in the config. See README for instructions on populating the USER list."
+    try:
+        repository = g.get_repo(f"{owner}/{repo}")
+        commits = repository.get_commits(
+            author=author, since=start_date, until=end_date
         )
 
-    # Iterate through repositories first
-    for owner, repo in REPOS:
-        print(f"Processing repository: {owner}/{repo}")
+        # Group commits by PR
+        prs = []
+        pr_commits = []
+        standalone_commits = []
 
-        # Get repository object once per repository
-        repository = g.get_repo(f"{owner}/{repo}")
+        for commit in commits:
+            pulls = commit.get_pulls()
+            if pulls.totalCount == 1:
+                if (number := pulls[0].number) not in prs:
+                    pr_commits.append(commit)
+                    prs.append(number)
+            elif pulls.totalCount == 0:
+                standalone_commits.append(commit)
 
-        # Iterate through all users and their emails for this repository
-        for name, username, start_date_str, end_date_str in USERS:
-            # Parse dates for this user
-            start_date = (
-                datetime.strptime(start_date_str, "%Y%m%d")
-                if start_date_str
-                else time_start
+        # Extract details immediately (avoid returning PyGithub objects)
+        results = []
+        for commit in pr_commits + standalone_commits:
+            results.append(
+                {
+                    "sha": commit.sha,
+                    "message": commit.commit.message.split("\n")[0],
+                    "author": commit.commit.author.name,
+                    "committer": commit.commit.committer.name,
+                    "url": commit.html_url,
+                    "total_changes": commit.stats.total if commit.stats else 0,
+                    "organization": owner,
+                    "repository": repo,
+                }
             )
-            end_date = (
-                datetime.strptime(end_date_str, "%Y%m%d") if end_date_str else time_end
-            )
+        return results
+    except Exception as e:
+        print(f"  Error processing {owner}/{repo} for {author}: {e}")
+        return []
 
-            print(f"  Processing user: {username}")
-            commits = get_commits_for_author(
-                repository=repository,
-                author=username,
-                start_date=start_date,
-                end_date=end_date,
-            )
-            for commit in commits:
-                commit_details = get_commit_details(commit)
-                commit_details.update(
-                    {
-                        "organization": owner,
-                        "repository": repo,
-                    }
-                )
-                all_commits.append(commit_details)
 
-    g.close()
+def main(token: str = None, pi: str = None, max_workers: int = 10):
+    """
+    Query GitHub for commits using parallel requests.
+
+    Args:
+        token: GitHub personal access token
+        pi: Optional PI to filter repos/contributors (e.g., "pi-26.1").
+            If None, uses current PI based on today's date.
+        max_workers: Number of parallel threads (default 10)
+    """
+    # Default to current PI if not specified
+    if pi is None:
+        pi = get_current_pi()
+
+    time_range = get_time_range(pi)
+    if not time_range:
+        raise ValueError(f"No date range found for PI: {pi}")
+
+    time_start = datetime.strptime(time_range[0], "%Y%m%d")
+    time_end = datetime.strptime(time_range[1], "%Y%m%d")
+
+    # Get repos and contributors for the PI
+    repos = get_repos_for_pi(pi)
+    contributors = get_contributors_for_pi(pi)
+    print(
+        f"PI: {pi} ({time_start.strftime('%Y-%m-%d')} to {time_end.strftime('%Y-%m-%d')})"
+    )
+    print(f"  {len(repos)} repos, {len(contributors)} contributors")
+
+    if len(contributors) < 1:
+        raise ValueError("No contributors found in config.")
+
+    # Build list of (repo, contributor) tasks
+    tasks = []
+    for owner, repo in repos:
+        for name, username in contributors:
+            tasks.append((owner, repo, username))
+
+    print(
+        f"Querying {len(tasks)} repo×contributor combinations with {max_workers} workers..."
+    )
+
+    all_commits = []
+
+    # Use thread pool for parallel API calls
+    # Each thread gets its own Github client to avoid rate limit issues
+    def process_task(task):
+        owner, repo, username = task
+        if token:
+            auth = Auth.Token(token)
+            g = Github(auth=auth)
+        else:
+            g = Github()
+        try:
+            return get_commits_for_repo_author(
+                g, owner, repo, username, time_start, time_end
+            )
+        finally:
+            g.close()
+
+    completed = 0
+    with ThreadPoolExecutor(max_workers=max_workers) as executor:
+        futures = {executor.submit(process_task, task): task for task in tasks}
+        for future in as_completed(futures):
+            completed += 1
+            if completed % 50 == 0:
+                print(f"  Progress: {completed}/{len(tasks)}")
+            commits = future.result()
+            all_commits.extend(commits)
+
+    print(f"Found {len(all_commits)} commits")
 
     df = pd.DataFrame(all_commits)
-    csv_filename = (
-        f"output/{time_start.strftime('%Y-%m-%d')}-{time_end.strftime('%Y-%m-%d')}.csv"
-    )
+    csv_filename = f"output/{pi}.csv"
     df.to_csv(csv_filename, index=False)
+    print(f"Saved to {csv_filename}")
 
     return df
 
 
 if __name__ == "__main__":
-    token = os.environ["GH_ODD_PAT"]
+    token = os.environ.get("GH_ODD_PAT") or os.environ.get("GITHUB_TOKEN")
     main(token=token)
