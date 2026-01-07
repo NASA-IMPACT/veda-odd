@@ -62,7 +62,7 @@ This page tracks quarterly objectives and their related repositories across Prog
 
 ---
 
-## Visualization
+## Commits Per Repository
 
 The commits per repository chart uses color-coding to show which objective each repo contributes to. Repos that contribute to multiple objectives are shown with split bars.
 
