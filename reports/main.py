@@ -153,5 +153,23 @@ def main(token: str = None, pi: str = None, max_workers: int = 10):
 
 
 if __name__ == "__main__":
+    import argparse
+
+    parser = argparse.ArgumentParser(
+        description="Query GitHub API for commits to repositories"
+    )
+    parser.add_argument(
+        "--pi",
+        type=str,
+        help='PI to query (e.g., "pi-26.1"). If not specified, uses current PI based on date.',
+    )
+    parser.add_argument(
+        "--max-workers",
+        type=int,
+        default=10,
+        help="Number of parallel threads (default: 10)",
+    )
+    args = parser.parse_args()
+
     token = os.environ.get("GH_ODD_PAT") or os.environ.get("GITHUB_TOKEN")
-    main(token=token)
+    main(token=token, pi=args.pi, max_workers=args.max_workers)

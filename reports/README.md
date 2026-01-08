@@ -9,7 +9,7 @@
 ## Configuration
 
 The `config.py` file contains:
-- `TIME_RANGE`: Start and end dates for commit analysis
+- `TIME_RANGE`: Start and end dates for commit analysis.
 - `OBJECTIVES`: Quarterly objectives with repos and contributors per objective
 
 ### Regenerating objectives from GitHub
