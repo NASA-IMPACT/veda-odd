@@ -141,7 +141,7 @@ def main(pi: str = None, show_labels: bool = False):
     plt.subplots_adjust(left=0.3)
 
     ax.set_title(
-        f"{pi.upper()} ODD's commits to open source repositories",
+        f"{pi.upper()} ODD's commits to the default branch",
         fontsize=24,
         fontweight="bold",
     )
@@ -167,6 +167,7 @@ def main(pi: str = None, show_labels: bool = False):
     # Caveats and link in bottom right of plot area
     caveats = (
         "Caveats:\n"
+        "- Only community-governed open source repositories are tracked (not ODSI-specific repos)\n"
         "- Merged PRs counted as one commit\n"
         "- Individual changes may span multiple PRs\n"
         "- Split bars indicate repos in multiple objectives\n"
