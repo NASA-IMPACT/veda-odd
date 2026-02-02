@@ -120,7 +120,7 @@ OBJECTIVES = {
         {
             "issue_number": 118,
             "title": "ODD PI 25.3 Objective 1: Support CMR Modernization",
-            "state": "open",
+            "state": "closed",
             "contributors": [
                 ("Sean Harkins", "sharkinsspatial"),
                 ("Kyle Barron", "kylebarron"),
@@ -140,7 +140,7 @@ OBJECTIVES = {
         {
             "issue_number": 124,
             "title": "ODD PI 25.3 Objective 3: Publish Cloud-Optimized Datasets",
-            "state": "open",
+            "state": "closed",
             "contributors": [
                 ("Chuck Daniels", "chuckwondo"),
                 ("Aimee Barciauskas", "abarciauskas-bgse"),
@@ -222,7 +222,7 @@ OBJECTIVES = {
         {
             "issue_number": 203,
             "title": "ODD PI 25.4 Objective 3: 🗺️Research, develop and document methods for Zarr and VirtualiZarr data services",
-            "state": "open",
+            "state": "closed",
             "contributors": [
                 ("Max Jones", "maxrjones"),
             ],
@@ -231,7 +231,7 @@ OBJECTIVES = {
         {
             "issue_number": 204,
             "title": "ODD PI 25.4 Objective 4: 🛠️ Zarr Development",
-            "state": "open",
+            "state": "closed",
             "contributors": [
                 ("Davis Bennett", "d-v-b"),
                 ("Max Jones", "maxrjones"),
@@ -294,7 +294,7 @@ OBJECTIVES = {
         {
             "issue_number": 246,
             "title": "ODD PI 26.1 Objective 3: 🤖 Support virtualization of additional data products",
-            "state": "open",
+            "state": "closed",
             "contributors": [
                 ("Sean Harkins", "sharkinsspatial"),
                 ("Max Jones", "maxrjones"),
@@ -329,7 +329,7 @@ OBJECTIVES = {
         {
             "issue_number": 248,
             "title": "ODD PI 26.1 Objective 5: 🤗 Support community adoption of the technologies incubated by EODC and VEDA",
-            "state": "open",
+            "state": "closed",
             "contributors": [
                 ("Sean Harkins", "sharkinsspatial"),
                 ("Chuck Daniels", "chuckwondo"),
@@ -348,6 +348,102 @@ OBJECTIVES = {
                 ("pangeo-data", "pangeo.io"),
                 ("pangeo-data", "pangeo-docker-images"),
                 ("nasa-openscapes", "earthdata-cloud-cookbook"),
+            ],
+        },
+    ],
+    "pi-26.2": [
+        {
+            "issue_number": 304,
+            "title": "ODD PI 26.2 Objective 1: 🤖Create virtual Zarr stores for high priority dataset(s)",
+            "state": "open",
+            "contributors": [
+                ("Tyler", "tylanderson"),
+            ],
+            "repos": [
+                ("developmentseed", "virtualizarr-data-pipelines"),
+            ],
+        },
+        {
+            "issue_number": 305,
+            "title": "ODD PI 26.2 Objective 2: 🛠️ TiTiler-CMR maintenance + performance",
+            "state": "open",
+            "contributors": [
+                ("Chuck Daniels", "chuckwondo"),
+            ],
+            "repos": [
+                ("developmentseed", "titiler"),
+                ("developmentseed", "titiler-cmr"),
+            ],
+        },
+        {
+            "issue_number": 306,
+            "title": "ODD PI 26.2 Objective 3: 🤗 Support community adoption of the technologies incubated by EODC and VEDA",
+            "state": "open",
+            "contributors": [
+                ("Max Jones", "maxrjones"),
+                ("Aimee Barciauskas", "abarciauskas-bgse"),
+            ],
+            "repos": [
+                ("zarr-developers", "geozarr-spec"),
+                ("zarr-developers", "zarr-python"),
+                ("zarr-conventions", "multiscales"),
+                ("zarr-conventions", "geo-proj"),
+                ("zarr-conventions", "spatial"),
+                ("developmentseed", "datacube-guide"),
+                ("developmentseed", "geozarr-examples"),
+                ("developmentseed", "warp-resample-profiling"),
+                ("pangeo-data", "pangeo.io"),
+                ("pangeo-data", "pangeo-docker-images"),
+                ("nasa-openscapes", "earthdata-cloud-cookbook"),
+            ],
+        },
+        {
+            "issue_number": 307,
+            "title": "ODD PI 26.2 Objective 4: 📈 Finalize Design for VirtualiZarr Time Series API [Stretch: start implementation]",
+            "state": "open",
+            "contributors": [
+                ("Henry Rodman", "hrodmn"),
+            ],
+            "repos": [
+                ("developmentseed", "titiler"),
+                ("developmentseed", "titiler-lambda-layer"),
+                ("developmentseed", "titiler-md-demo"),
+            ],
+        },
+        {
+            "issue_number": 308,
+            "title": "ODD PI 26.2 Objective 5: 🤪 Expand virtualization support for quirky datasets",
+            "state": "open",
+            "contributors": [
+                ("Max Jones", "maxrjones"),
+            ],
+            "repos": [
+                ("zarr-developers", "virtualizarr"),
+                ("zarr-developers", "zarr-python"),
+                ("virtual-zarr", "obspec-utils"),
+                ("virtual-zarr", "virtual-tiff"),
+                ("virtual-zarr", "hrrr-parser"),
+                ("developmentseed", "virtualizarr-data-pipelines"),
+            ],
+        },
+        {
+            "issue_number": 309,
+            "title": "ODD PI 26.2 Objective 6: 🛰️ Propose unified strategy for virtualization of orbital swath (“L2”) data",
+            "state": "open",
+            "contributors": [
+                ("Sean Harkins", "sharkinsspatial"),
+                ("Max Jones", "maxrjones"),
+                ("Henry Rodman", "hrodmn"),
+            ],
+            "repos": [
+                ("zarr-developers", "virtualizarr"),
+                ("virtual-zarr", "obspec-utils"),
+                ("developmentseed", "obstore"),
+                ("developmentseed", "obspec"),
+                ("developmentseed", "zarr-datafusion-search"),
+                ("geoarrow", "geoarrow-rs"),
+                ("developmentseed", "async-tiff"),
+                ("datafusion-contrib", "arrow-zarr"),
             ],
         },
     ],

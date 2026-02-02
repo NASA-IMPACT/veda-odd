@@ -2,20 +2,34 @@
 
 This page tracks quarterly objectives and their related repositories across Program Increments (PIs).
 
-## Current PI: 26.1
+## Current PI: 26.2
 
 | # | Objective | Contributors | Repos |
 |---|-----------|--------------|-------|
-| [#244](https://github.com/NASA-IMPACT/veda-odd/issues/244) | 🗺️ Add dynamic tiling and timeseries support for Virtual Zar... | jbusecke, hrodmn | titiler, icechunk |
-| [#245](https://github.com/NASA-IMPACT/veda-odd/issues/245) | 🌍 Add dynamic tiling and timeseries support for datasets in ... | abarciauskas-bgse, hrodmn | titiler, titiler-cmr, titiler-lambda-layer, titiler-md-demo, python_cmr |
-| [#246](https://github.com/NASA-IMPACT/veda-odd/issues/246) | 🤖 Support virtualization of additional data products | sharkinsspatial, maxrjones, jbusecke | virtualizarr, obspec-utils, virtual-tiff, hrrr-parser, async-tiff, virtualizarr-data-pipelines, icechunk |
-| [#247](https://github.com/NASA-IMPACT/veda-odd/issues/247) | 🛰 Explore scalable, cloud native approaches for search, disc... | sharkinsspatial, kylebarron | obstore, obspec, zarr-datafusion-search, geoarrow-rs, arrow-zarr |
-| [#248](https://github.com/NASA-IMPACT/veda-odd/issues/248) | 🤗 Support community adoption of the technologies incubated b... | sharkinsspatial, chuckwondo, maxrjones, abarciauskas-bgse | geozarr-spec, zarr-python, multiscales, geo-proj, spatial, datacube-guide, geozarr-examples, warp-resample-profiling, pangeo.io, pangeo-docker-images, earthdata-cloud-cookbook |
+| [#304](https://github.com/NASA-IMPACT/veda-odd/issues/304) | 🤖Create virtual Zarr stores for high priority dataset(s) | tylanderson | virtualizarr-data-pipelines |
+| [#305](https://github.com/NASA-IMPACT/veda-odd/issues/305) | 🛠️ TiTiler-CMR maintenance + performance | chuckwondo | titiler, titiler-cmr |
+| [#306](https://github.com/NASA-IMPACT/veda-odd/issues/306) | 🤗 Support community adoption of the technologies incubated b... | maxrjones, abarciauskas-bgse | geozarr-spec, zarr-python, multiscales, geo-proj, spatial, datacube-guide, geozarr-examples, warp-resample-profiling, pangeo.io, pangeo-docker-images, earthdata-cloud-cookbook |
+| [#307](https://github.com/NASA-IMPACT/veda-odd/issues/307) | 📈 Finalize Design for VirtualiZarr Time Series API [Stretch:... | hrodmn | titiler, titiler-lambda-layer, titiler-md-demo |
+| [#308](https://github.com/NASA-IMPACT/veda-odd/issues/308) | 🤪 Expand virtualization support for quirky datasets | maxrjones | virtualizarr, zarr-python, obspec-utils, virtual-tiff, hrrr-parser, virtualizarr-data-pipelines |
+| [#309](https://github.com/NASA-IMPACT/veda-odd/issues/309) | 🛰️ Propose unified strategy for virtualization of orbital sw... | sharkinsspatial, maxrjones, hrodmn | virtualizarr, obspec-utils, obstore, obspec, zarr-datafusion-search, geoarrow-rs, async-tiff, arrow-zarr |
 
 ---
 
 <details markdown>
-<summary>PI 25.4 (8 objectives, 5 closed)</summary>
+<summary>PI 26.1 (5 objectives, 3 closed)</summary>
+
+| # | Objective | State | Contributors |
+|---|-----------|-------|--------------|
+| [#244](https://github.com/NASA-IMPACT/veda-odd/issues/244) | 🗺️ Add dynamic tiling and timeseries support for V... | open | jbusecke, hrodmn |
+| [#245](https://github.com/NASA-IMPACT/veda-odd/issues/245) | 🌍 Add dynamic tiling and timeseries support for da... | open | abarciauskas-bgse, hrodmn |
+| [#246](https://github.com/NASA-IMPACT/veda-odd/issues/246) | 🤖 Support virtualization of additional data produc... | closed | sharkinsspatial, maxrjones, jbusecke |
+| [#247](https://github.com/NASA-IMPACT/veda-odd/issues/247) | 🛰 Explore scalable, cloud native approaches for se... | closed | sharkinsspatial, kylebarron |
+| [#248](https://github.com/NASA-IMPACT/veda-odd/issues/248) | 🤗 Support community adoption of the technologies i... | closed | sharkinsspatial, chuckwondo, maxrjones, abarciauskas-bgse |
+
+</details>
+
+<details markdown>
+<summary>PI 25.4 (8 objectives, 7 closed)</summary>
 
 | # | Objective | State | Contributors |
 |---|-----------|-------|--------------|
@@ -23,21 +37,21 @@ This page tracks quarterly objectives and their related repositories across Prog
 | [#122](https://github.com/NASA-IMPACT/veda-odd/issues/122) | Research, develop and document methods for Zarr an... | closed | maxrjones, kylebarron |
 | [#197](https://github.com/NASA-IMPACT/veda-odd/issues/197) | 🎬 TiTiler-CMR is production ready | open | abarciauskas-bgse, hrodmn |
 | [#198](https://github.com/NASA-IMPACT/veda-odd/issues/198) | 🚀 Dataset support for VEDA instances | closed | maxrjones, jbusecke |
-| [#203](https://github.com/NASA-IMPACT/veda-odd/issues/203) | 🗺️Research, develop and document methods for Zarr ... | open | maxrjones |
-| [#204](https://github.com/NASA-IMPACT/veda-odd/issues/204) | 🛠️ Zarr Development | open | d-v-b, maxrjones |
+| [#203](https://github.com/NASA-IMPACT/veda-odd/issues/203) | 🗺️Research, develop and document methods for Zarr ... | closed | maxrjones |
+| [#204](https://github.com/NASA-IMPACT/veda-odd/issues/204) | 🛠️ Zarr Development | closed | d-v-b, maxrjones |
 | [#205](https://github.com/NASA-IMPACT/veda-odd/issues/205) | 🤗 Community engagement | closed | sharkinsspatial, chuckwondo, maxrjones, abarciauskas-bgse |
 | [#206](https://github.com/NASA-IMPACT/veda-odd/issues/206) | 📦 Obstore outreach | closed | chuckwondo, kylebarron |
 
 </details>
 
 <details markdown>
-<summary>PI 25.3 (6 objectives, 4 closed)</summary>
+<summary>PI 25.3 (6 objectives, 6 closed)</summary>
 
 | # | Objective | State | Contributors |
 |---|-----------|-------|--------------|
-| [#118](https://github.com/NASA-IMPACT/veda-odd/issues/118) | Support CMR Modernization | open | sharkinsspatial, kylebarron |
+| [#118](https://github.com/NASA-IMPACT/veda-odd/issues/118) | Support CMR Modernization | closed | sharkinsspatial, kylebarron |
 | [#119](https://github.com/NASA-IMPACT/veda-odd/issues/119) | Continue to Build Out the VirtualiZarr Ecosystem | closed | sharkinsspatial, maxrjones |
-| [#124](https://github.com/NASA-IMPACT/veda-odd/issues/124) | Publish Cloud-Optimized Datasets | open | chuckwondo, abarciauskas-bgse |
+| [#124](https://github.com/NASA-IMPACT/veda-odd/issues/124) | Publish Cloud-Optimized Datasets | closed | chuckwondo, abarciauskas-bgse |
 | [#126](https://github.com/NASA-IMPACT/veda-odd/issues/126) | Support TiTiler-CMR Adoption | closed | sharkinsspatial, hrodmn |
 | [#127](https://github.com/NASA-IMPACT/veda-odd/issues/127) | Community Involvement | closed | maxrjones, abarciauskas-bgse, hrodmn |
 | [#165](https://github.com/NASA-IMPACT/veda-odd/issues/165) | Foundational Zarr-Python and Xarray Contributions | closed | d-v-b, maxrjones |
@@ -62,11 +76,11 @@ This page tracks quarterly objectives and their related repositories across Prog
 
 ---
 
-## Commits Per Repository
+## Visualization
 
 The commits per repository chart uses color-coding to show which objective each repo contributes to. Repos that contribute to multiple objectives are shown with split bars.
 
-![PI-26.1 Commits per Repository](images/pi-26.1.png)
+![PI-26.2 Commits per Repository](images/pi-26.2.png)
 
 ---
 
