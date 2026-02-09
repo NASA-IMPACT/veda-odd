@@ -25,6 +25,8 @@ def get_objective_issues(g: Github, repo_name: str = "NASA-IMPACT/veda-odd"):
     query = f"repo:{repo_name} is:issue label:pi-25.2-objective,pi-25.3-objective,pi-25.4-objective,pi-26.1-objective,pi-26.2-objective,pi-26.3-objective,pi-26.4-objective"
     issues = g.search_issues(query)
 
+    if len(issues) < 1:
+        raise (ValueError, "No PI issue found")
     for issue in issues:
         pi = None
         repos = []
