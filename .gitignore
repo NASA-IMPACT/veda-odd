@@ -3,3 +3,4 @@ uv.lock
 .python-version
 site/
 __pycache__
+output.md

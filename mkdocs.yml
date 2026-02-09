@@ -13,6 +13,7 @@ nav:
   - FY26 Roadmap: "fy26-roadmap.md"
   - PI Objectives: "objectives.md"
   - ODD Products: "products.md"
+  - Tech Tips: "tech-tips.md"
 
 theme:
   language: en
