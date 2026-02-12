@@ -4,7 +4,7 @@
 
 1. Navigate to https://github.com/settings/personal-access-tokens/new
 2. Select public repositories
-3. Add new token as the environment variable `GH_ODD_PAT`
+3. Add new token as the environment variable specified by `TOKEN_ENV_VAR` in `settings.py` (default: `GH_ODD_PAT`)
 
 ## Configuration
 
@@ -29,7 +29,7 @@ This generates `objectives_config.py` with objectives and contributors from issu
 
 `TIME_RANGE` is automatically set to the current fiscal quarter (Q1: Oct-Dec, Q2: Jan-Mar, Q3: Apr-Jun, Q4: Jul-Sep).
 
-The generated chart colors bars by PI objective (see [objectives page](https://nasa-impact.github.io/veda-odd/objectives) for details).
+The generated chart colors bars by PI objective (see the objectives page on the deployed site for details).
 
 ### Regenerating docs/objectives.md
 

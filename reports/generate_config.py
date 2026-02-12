@@ -14,9 +14,10 @@ Usage:
 import os
 import re
 from github import Github, Auth
+from settings import REPO_FULL_NAME, TOKEN_ENV_VAR
 
 
-def get_objective_issues(g: Github, repo_name: str = "NASA-IMPACT/veda-odd"):
+def get_objective_issues(g: Github, repo_name: str = REPO_FULL_NAME):
     """Fetch all issues with pi-*-objective labels using search API."""
     objectives_by_pi = {}
 
@@ -188,9 +189,9 @@ def generate_config(objectives_by_pi: dict) -> str:
 
 
 def main():
-    token = os.environ.get("GH_ODD_PAT") or os.environ.get("GITHUB_TOKEN")
+    token = os.environ.get(TOKEN_ENV_VAR) or os.environ.get("GITHUB_TOKEN")
     if not token:
-        raise ValueError("Set GH_ODD_PAT or GITHUB_TOKEN environment variable")
+        raise ValueError(f"Set {TOKEN_ENV_VAR} or GITHUB_TOKEN environment variable")
 
     auth = Auth.Token(token)
     g = Github(auth=auth)

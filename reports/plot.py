@@ -7,6 +7,7 @@ from matplotlib.patches import Patch
 from matplotlib.ticker import MaxNLocator
 
 from config import get_current_pi, OBJECTIVES
+from settings import TEAM_NAME, TEAM_DISPLAY_NAME, OBJECTIVES_PAGE_URL
 
 
 # Color palette for objectives (cycles if more than 10 objectives)
@@ -56,7 +57,7 @@ def get_objective_titles(pi: str) -> dict:
     length = 100
     for obj in objectives:
         title = obj["title"]
-        # Strip "ODD PI X.Y Objective N: " prefix if present
+        # Strip "TEAM PI X.Y Objective N: " prefix if present
         if ": " in title:
             title = title.split(": ", 1)[1]
         # Strip emojis (unicode emoji ranges)
@@ -141,7 +142,7 @@ def main(pi: str = None, show_labels: bool = False):
     plt.subplots_adjust(left=0.3)
 
     ax.set_title(
-        f"{pi.upper()} ODD's commits to the default branch",
+        f"{pi.upper()} {TEAM_NAME}'s commits to the default branch",
         fontsize=24,
         fontweight="bold",
     )
@@ -167,12 +168,12 @@ def main(pi: str = None, show_labels: bool = False):
     # Caveats and link in bottom right of plot area
     caveats = (
         "Caveats:\n"
-        "- Only community-governed open source repositories are tracked (not ODSI-specific repos)\n"
+        "- Only community-governed open source repositories are tracked\n"
         "- Merged PRs counted as one commit\n"
         "- Individual changes may span multiple PRs\n"
         "- Split bars indicate repos in multiple objectives\n"
-        "- Includes all open source work by VEDA/EODC ODD team members, not only ODSI-funded work\n\n"
-        "Objective details: nasa-impact.github.io/veda-odd/objectives"
+        f"- Includes all open source work by {TEAM_DISPLAY_NAME} team members\n\n"
+        f"Objective details: {OBJECTIVES_PAGE_URL.removeprefix('https://')}"
     )
     ax.text(
         1.0,

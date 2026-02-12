@@ -15,6 +15,7 @@ from config import (
     get_repos_for_pi,
     get_contributors_for_pi,
 )
+from settings import TOKEN_ENV_VAR
 
 
 def get_commits_for_repo_author(
@@ -153,5 +154,5 @@ def main(token: str = None, pi: str = None, max_workers: int = 10):
 
 
 if __name__ == "__main__":
-    token = os.environ.get("GH_ODD_PAT") or os.environ.get("GITHUB_TOKEN")
+    token = os.environ.get(TOKEN_ENV_VAR) or os.environ.get("GITHUB_TOKEN")
     main(token=token)

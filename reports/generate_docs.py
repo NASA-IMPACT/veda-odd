@@ -7,6 +7,7 @@ Usage:
 """
 
 from config import OBJECTIVES
+from settings import REPO_URL
 
 
 def generate_objectives_md() -> str:
@@ -46,7 +47,7 @@ def generate_objectives_md() -> str:
                 repos = ", ".join(r for _, r in obj["repos"]) if obj["repos"] else "-"
 
                 lines.append(
-                    f"| [#{num}](https://github.com/NASA-IMPACT/veda-odd/issues/{num}) | {title} | {contributors} | {repos} |"
+                    f"| [#{num}]({REPO_URL}/issues/{num}) | {title} | {contributors} | {repos} |"
                 )
 
             lines.append("")
@@ -75,7 +76,7 @@ def generate_objectives_md() -> str:
                 contributors = ", ".join(u for _, u in obj["contributors"])
 
                 lines.append(
-                    f"| [#{num}](https://github.com/NASA-IMPACT/veda-odd/issues/{num}) | {title} | {state} | {contributors} |"
+                    f"| [#{num}]({REPO_URL}/issues/{num}) | {title} | {state} | {contributors} |"
                 )
 
             lines.append("")
@@ -101,7 +102,7 @@ def generate_objectives_md() -> str:
     lines.append("## Configuration")
     lines.append("")
     lines.append(
-        "Objectives are configured in [`reports/config.py`](https://github.com/NASA-IMPACT/veda-odd/blob/main/reports/config.py)."
+        f"Objectives are configured in [`reports/config.py`]({REPO_URL}/blob/main/reports/config.py)."
     )
     lines.append("")
     lines.append("To regenerate this page from config:")
