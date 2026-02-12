@@ -22,14 +22,6 @@ uv run generate_config.py
 
 This generates `objectives_config.py` with objectives and contributors from issues labeled `pi-*-objective`. You'll need to manually add repos to each objective, then copy to `config.py`.
 
-### Regenerating docs/objectives.md
-
-To regenerate the objectives documentation page from config:
-
-```bash
-uv run generate_docs.py
-```
-
 ## Generating data
 
 1. Run `uv run main.py` (uses 10 parallel workers by default)
@@ -38,6 +30,14 @@ uv run generate_docs.py
 `TIME_RANGE` is automatically set to the current fiscal quarter (Q1: Oct-Dec, Q2: Jan-Mar, Q3: Apr-Jun, Q4: Jul-Sep).
 
 The generated chart colors bars by PI objective (see [objectives page](https://nasa-impact.github.io/veda-odd/objectives) for details).
+
+### Regenerating docs/objectives.md
+
+To regenerate the objectives documentation page from config:
+
+```bash
+uv run generate_docs.py
+```
 
 ## Performance
 

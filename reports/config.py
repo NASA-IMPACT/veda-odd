@@ -369,10 +369,14 @@ OBJECTIVES = {
             "state": "open",
             "contributors": [
                 ("Chuck Daniels", "chuckwondo"),
+                ("Henry Rodman", "hrodmn"),
             ],
             "repos": [
                 ("developmentseed", "titiler"),
                 ("developmentseed", "titiler-cmr"),
+                ("nasa", "python_cmr"),
+                ("nsidc", "earthaccess"),
+                ("cogeotiff", "rio-tiler"),
             ],
         },
         {
@@ -380,6 +384,7 @@ OBJECTIVES = {
             "title": "ODD PI 26.2 Objective 3: 🤗 Support community adoption of the technologies incubated by EODC and VEDA",
             "state": "open",
             "contributors": [
+                ("Chuck Daniels", "chuckwondo"),
                 ("Max Jones", "maxrjones"),
                 ("Aimee Barciauskas", "abarciauskas-bgse"),
             ],
@@ -395,6 +400,7 @@ OBJECTIVES = {
                 ("pangeo-data", "pangeo.io"),
                 ("pangeo-data", "pangeo-docker-images"),
                 ("nasa-openscapes", "earthdata-cloud-cookbook"),
+                ("virtual-zarr", "virtualzarr.cloud"),
             ],
         },
         {
@@ -424,6 +430,8 @@ OBJECTIVES = {
                 ("virtual-zarr", "virtual-tiff"),
                 ("virtual-zarr", "hrrr-parser"),
                 ("developmentseed", "virtualizarr-data-pipelines"),
+                ("virtual-zarr", "nisar-manifest-explorer"),
+                ("virtual-zarr", "mur-manifest-explorer"),
             ],
         },
         {
@@ -438,6 +446,7 @@ OBJECTIVES = {
             "repos": [
                 ("zarr-developers", "virtualizarr"),
                 ("virtual-zarr", "obspec-utils"),
+                ("virtual-zarr", "virtual-tiff"),
                 ("developmentseed", "obstore"),
                 ("developmentseed", "obspec"),
                 ("developmentseed", "zarr-datafusion-search"),
@@ -445,6 +454,15 @@ OBJECTIVES = {
                 ("developmentseed", "async-tiff"),
                 ("datafusion-contrib", "arrow-zarr"),
             ],
+        },
+        {
+            "issue_number": 319,
+            "title": "ODD PI 26.2 Objective 7: Client-side raster rendering (deck.gl-raster)",
+            "state": "open",
+            "contributors": [
+                ("Kyle Barron", "kylebarron"),
+            ],
+            "repos": [],
         },
     ],
 }
