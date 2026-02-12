@@ -33,12 +33,14 @@ jobs:
         working-directory: reports
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_ODD_PAT: ${{ secrets.GH_ODD_PAT }}
         run: uv run generate_config.py
 
       - name: Generate commit data
         working-directory: reports
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_ODD_PAT: ${{ secrets.GH_ODD_PAT }}
         run: uv run main.py
 
       - name: Generate plot
