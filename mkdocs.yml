@@ -2,6 +2,7 @@ site_name: Optimized Data Delivery
 repo_name: NASA-IMPACT/veda-odd
 site_author: ODD Team
 docs_dir: docs
+site_url: !ENV [READTHEDOCS_CANONICAL_URL, 'https://nasa-impact.github.io/veda-odd/']
 
 extra:
   version:
