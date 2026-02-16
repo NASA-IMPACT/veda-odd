@@ -15,6 +15,7 @@ nav:
   - PI Objectives: "objectives.md"
   - ODD Products: "products.md"
   - Tech Tips: "tech-tips.md"
+  - Adopting This Structure: "adopting.md"
 
 theme:
   language: en

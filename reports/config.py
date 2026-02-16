@@ -302,7 +302,7 @@ OBJECTIVES = {
             ],
             "repos": [
                 ("zarr-developers", "virtualizarr"),
-                ("virtual-zarr", "obspec-utils"),
+                ("developmentseed", "obspec-utils"),
                 ("virtual-zarr", "virtual-tiff"),
                 ("virtual-zarr", "hrrr-parser"),
                 ("developmentseed", "async-tiff"),
@@ -426,7 +426,7 @@ OBJECTIVES = {
             "repos": [
                 ("zarr-developers", "virtualizarr"),
                 ("zarr-developers", "zarr-python"),
-                ("virtual-zarr", "obspec-utils"),
+                ("developmentseed", "obspec-utils"),
                 ("virtual-zarr", "virtual-tiff"),
                 ("virtual-zarr", "hrrr-parser"),
                 ("developmentseed", "virtualizarr-data-pipelines"),
@@ -445,7 +445,7 @@ OBJECTIVES = {
             ],
             "repos": [
                 ("zarr-developers", "virtualizarr"),
-                ("virtual-zarr", "obspec-utils"),
+                ("developmentseed", "obspec-utils"),
                 ("virtual-zarr", "virtual-tiff"),
                 ("developmentseed", "obstore"),
                 ("developmentseed", "obspec"),
