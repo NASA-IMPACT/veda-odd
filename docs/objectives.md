@@ -12,7 +12,7 @@ This page tracks quarterly objectives and their related repositories across Prog
 | [#307](https://github.com/NASA-IMPACT/veda-odd/issues/307) | 📈 Finalize Design for VirtualiZarr Time Series API [Stretch:... | hrodmn | titiler, titiler-lambda-layer, titiler-md-demo |
 | [#308](https://github.com/NASA-IMPACT/veda-odd/issues/308) | 🤪 Expand virtualization support for quirky datasets | maxrjones | virtualizarr, zarr-python, obspec-utils, virtual-tiff, hrrr-parser, virtualizarr-data-pipelines, nisar-manifest-explorer, mur-manifest-explorer |
 | [#309](https://github.com/NASA-IMPACT/veda-odd/issues/309) | 🛰️ Propose unified strategy for virtualization of orbital sw... | sharkinsspatial, maxrjones, hrodmn | virtualizarr, obspec-utils, virtual-tiff, obstore, obspec, zarr-datafusion-search, geoarrow-rs, async-tiff, arrow-zarr |
-| [#319](https://github.com/NASA-IMPACT/veda-odd/issues/319) | Client-side raster rendering (deck.gl-raster) | kylebarron | - |
+| [#319](https://github.com/NASA-IMPACT/veda-odd/issues/319) | 🌐 Client-side raster rendering (deck.gl-raster) | kylebarron | - |
 
 ---
 
