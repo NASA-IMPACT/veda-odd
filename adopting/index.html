@@ -1,0 +1,1702 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="ODD Team">
+      
+      
+        <link rel="canonical" href="https://nasa-impact.github.io/veda-odd/adopting/">
+      
+      
+        <link rel="prev" href="../tech-tips/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Adopting This Structure - Optimized Data Delivery</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#adopting-the-veda-odd-reporting-structure" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Optimized Data Delivery" class="md-header__button md-logo" aria-label="Optimized Data Delivery" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Optimized Data Delivery
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Adopting This Structure
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Optimized Data Delivery" class="md-nav__button md-logo" aria-label="Optimized Data Delivery" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Optimized Data Delivery
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ODD Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fy26-roadmap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FY26 Roadmap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../objectives/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PI Objectives
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../products/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ODD Products
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tech-tips/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tech Tips
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adopting This Structure
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adopting This Structure
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-fork-or-copy-the-repository-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Fork or copy the repository structure
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-set-up-issue-driven-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Set up issue-driven objectives
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 2: Set up issue-driven objectives">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-an-issue-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create an issue template
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#label-conventions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Label conventions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-configure-team-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Configure team settings
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-configure-the-reporting-scripts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: Configure the reporting scripts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 4: Configure the reporting scripts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#define-pi-date-ranges" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Define PI date ranges
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#define-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Define objectives
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auto-generate-config-from-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Auto-generate config from issues
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-python-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Install Python dependencies
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5-run-the-reporting-pipeline-locally" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 5: Run the reporting pipeline locally
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 5: Run the reporting pipeline locally">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#environment-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Environment variables
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-6-set-up-mkdocs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 6: Set up MkDocs
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 6: Set up MkDocs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#root-pyprojecttoml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Root pyproject.toml
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mkdocsyml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        mkdocs.yml
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preview-locally" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Preview locally
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-7-automate-with-github-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 7: Automate with GitHub Actions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 7: Automate with GitHub Actions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#report-generation-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Report generation workflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deployment-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deployment workflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#repository-secrets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Repository secrets
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-8-quarterly-maintenance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 8: Quarterly maintenance
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#customization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Customization
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Customization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#team-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Team settings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adjusting-the-chart" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adjusting the chart
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tracking-different-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tracking different metrics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changing-the-schedule" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Changing the schedule
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-fork-or-copy-the-repository-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Fork or copy the repository structure
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-set-up-issue-driven-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Set up issue-driven objectives
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 2: Set up issue-driven objectives">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-an-issue-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create an issue template
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#label-conventions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Label conventions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-configure-team-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Configure team settings
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-configure-the-reporting-scripts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: Configure the reporting scripts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 4: Configure the reporting scripts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#define-pi-date-ranges" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Define PI date ranges
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#define-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Define objectives
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auto-generate-config-from-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Auto-generate config from issues
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-python-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Install Python dependencies
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5-run-the-reporting-pipeline-locally" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 5: Run the reporting pipeline locally
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 5: Run the reporting pipeline locally">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#environment-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Environment variables
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-6-set-up-mkdocs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 6: Set up MkDocs
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 6: Set up MkDocs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#root-pyprojecttoml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Root pyproject.toml
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mkdocsyml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        mkdocs.yml
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preview-locally" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Preview locally
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-7-automate-with-github-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 7: Automate with GitHub Actions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 7: Automate with GitHub Actions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#report-generation-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Report generation workflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deployment-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deployment workflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#repository-secrets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Repository secrets
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-8-quarterly-maintenance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 8: Quarterly maintenance
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#customization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Customization
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Customization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#team-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Team settings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adjusting-the-chart" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adjusting the chart
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tracking-different-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tracking different metrics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changing-the-schedule" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Changing the schedule
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="adopting-the-veda-odd-reporting-structure">Adopting the VEDA-ODD Reporting Structure</h1>
+<p>This guide walks through how to adopt the automated reporting system used by VEDA-ODD for your own team or project. The system tracks open-source contributions across GitHub repositories, generates visualizations, and publishes a documentation site -- all driven by GitHub Issues and Actions.</p>
+<h2 id="overview">Overview</h2>
+<p>The reporting structure ties together four pieces:</p>
+<ol>
+<li><strong>GitHub Issues</strong> define quarterly objectives, contributors, and repositories.</li>
+<li><strong>Python scripts</strong> query the GitHub API for commit data and generate charts and documentation.</li>
+<li><strong>GitHub Actions</strong> run the scripts on a schedule and open a PR with the results.</li>
+<li><strong>MkDocs</strong> publishes the documentation site to GitHub Pages.</li>
+</ol>
+<div class="highlight"><pre><span></span><code>GitHub Issues (labeled objectives)
+        │
+        ▼
+┌──────────────────┐   weekly cron
+│  generate_config │◄──────────────── GitHub Actions
+└────────┬─────────┘
+         ▼
+┌──────────────────┐
+│     main.py      │  query commits via GitHub API
+└────────┬─────────┘
+         ▼
+┌──────────────────┐
+│     plot.py      │  create bar chart (matplotlib)
+└────────┬─────────┘
+         ▼
+┌──────────────────┐
+│  generate_docs   │  write objectives.md
+└────────┬─────────┘
+         ▼
+   Pull Request ──► merge ──► MkDocs deploys to GitHub Pages
+</code></pre></div>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li>A GitHub organization or repository where your team works</li>
+<li>Python 3.11+</li>
+<li><a href="https://docs.astral.sh/uv/">uv</a> (fast Python package manager)</li>
+<li>A GitHub fine-grained personal access token (PAT) with public repository read access</li>
+</ul>
+<h2 id="step-1-fork-or-copy-the-repository-structure">Step 1: Fork or copy the repository structure</h2>
+<p>Start by reproducing this directory layout in your own repo:</p>
+<div class="highlight"><pre><span></span><code>your-repo/
+├── .github/
+│   ├── ISSUE_TEMPLATE/
+│   │   └── objective.md          # Issue template for objectives
+│   └── workflows/
+│       ├── deploy.yml            # MkDocs deployment
+│       └── update-reports.yml    # Report generation
+├── docs/
+│   ├── index.md
+│   ├── objectives.md             # Auto-generated (do not edit by hand)
+│   └── images/                   # Auto-generated charts
+├── reports/
+│   ├── settings.py               # Team-specific settings (edit this first)
+│   ├── config.py                 # Objectives, repos, contributors, dates
+│   ├── main.py                   # Fetch commit data from GitHub
+│   ├── plot.py                   # Generate visualization
+│   ├── generate_config.py        # Regenerate config from GitHub issues
+│   ├── generate_docs.py          # Generate objectives.md
+│   ├── pyproject.toml            # Python dependencies for reports
+│   └── output/                   # CSV output directory
+├── mkdocs.yml
+└── pyproject.toml                # Root project dependencies (MkDocs, etc.)
+</code></pre></div>
+<h2 id="step-2-set-up-issue-driven-objectives">Step 2: Set up issue-driven objectives</h2>
+<p>Objectives are GitHub Issues with a specific labeling convention. Each objective issue needs:</p>
+<ul>
+<li><strong>A label</strong> matching the pattern <code>pi-{YY}.{Q}-objective</code> (e.g., <code>pi-26.2-objective</code> for FY26 Q2).</li>
+<li><strong>Assignees</strong> set to the contributors working on that objective.</li>
+<li><strong>Repository labels</strong> in the format <code>repo:org/repo-name</code> for each tracked repository.</li>
+</ul>
+<h3 id="create-an-issue-template">Create an issue template</h3>
+<p>Add <code>.github/ISSUE_TEMPLATE/objective.md</code> so team members can propose objectives with a consistent structure:</p>
+<div class="highlight"><pre><span></span><code>---
+name: Propose objective
+about: Objective for the team
+title: &#39;PI 26.2 Objective X: ...&#39;
+labels: pi-26.2-objective
+<span class="gu">assignees: &#39;&#39;</span>
+<span class="gu">---</span>
+
+<span class="gu">### Motivation</span>
+
+<span class="gu">### Description</span>
+
+<span class="gu">### Acceptance Criteria</span>
+
+<span class="k">- [ ]</span> ...
+
+<span class="gu">### Sub-tasks</span>
+
+<span class="k">- [ ]</span> ...
+</code></pre></div>
+<p>Update the <code>title</code> and <code>labels</code> fields each quarter to match the current PI.</p>
+<h3 id="label-conventions">Label conventions</h3>
+<p>Create these labels in your repository:</p>
+<table>
+<thead>
+<tr>
+<th>Label</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>pi-{YY}.{Q}-objective</code></td>
+<td>Tags an issue as a quarterly objective</td>
+</tr>
+<tr>
+<td><code>repo:org/repo-name</code></td>
+<td>Maps a repository to an objective</td>
+</tr>
+</tbody>
+</table>
+<p>The <code>generate_config.py</code> script searches for issues using the <code>pi-*-objective</code> label pattern, so sticking to this convention is required.</p>
+<h2 id="step-3-configure-team-settings">Step 3: Configure team settings</h2>
+<p>Open <code>reports/settings.py</code> and update the values for your team:</p>
+<div class="highlight"><pre><span></span><code><span class="n">GITHUB_ORG</span> <span class="o">=</span> <span class="s2">&quot;your-org&quot;</span>                    <span class="c1"># GitHub org that owns the repo</span>
+<span class="n">GITHUB_REPO</span> <span class="o">=</span> <span class="s2">&quot;your-repo&quot;</span>                  <span class="c1"># repo where objective issues live</span>
+<span class="n">TEAM_NAME</span> <span class="o">=</span> <span class="s2">&quot;Your Team&quot;</span>                    <span class="c1"># short name for chart titles</span>
+<span class="n">TEAM_DISPLAY_NAME</span> <span class="o">=</span> <span class="s2">&quot;Your Full Team Name&quot;</span>  <span class="c1"># used in chart annotations</span>
+<span class="n">SITE_URL</span> <span class="o">=</span> <span class="s2">&quot;your-org.github.io/your-repo&quot;</span>  <span class="c1"># GitHub Pages URL (no https://)</span>
+<span class="n">TOKEN_ENV_VAR</span> <span class="o">=</span> <span class="s2">&quot;GH_YOUR_TEAM_PAT&quot;</span>        <span class="c1"># env var name for the GitHub PAT</span>
+</code></pre></div>
+<p>This is the <strong>only Python file</strong> you need to edit to adopt the reporting system. All other scripts import their team-specific values from here. The derived values (<code>REPO_FULL_NAME</code>, <code>REPO_URL</code>, <code>OBJECTIVES_PAGE_URL</code>) are computed automatically.</p>
+<p>You will also need to update the secret name in <code>.github/workflows/update-reports.yml</code> to match your <code>TOKEN_ENV_VAR</code> value, since the workflow YAML cannot import from Python.</p>
+<h2 id="step-4-configure-the-reporting-scripts">Step 4: Configure the reporting scripts</h2>
+<h3 id="define-pi-date-ranges">Define PI date ranges</h3>
+<p>In <code>reports/config.py</code>, define the date ranges for each Program Increment (PI). VEDA-ODD uses a fiscal-quarter calendar:</p>
+<div class="highlight"><pre><span></span><code><span class="n">PI_DATES</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;pi-26.1&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;20251018&quot;</span><span class="p">,</span> <span class="s2">&quot;20260117&quot;</span><span class="p">),</span>
+    <span class="s2">&quot;pi-26.2&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;20260118&quot;</span><span class="p">,</span> <span class="s2">&quot;20260425&quot;</span><span class="p">),</span>
+    <span class="c1"># Add your own quarters here</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Dates are in <code>YYYYMMDD</code> format. The <code>get_current_pi()</code> helper determines which PI is active based on today's date.</p>
+<h3 id="define-objectives">Define objectives</h3>
+<p>The <code>OBJECTIVES</code> dictionary in <code>config.py</code> is the source of truth for what gets tracked. Each entry maps a PI to a list of objectives:</p>
+<div class="highlight"><pre><span></span><code><span class="n">OBJECTIVES</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;pi-26.2&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;issue_number&quot;</span><span class="p">:</span> <span class="mi">304</span><span class="p">,</span>
+            <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Objective description&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;state&quot;</span><span class="p">:</span> <span class="s2">&quot;open&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;contributors&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">(</span><span class="s2">&quot;Display Name&quot;</span><span class="p">,</span> <span class="s2">&quot;github_username&quot;</span><span class="p">),</span>
+            <span class="p">],</span>
+            <span class="s2">&quot;repos&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">(</span><span class="s2">&quot;org-name&quot;</span><span class="p">,</span> <span class="s2">&quot;repo-name&quot;</span><span class="p">),</span>
+            <span class="p">],</span>
+        <span class="p">},</span>
+        <span class="c1"># more objectives ...</span>
+    <span class="p">],</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>You can maintain this manually or auto-generate it with <code>generate_config.py</code> (see below).</p>
+<h3 id="auto-generate-config-from-issues">Auto-generate config from issues</h3>
+<p>Run <code>generate_config.py</code> to pull objectives, contributors, and repo mappings from your GitHub issues:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>reports
+<span class="nb">export</span><span class="w"> </span><span class="nv">GH_YOUR_TEAM_PAT</span><span class="o">=</span>ghp_your_token_here<span class="w">  </span><span class="c1"># must match TOKEN_ENV_VAR in settings.py</span>
+uv<span class="w"> </span>run<span class="w"> </span>generate_config.py
+</code></pre></div>
+<p>This produces an <code>objectives_config.py</code> file. Review it, then copy the relevant sections into <code>config.py</code>. The script extracts:</p>
+<ul>
+<li>Objective metadata from issue titles</li>
+<li>Contributors from issue assignees</li>
+<li>Repository mappings from <code>repo:org/repo-name</code> labels</li>
+</ul>
+<h3 id="install-python-dependencies">Install Python dependencies</h3>
+<p>The reports scripts have their own <code>pyproject.toml</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="k">[project]</span>
+<span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;reports&quot;</span>
+<span class="n">requires-python</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;&gt;=3.11&quot;</span>
+<span class="n">dependencies</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">&quot;matplotlib&gt;=3.10.3&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;pandas&gt;=2.3.0&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;pygithub&gt;=2.6.1&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+</code></pre></div>
+<p>Run <code>uv sync</code> in the <code>reports/</code> directory to install them.</p>
+<h2 id="step-5-run-the-reporting-pipeline-locally">Step 5: Run the reporting pipeline locally</h2>
+<p>The pipeline has four stages that must run in order:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>reports
+
+<span class="c1"># 1. (Optional) Regenerate config from GitHub issues</span>
+uv<span class="w"> </span>run<span class="w"> </span>generate_config.py
+
+<span class="c1"># 2. Fetch commit data for the current PI</span>
+uv<span class="w"> </span>run<span class="w"> </span>main.py
+
+<span class="c1"># 3. Generate the bar chart</span>
+uv<span class="w"> </span>run<span class="w"> </span>plot.py
+
+<span class="c1"># 4. Generate the objectives documentation page</span>
+uv<span class="w"> </span>run<span class="w"> </span>generate_docs.py
+</code></pre></div>
+<p>After running, you will have:</p>
+<table>
+<thead>
+<tr>
+<th>Output</th>
+<th>Location</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Commit CSV</td>
+<td><code>reports/output/pi-{PI}.csv</code></td>
+</tr>
+<tr>
+<td>Bar chart PNG</td>
+<td><code>docs/images/pi-{PI}.png</code></td>
+</tr>
+<tr>
+<td>Objectives page</td>
+<td><code>docs/objectives.md</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="environment-variables">Environment variables</h3>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Value of <code>TOKEN_ENV_VAR</code> in <code>settings.py</code></td>
+<td>Yes</td>
+<td>Fine-grained PAT with public repo read access</td>
+</tr>
+<tr>
+<td><code>GITHUB_TOKEN</code></td>
+<td>In CI only</td>
+<td>Automatically provided by GitHub Actions</td>
+</tr>
+</tbody>
+</table>
+<p>To create a PAT: go to <a href="https://github.com/settings/personal-access-tokens/new">GitHub token settings</a>, select <strong>Public Repositories</strong>, and generate the token.</p>
+<h2 id="step-6-set-up-mkdocs">Step 6: Set up MkDocs</h2>
+<h3 id="root-pyprojecttoml">Root <code>pyproject.toml</code></h3>
+<p>The documentation site dependencies live in the root project file:</p>
+<div class="highlight"><pre><span></span><code><span class="k">[dependency-groups]</span>
+<span class="n">dev</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">&quot;mkdocs&gt;=1.6.1&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;mkdocs-material[imaging]&gt;=9.6.3&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;mike&gt;=2.1.3&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+</code></pre></div>
+<h3 id="mkdocsyml"><code>mkdocs.yml</code></h3>
+<p>Configure your site. At a minimum, include the objectives page in your nav:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">site_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Your Team Reports</span>
+<span class="nt">nav</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;index.md&quot;</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">PI Objectives</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;objectives.md&quot;</span>
+
+<span class="nt">theme</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">material</span>
+
+<span class="nt">plugins</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">search</span>
+</code></pre></div>
+<h3 id="preview-locally">Preview locally</h3>
+<div class="highlight"><pre><span></span><code>uv<span class="w"> </span>run<span class="w"> </span>mkdocs<span class="w"> </span>serve
+</code></pre></div>
+<p>This starts a local dev server at <code>http://127.0.0.1:8000</code> with live reloading.</p>
+<h2 id="step-7-automate-with-github-actions">Step 7: Automate with GitHub Actions</h2>
+<h3 id="report-generation-workflow">Report generation workflow</h3>
+<p>Create <code>.github/workflows/update-reports.yml</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Update Reports</span>
+
+<span class="nt">on</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">schedule</span><span class="p">:</span>
+<span class="w">    </span><span class="c1"># Run every Monday at 9 AM ET (14:00 UTC)</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">cron</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;0</span><span class="nv"> </span><span class="s">14</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">1&#39;</span>
+<span class="w">  </span><span class="nt">push</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">branches</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main</span>
+<span class="w">    </span><span class="nt">paths</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;reports/*.py&#39;</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;reports/pyproject.toml&#39;</span>
+<span class="w">  </span><span class="nt">workflow_dispatch</span><span class="p">:</span>
+
+<span class="nt">jobs</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">update-reports</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
+<span class="w">    </span><span class="nt">permissions</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">contents</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">write</span>
+<span class="w">      </span><span class="nt">pull-requests</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">write</span>
+
+<span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v5</span>
+
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">astral-sh/setup-uv@v7</span>
+<span class="w">        </span><span class="nt">with</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;0.9.*&quot;</span>
+<span class="w">          </span><span class="nt">enable-cache</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Generate config data</span>
+<span class="w">        </span><span class="nt">working-directory</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">reports</span>
+<span class="w">        </span><span class="nt">env</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">GITHUB_TOKEN</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ secrets.GITHUB_TOKEN }}</span>
+<span class="w">          </span><span class="nt">GH_ODD_PAT</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ secrets.GH_ODD_PAT }}</span><span class="w">  </span><span class="c1"># Rename to match TOKEN_ENV_VAR</span>
+<span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uv run generate_config.py</span>
+
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Generate commit data</span>
+<span class="w">        </span><span class="nt">working-directory</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">reports</span>
+<span class="w">        </span><span class="nt">env</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">GITHUB_TOKEN</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ secrets.GITHUB_TOKEN }}</span>
+<span class="w">          </span><span class="nt">GH_ODD_PAT</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ secrets.GH_ODD_PAT }}</span><span class="w">  </span><span class="c1"># Rename to match TOKEN_ENV_VAR</span>
+<span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uv run main.py</span>
+
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Generate plot</span>
+<span class="w">        </span><span class="nt">working-directory</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">reports</span>
+<span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uv run plot.py</span>
+
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Generate docs page</span>
+<span class="w">        </span><span class="nt">working-directory</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">reports</span>
+<span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uv run generate_docs.py</span>
+
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Create Pull Request</span>
+<span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">peter-evans/create-pull-request@v7</span>
+<span class="w">        </span><span class="nt">with</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">commit-message</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Update</span><span class="nv"> </span><span class="s">reports&quot;</span>
+<span class="w">          </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Update</span><span class="nv"> </span><span class="s">reports&quot;</span>
+<span class="w">          </span><span class="nt">body</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">            </span><span class="no">Automated update of commit reports and visualization.</span>
+<span class="w">          </span><span class="nt">branch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">update-reports</span>
+<span class="w">          </span><span class="nt">add-paths</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">            </span><span class="no">reports/output/</span>
+<span class="w">            </span><span class="no">docs/images/</span>
+<span class="w">            </span><span class="no">docs/objectives.md</span>
+</code></pre></div>
+<h3 id="deployment-workflow">Deployment workflow</h3>
+<p>Create <code>.github/workflows/deploy.yml</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Deploy docs</span>
+
+<span class="nt">on</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">push</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">branches</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main</span>
+
+<span class="nt">jobs</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">deploy</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
+<span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v5</span>
+
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">astral-sh/setup-uv@v7</span>
+<span class="w">        </span><span class="nt">with</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;0.9.*&quot;</span>
+<span class="w">          </span><span class="nt">enable-cache</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uv run mkdocs gh-deploy --force --strict</span>
+</code></pre></div>
+<h3 id="repository-secrets">Repository secrets</h3>
+<p>Add the following secret in your repository settings (<strong>Settings &gt; Secrets and variables &gt; Actions</strong>):</p>
+<table>
+<thead>
+<tr>
+<th>Secret</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Secret matching <code>TOKEN_ENV_VAR</code> in <code>settings.py</code></td>
+<td>Your fine-grained personal access token (default: <code>GH_ODD_PAT</code>)</td>
+</tr>
+</tbody>
+</table>
+<p><code>GITHUB_TOKEN</code> is provided automatically by GitHub Actions.</p>
+<h2 id="step-8-quarterly-maintenance">Step 8: Quarterly maintenance</h2>
+<p>At the start of each quarter:</p>
+<ol>
+<li><strong>Update the issue template</strong> -- change the label and title prefix to the new PI (e.g., <code>pi-26.3-objective</code>).</li>
+<li><strong>Create objective issues</strong> -- use the template to propose and finalize objectives. Assign contributors and add <code>repo:org/repo-name</code> labels.</li>
+<li><strong>Add the new PI date range</strong> to <code>PI_DATES</code> in <code>config.py</code>.</li>
+<li><strong>Run <code>generate_config.py</code></strong> or wait for the weekly automation to pick up the new issues.</li>
+</ol>
+<p>The weekly cron job handles everything else: fetching commit data, generating the chart, updating the docs page, and opening a PR for review.</p>
+<h2 id="customization">Customization</h2>
+<h3 id="team-settings">Team settings</h3>
+<p>All team-specific values (org name, repo name, team display name, PAT variable name, site URL) are centralized in <code>reports/settings.py</code>. This is the first file to edit when adopting the system for a new team. The workflow YAML file (<code>.github/workflows/update-reports.yml</code>) must also be updated to use your team's secret name for the GitHub PAT.</p>
+<h3 id="adjusting-the-chart">Adjusting the chart</h3>
+<p><code>plot.py</code> generates a horizontal bar chart color-coded by objective. You can customize:</p>
+<ul>
+<li><strong>Colors</strong>: Edit the <code>COLORS</code> list (10-color palette that cycles).</li>
+<li><strong>Figure size</strong>: Change the <code>figsize</code> parameter (default: 16x10 inches).</li>
+<li><strong>DPI</strong>: Adjust output resolution (default: 150).</li>
+<li><strong>Caveats text</strong>: Update the annotation at the bottom of the chart.</li>
+</ul>
+<p>Repositories that appear in multiple objectives get split bars showing proportional contribution.</p>
+<h3 id="tracking-different-metrics">Tracking different metrics</h3>
+<p><code>main.py</code> collects commit-level data including SHA, message, author, and total changes (additions + deletions). The output CSV can be extended or replaced with other metrics by modifying the <code>get_commits_for_repo_user</code> function.</p>
+<h3 id="changing-the-schedule">Changing the schedule</h3>
+<p>Edit the <code>cron</code> expression in <code>update-reports.yml</code>. For example, to run daily at noon UTC:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">schedule</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">cron</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;0</span><span class="nv"> </span><span class="s">12</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*&#39;</span>
+</code></pre></div>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<table>
+<thead>
+<tr>
+<th>Problem</th>
+<th>Solution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>generate_config.py</code> finds no issues</td>
+<td>Verify your issues have labels matching <code>pi-*-objective</code></td>
+</tr>
+<tr>
+<td>Rate limiting errors in <code>main.py</code></td>
+<td>Ensure your PAT env var (see <code>TOKEN_ENV_VAR</code> in <code>settings.py</code>) is set. The script uses 10 parallel workers; reduce this if needed</td>
+</tr>
+<tr>
+<td>Chart is empty</td>
+<td>Check that <code>reports/output/pi-{PI}.csv</code> has data. Verify date ranges in <code>PI_DATES</code></td>
+</tr>
+<tr>
+<td>PR not created by Actions</td>
+<td>Confirm the workflow has <code>contents: write</code> and <code>pull-requests: write</code> permissions</td>
+</tr>
+<tr>
+<td>MkDocs build fails</td>
+<td>Run <code>uv run mkdocs build --strict</code> locally to see errors</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.code.annotate", "content.code.copy", "navigation.indexes", "navigation.instant", "navigation.tracking", "search.suggest", "search.share"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
