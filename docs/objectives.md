@@ -17,7 +17,7 @@ This page tracks quarterly objectives and their related repositories across Prog
 ---
 
 <details markdown>
-<summary>PI 26.1 (5 objectives, 3 closed)</summary>
+<summary>PI 26.1 (6 objectives, 3 closed)</summary>
 
 | # | Objective | State | Contributors |
 |---|-----------|-------|--------------|
@@ -26,6 +26,7 @@ This page tracks quarterly objectives and their related repositories across Prog
 | [#246](https://github.com/NASA-IMPACT/veda-odd/issues/246) | 🤖 Support virtualization of additional data produc... | closed | sharkinsspatial, maxrjones, jbusecke |
 | [#247](https://github.com/NASA-IMPACT/veda-odd/issues/247) | 🛰 Explore scalable, cloud native approaches for se... | closed | sharkinsspatial, kylebarron |
 | [#248](https://github.com/NASA-IMPACT/veda-odd/issues/248) | 🤗 Support community adoption of the technologies i... | closed | sharkinsspatial, chuckwondo, maxrjones, abarciauskas-bgse |
+| [#331](https://github.com/NASA-IMPACT/veda-odd/issues/331) | WASM chunk codec research and PoC | open |  |
 
 </details>
 
