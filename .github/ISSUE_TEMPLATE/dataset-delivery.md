@@ -97,18 +97,20 @@ assignees: ''
 - [ ] **1. Access data and exploration**
   - [ ] Identify data source/location
   - [ ] Verify access permissions
+  - [ ] Determine access patterns and use cases (how will the data be used and what services are required to fulfill those use cases)
   - [ ] Initial data inspection
+  - [ ] If needed, design cloud-optimized structure
 
 - [ ] **2. Integration**
-  - [ ] Define ingestion pipeline
-  - [ ] Visualize data using one of the tiling services
+  - [ ] Design ingestion + processing pipeline
+  - [ ] Implement pipeline
+  - [ ] Test analyzing and visualizing data using appropriate services
 
 - [ ] **3. Exploring ingested data (Jupyter Notebook)**
-  - [ ] Create notebook for validation
-  - [ ] Visualize dataset
+  - [ ] Create notebooks demonstrating validation, visualization and analysis
   - [ ] Document findings
 
-- [ ] **4. Benchmarking original vs ingested (Jupyter Notebook)**
+- [ ] **4. [Optional] Benchmarking original vs ingested (Jupyter Notebook)**
   - [ ] Compare performance
 
 - [ ] **5. Demo**
