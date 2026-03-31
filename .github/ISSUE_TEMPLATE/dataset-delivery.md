@@ -91,6 +91,30 @@ assignees: ''
 ```
 [Enter details about what's driving your deadline - e.g., publication, conference, stakeholder requirements]
 ```
+## Progress Tracking
+
+### Create Sub-issues
+- [ ] **1. Access data and exploration**
+  - [ ] Identify data source/location
+  - [ ] Verify access permissions
+  - [ ] Initial data inspection
+
+- [ ] **2. Integration**
+  - [ ] Define ingestion pipeline
+  - [ ] Visualize data using one of the tiling services
+
+- [ ] **3. Exploring ingested data (Jupyter Notebook)**
+  - [ ] Create notebook for validation
+  - [ ] Visualize dataset
+  - [ ] Document findings
+
+- [ ] **4. Benchmarking original vs ingested (Jupyter Notebook)**
+  - [ ] Compare performance
+
+- [ ] **5. Demo**
+  - [ ] Prepare demo use case
+  - [ ] Generate visual outputs
+  - [ ] Share/demo with stakeholders
 
 ## Other relevant information
 
