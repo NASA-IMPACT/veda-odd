@@ -12,9 +12,12 @@ on:
       - 'reports/pyproject.toml'
   workflow_dispatch:
 
+permissions: {}
+
 jobs:
   update-reports:
     runs-on: ubuntu-latest
+    environment: gh-stats
     permissions:
       contents: write
       pull-requests: write

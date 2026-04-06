@@ -8,10 +8,14 @@ on:
     branches:
       - main
 
+permissions: {}
+
 jobs:
   build:
     name: Deploy docs
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout main
         uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd # v5
@@ -26,3 +30,4 @@ jobs:
 
       - name: Deploy docs
         run: uv run mkdocs gh-deploy --force --strict
+        env:          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
