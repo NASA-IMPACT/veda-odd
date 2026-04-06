@@ -21,14 +21,16 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v5
+        uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd # v5
+        with:
+          persist-credentials: false
 
       - name: Get current date
         id: date
         run: echo "date=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
 
       - name: Install uv
-        uses: astral-sh/setup-uv@v7
+        uses: astral-sh/setup-uv@37802adc94f370d6bfd71619e3f0bf239e1f3b78 # v7
         with:
           version: "0.9.*"
           enable-cache: true
@@ -56,7 +58,7 @@ jobs:
         run: uv run generate_docs.py
 
       - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v7.0.11
+        uses: peter-evans/create-pull-request@22a9089034f40e5a961c8808d113e2c98fb63676 # v7.0.11
         with:
           commit-message: "Update reports for ${{ github.run_id }}"
           title: "Update reports (${{ steps.date.outputs.date }})"
