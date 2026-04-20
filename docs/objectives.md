@@ -7,12 +7,13 @@ This page tracks quarterly objectives and their related repositories across Prog
 | # | Objective | Contributors | Repos |
 |---|-----------|--------------|-------|
 | [#304](https://github.com/NASA-IMPACT/veda-odd/issues/304) | 🤖Create virtual Zarr stores for high priority dataset(s) | tylanderson | virtualizarr-data-pipelines |
-| [#305](https://github.com/NASA-IMPACT/veda-odd/issues/305) | 🛠️ TiTiler-CMR maintenance + performance | chuckwondo, hrodmn | titiler, titiler-cmr, python_cmr, earthaccess, rio-tiler |
-| [#306](https://github.com/NASA-IMPACT/veda-odd/issues/306) | 🤗 Support community adoption of the technologies incubated b... | chuckwondo, maxrjones, abarciauskas-bgse | geozarr-spec, zarr-python, multiscales, geo-proj, spatial, datacube-guide, geozarr-examples, warp-resample-profiling, pangeo.io, pangeo-docker-images, earthdata-cloud-cookbook, virtualzarr.cloud |
+| [#305](https://github.com/NASA-IMPACT/veda-odd/issues/305) | 🛠️ TiTiler-CMR maintenance + performance | chuckwondo, hrodmn | titiler, titiler-cmr, python_cmr, rio-tiler, earthaccess |
+| [#306](https://github.com/NASA-IMPACT/veda-odd/issues/306) | 🤗 Support community adoption of the technologies incubated b... | chuckwondo, maxrjones, abarciauskas-bgse | geozarr-spec, zarr-python, multiscales, geo-proj, spatial, datacube-guide, geozarr-examples, warp-resample-profiling, pangeo.io, pangeo-docker-images, earthdata-cloud-cookbook, virtualzarr.cloud, lithops |
 | [#307](https://github.com/NASA-IMPACT/veda-odd/issues/307) | 📈 Finalize Design for VirtualiZarr Time Series API [Stretch:... | hrodmn | titiler, titiler-lambda-layer, titiler-md-demo |
 | [#308](https://github.com/NASA-IMPACT/veda-odd/issues/308) | 🤪 Expand virtualization support for quirky datasets | maxrjones | virtualizarr, zarr-python, obspec-utils, virtual-tiff, hrrr-parser, virtualizarr-data-pipelines, nisar-manifest-explorer, mur-manifest-explorer |
 | [#309](https://github.com/NASA-IMPACT/veda-odd/issues/309) | 🛰️ Propose unified strategy for virtualization of orbital sw... | sharkinsspatial, maxrjones, hrodmn | virtualizarr, obspec-utils, virtual-tiff, obstore, obspec, zarr-datafusion-search, geoarrow-rs, async-tiff, arrow-zarr |
 | [#319](https://github.com/NASA-IMPACT/veda-odd/issues/319) | 🌐 Client-side raster rendering (deck.gl-raster) | kylebarron | deck.gl-raster |
+| [#331](https://github.com/NASA-IMPACT/veda-odd/issues/331) | WASM chunk codec research and PoC | jkeifer | - |
 
 ---
 
