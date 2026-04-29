@@ -1,3 +1,4 @@
+import argparse
 import re
 from pathlib import Path
 
@@ -200,4 +201,10 @@ def main(pi: str = None, show_labels: bool = False):
 
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--pi",
+        help="PI name (e.g. pi-26.2). Defaults to the current PI.",
+    )
+    args = parser.parse_args()
+    main(pi=args.pi)

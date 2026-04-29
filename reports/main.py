@@ -3,6 +3,7 @@
 Query GitHub API for commits to repositories in parallel.
 """
 
+import argparse
 from github import Github, Auth
 from datetime import datetime
 from typing import List
@@ -154,5 +155,11 @@ def main(token: str = None, pi: str = None, max_workers: int = 10):
 
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--pi",
+        help="PI name (e.g. pi-26.2). Defaults to the current PI.",
+    )
+    args = parser.parse_args()
     token = os.environ.get(TOKEN_ENV_VAR) or os.environ.get("GITHUB_TOKEN")
-    main(token=token)
+    main(token=token, pi=args.pi)
