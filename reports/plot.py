@@ -7,7 +7,8 @@ import matplotlib.pyplot as plt
 from matplotlib.patches import Patch
 from matplotlib.ticker import MaxNLocator
 
-from config import get_current_pi, OBJECTIVES
+from config import OBJECTIVES
+from constants import get_current_pi
 from settings import TEAM_NAME, TEAM_DISPLAY_NAME, OBJECTIVES_PAGE_URL
 
 

@@ -11,11 +11,10 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 import os
 import pandas as pd
 from config import (
-    get_time_range,
-    get_current_pi,
     get_repos_for_pi,
     get_contributors_for_pi,
 )
+from constants import get_time_range, get_current_pi
 from settings import TOKEN_ENV_VAR
 
 
