@@ -10,7 +10,7 @@ from typing import List
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import os
 import pandas as pd
-from config import (
+from objectives import (
     get_repos_for_pi,
     get_contributors_for_pi,
 )

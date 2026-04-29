@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """
-Generate docs/objectives.md from config.py OBJECTIVES.
+Generate docs/objectives.md from the OBJECTIVES dataset.
 
 Usage:
     uv run generate_docs.py
 """
 
-from config import OBJECTIVES
+from objectives import OBJECTIVES
 from settings import REPO_URL
 
 
@@ -102,10 +102,11 @@ def generate_objectives_md() -> str:
     lines.append("## Configuration")
     lines.append("")
     lines.append(
-        f"Objectives are configured in [`reports/config.py`]({REPO_URL}/blob/main/reports/config.py)."
+        f"Objectives data lives in [`reports/_objectives_data.py`]({REPO_URL}/blob/main/reports/_objectives_data.py) "
+        f"(auto-generated from GitHub issues; helpers in [`reports/objectives.py`]({REPO_URL}/blob/main/reports/objectives.py))."
     )
     lines.append("")
-    lines.append("To regenerate this page from config:")
+    lines.append("To regenerate this page:")
     lines.append("")
     lines.append("```bash")
     lines.append("cd reports")

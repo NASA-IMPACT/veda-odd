@@ -2,19 +2,35 @@
 
 This page tracks quarterly objectives and their related repositories across Program Increments (PIs).
 
-## Current PI: 26.2
+## Current PI: 26.3
 
 | # | Objective | Contributors | Repos |
 |---|-----------|--------------|-------|
-| [#304](https://github.com/NASA-IMPACT/veda-odd/issues/304) | 🤖Create virtual Zarr stores for high priority dataset(s) | tylanderson | virtualizarr-data-pipelines |
-| [#305](https://github.com/NASA-IMPACT/veda-odd/issues/305) | 🛠️ TiTiler-CMR maintenance + performance | chuckwondo, hrodmn | titiler, titiler-cmr, python_cmr, earthaccess, rio-tiler |
-| [#306](https://github.com/NASA-IMPACT/veda-odd/issues/306) | 🤗 Support community adoption of the technologies incubated b... | chuckwondo, maxrjones, abarciauskas-bgse | geozarr-spec, zarr-python, multiscales, geo-proj, spatial, datacube-guide, geozarr-examples, warp-resample-profiling, pangeo.io, pangeo-docker-images, earthdata-cloud-cookbook, virtualzarr.cloud |
-| [#307](https://github.com/NASA-IMPACT/veda-odd/issues/307) | 📈 Finalize Design for VirtualiZarr Time Series API [Stretch:... | hrodmn | titiler, titiler-lambda-layer, titiler-md-demo |
-| [#308](https://github.com/NASA-IMPACT/veda-odd/issues/308) | 🤪 Expand virtualization support for quirky datasets | maxrjones | virtualizarr, zarr-python, obspec-utils, virtual-tiff, hrrr-parser, virtualizarr-data-pipelines, nisar-manifest-explorer, mur-manifest-explorer |
-| [#309](https://github.com/NASA-IMPACT/veda-odd/issues/309) | 🛰️ Propose unified strategy for virtualization of orbital sw... | sharkinsspatial, maxrjones, hrodmn | virtualizarr, obspec-utils, virtual-tiff, obstore, obspec, zarr-datafusion-search, geoarrow-rs, async-tiff, arrow-zarr |
-| [#319](https://github.com/NASA-IMPACT/veda-odd/issues/319) | 🌐 Client-side raster rendering (deck.gl-raster) | kylebarron | deck.gl-raster |
+| [#307](https://github.com/NASA-IMPACT/veda-odd/issues/307) | 📈 Finalize Design for Zarr + VirtualiZarr Time Series API [C... | hrodmn | titiler, titiler-lambda-layer, titiler-md-demo |
+| [#346](https://github.com/NASA-IMPACT/veda-odd/issues/346) | 🤖 Develop + Maintain the Virtual Zarr Ecosystem | maxrjones, tylanderson, HarshiniGirish | virtualizarr, virtual-tiff, icechunk, virtualzarr.cloud |
+| [#347](https://github.com/NASA-IMPACT/veda-odd/issues/347) | 🌳 Evolve the Zarr Ecosystem | d-v-b, chuckwondo, maxrjones | geozarr-spec, zarr-python, multiscales, geo-proj, spatial, zarr-specs, zarr-extensions, geozarr-toolkit, numcodecs, geozarr-site, zarr-developers.github.io |
+| [#348](https://github.com/NASA-IMPACT/veda-odd/issues/348) | 📝 Cloud-Optimized Data Guidance | abarciauskas-bgse, hrodmn, siddharth0248 | - |
+| [#349](https://github.com/NASA-IMPACT/veda-odd/issues/349) | 🤗 Community Engagement | sharkinsspatial, chuckwondo, maxrjones, abarciauskas-bgse | - |
+| [#350](https://github.com/NASA-IMPACT/veda-odd/issues/350) | 🛠️ TiTiler-CMR Support | chuckwondo, abarciauskas-bgse | - |
+| [#351](https://github.com/NASA-IMPACT/veda-odd/issues/351) | 🛰️ Analytics-scale metadata stores | sharkinsspatial, hrodmn | - |
+| [#352](https://github.com/NASA-IMPACT/veda-odd/issues/352) | 🌐 Browser-based visualization + analysis | abarciauskas-bgse, kylebarron | - |
 
 ---
+
+<details markdown>
+<summary>PI 26.2 (7 objectives, 2 closed)</summary>
+
+| # | Objective | State | Contributors |
+|---|-----------|-------|--------------|
+| [#304](https://github.com/NASA-IMPACT/veda-odd/issues/304) | 🤖Create virtual Zarr stores for high priority data... | closed | tylanderson |
+| [#305](https://github.com/NASA-IMPACT/veda-odd/issues/305) | 🛠️ TiTiler-CMR maintenance + performance | open | chuckwondo, hrodmn |
+| [#306](https://github.com/NASA-IMPACT/veda-odd/issues/306) | 🤗 Support community adoption of the technologies i... | open | chuckwondo, maxrjones, abarciauskas-bgse |
+| [#308](https://github.com/NASA-IMPACT/veda-odd/issues/308) | 🤪 Expand virtualization support for quirky dataset... | open | maxrjones |
+| [#309](https://github.com/NASA-IMPACT/veda-odd/issues/309) | 🛰️ Propose unified strategy for virtualization of ... | open | sharkinsspatial, maxrjones, hrodmn |
+| [#319](https://github.com/NASA-IMPACT/veda-odd/issues/319) | 🌐 Client-side raster rendering (deck.gl-raster) | closed | kylebarron |
+| [#331](https://github.com/NASA-IMPACT/veda-odd/issues/331) | WASM chunk codec research and PoC | open | jkeifer |
+
+</details>
 
 <details markdown>
 <summary>PI 26.1 (5 objectives, 3 closed)</summary>
@@ -81,15 +97,15 @@ This page tracks quarterly objectives and their related repositories across Prog
 
 The commits per repository chart uses color-coding to show which objective each repo contributes to. Repos that contribute to multiple objectives are shown with split bars.
 
-![PI-26.2 Commits per Repository](images/pi-26.2.png)
+![PI-26.3 Commits per Repository](images/pi-26.3.png)
 
 ---
 
 ## Configuration
 
-Objectives are configured in [`reports/config.py`](https://github.com/NASA-IMPACT/veda-odd/blob/main/reports/config.py).
+Objectives data lives in [`reports/_objectives_data.py`](https://github.com/NASA-IMPACT/veda-odd/blob/main/reports/_objectives_data.py) (auto-generated from GitHub issues; helpers in [`reports/objectives.py`](https://github.com/NASA-IMPACT/veda-odd/blob/main/reports/objectives.py)).
 
-To regenerate this page from config:
+To regenerate this page:
 
 ```bash
 cd reports
