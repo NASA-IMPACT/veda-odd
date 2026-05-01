@@ -517,7 +517,9 @@ OBJECTIVES = {
                 ("Max Jones", "maxrjones"),
                 ("Aimee Barciauskas", "abarciauskas-bgse"),
             ],
-            "repos": [],
+            "repos": [
+                ("pangeo-data", "pangeo.io"),
+            ],
         },
         {
             "issue_number": 350,
@@ -527,7 +529,13 @@ OBJECTIVES = {
                 ("Chuck Daniels", "chuckwondo"),
                 ("Aimee Barciauskas", "abarciauskas-bgse"),
             ],
-            "repos": [],
+            "repos": [
+                ("developmentseed", "titiler"),
+                ("developmentseed", "titiler-cmr"),
+                ("developmentseed", "titiler-lambda-layer"),
+                ("developmentseed", "titiler-md-demo"),
+                ("cogeotiff", "rio-tiler"),
+            ],
         },
         {
             "issue_number": 351,
@@ -537,7 +545,10 @@ OBJECTIVES = {
                 ("Sean Harkins", "sharkinsspatial"),
                 ("Henry Rodman", "hrodmn"),
             ],
-            "repos": [],
+            "repos": [
+                ("developmentseed", "zarr-datafusion-search"),
+                ("developmentseed", "lazycogs"),
+            ],
         },
         {
             "issue_number": 352,
@@ -547,7 +558,10 @@ OBJECTIVES = {
                 ("Aimee Barciauskas", "abarciauskas-bgse"),
                 ("Kyle Barron", "kylebarron"),
             ],
-            "repos": [],
+            "repos": [
+                ("developmentseed", "deck.gl-raster"),
+                ("developmentseed", "lonboard"),
+            ],
         },
     ],
 }

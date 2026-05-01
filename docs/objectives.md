@@ -2,7 +2,11 @@
 
 This page tracks quarterly objectives and their related repositories across Program Increments (PIs).
 
+The commits per repository chart for each PI uses color-coding to show which objective each repo contributes to. Repos that contribute to multiple objectives are shown with split bars.
+
 ## Current PI: 26.3
+
+![PI-26.3 Commits per Repository](images/pi-26.3.png)
 
 | # | Objective | Contributors | Repos |
 |---|-----------|--------------|-------|
@@ -10,10 +14,10 @@ This page tracks quarterly objectives and their related repositories across Prog
 | [#346](https://github.com/NASA-IMPACT/veda-odd/issues/346) | 🤖 Develop + Maintain the Virtual Zarr Ecosystem | maxrjones, tylanderson, HarshiniGirish | virtualizarr, virtual-tiff, icechunk, virtualzarr.cloud |
 | [#347](https://github.com/NASA-IMPACT/veda-odd/issues/347) | 🌳 Evolve the Zarr Ecosystem | d-v-b, chuckwondo, maxrjones | geozarr-spec, zarr-python, multiscales, geo-proj, spatial, zarr-specs, zarr-extensions, geozarr-toolkit, numcodecs, geozarr-site, zarr-developers.github.io |
 | [#348](https://github.com/NASA-IMPACT/veda-odd/issues/348) | 📝 Cloud-Optimized Data Guidance | abarciauskas-bgse, hrodmn, siddharth0248 | - |
-| [#349](https://github.com/NASA-IMPACT/veda-odd/issues/349) | 🤗 Community Engagement | sharkinsspatial, chuckwondo, maxrjones, abarciauskas-bgse | - |
-| [#350](https://github.com/NASA-IMPACT/veda-odd/issues/350) | 🛠️ TiTiler-CMR Support | chuckwondo, abarciauskas-bgse | - |
-| [#351](https://github.com/NASA-IMPACT/veda-odd/issues/351) | 🛰️ Analytics-scale metadata stores | sharkinsspatial, hrodmn | - |
-| [#352](https://github.com/NASA-IMPACT/veda-odd/issues/352) | 🌐 Browser-based visualization + analysis | abarciauskas-bgse, kylebarron | - |
+| [#349](https://github.com/NASA-IMPACT/veda-odd/issues/349) | 🤗 Community Engagement | sharkinsspatial, chuckwondo, maxrjones, abarciauskas-bgse | pangeo.io |
+| [#350](https://github.com/NASA-IMPACT/veda-odd/issues/350) | 🛠️ TiTiler-CMR Support | chuckwondo, abarciauskas-bgse | titiler, titiler-cmr, titiler-lambda-layer, titiler-md-demo, rio-tiler |
+| [#351](https://github.com/NASA-IMPACT/veda-odd/issues/351) | 🛰️ Analytics-scale metadata stores | sharkinsspatial, hrodmn | zarr-datafusion-search, lazycogs |
+| [#352](https://github.com/NASA-IMPACT/veda-odd/issues/352) | 🌐 Browser-based visualization + analysis | abarciauskas-bgse, kylebarron | deck.gl-raster, lonboard |
 
 ---
 
@@ -30,6 +34,8 @@ This page tracks quarterly objectives and their related repositories across Prog
 | [#319](https://github.com/NASA-IMPACT/veda-odd/issues/319) | 🌐 Client-side raster rendering (deck.gl-raster) | closed | kylebarron |
 | [#331](https://github.com/NASA-IMPACT/veda-odd/issues/331) | WASM chunk codec research and PoC | open | jkeifer |
 
+![PI-26.2 Commits per Repository](images/pi-26.2.png)
+
 </details>
 
 <details markdown>
@@ -42,6 +48,8 @@ This page tracks quarterly objectives and their related repositories across Prog
 | [#246](https://github.com/NASA-IMPACT/veda-odd/issues/246) | 🤖 Support virtualization of additional data produc... | closed | sharkinsspatial, maxrjones, jbusecke |
 | [#247](https://github.com/NASA-IMPACT/veda-odd/issues/247) | 🛰 Explore scalable, cloud native approaches for se... | closed | sharkinsspatial, kylebarron |
 | [#248](https://github.com/NASA-IMPACT/veda-odd/issues/248) | 🤗 Support community adoption of the technologies i... | closed | sharkinsspatial, chuckwondo, maxrjones, abarciauskas-bgse |
+
+![PI-26.1 Commits per Repository](images/pi-26.1.png)
 
 </details>
 
@@ -90,14 +98,6 @@ This page tracks quarterly objectives and their related repositories across Prog
 | [#76](https://github.com/NASA-IMPACT/veda-odd/issues/76) | Demonstrate how to tile HLS using titiler-cmr | closed | hrodmn |
 
 </details>
-
----
-
-## Visualization
-
-The commits per repository chart uses color-coding to show which objective each repo contributes to. Repos that contribute to multiple objectives are shown with split bars.
-
-![PI-26.3 Commits per Repository](images/pi-26.3.png)
 
 ---
 

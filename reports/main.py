@@ -73,7 +73,7 @@ def get_commits_for_repo_author(
         return []
 
 
-def main(token: str = None, pi: str = None, max_workers: int = 10):
+def main(token: str = None, pi: str = None, max_workers: int = 3):
     """
     Query GitHub for commits using parallel requests.
 
@@ -159,6 +159,13 @@ if __name__ == "__main__":
         "--pi",
         help="PI name (e.g. pi-26.2). Defaults to the current PI.",
     )
+    parser.add_argument(
+        "--max-workers",
+        type=int,
+        default=3,
+        help="Parallel API workers (default 3). Raise cautiously — GitHub's "
+        "secondary rate limit triggers on bursty concurrent requests.",
+    )
     args = parser.parse_args()
     token = os.environ.get(TOKEN_ENV_VAR) or os.environ.get("GITHUB_TOKEN")
-    main(token=token, pi=args.pi)
+    main(token=token, pi=args.pi, max_workers=args.max_workers)

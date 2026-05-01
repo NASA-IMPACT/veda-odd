@@ -6,8 +6,16 @@ Usage:
     uv run generate_docs.py
 """
 
+from pathlib import Path
+
 from objectives import OBJECTIVES
 from settings import REPO_URL
+
+DOCS_IMAGES_DIR = Path(__file__).parent.parent / "docs" / "images"
+
+
+def has_plot(pi: str) -> bool:
+    return (DOCS_IMAGES_DIR / f"{pi}.png").exists()
 
 
 def generate_objectives_md() -> str:
@@ -16,6 +24,8 @@ def generate_objectives_md() -> str:
         "# Quarterly Objectives",
         "",
         "This page tracks quarterly objectives and their related repositories across Program Increments (PIs).",
+        "",
+        "The commits per repository chart for each PI uses color-coding to show which objective each repo contributes to. Repos that contribute to multiple objectives are shown with split bars.",
         "",
     ]
 
@@ -32,6 +42,9 @@ def generate_objectives_md() -> str:
             # Current PI - show full details
             lines.append(f"## Current PI: {pi.split('-')[1]}")
             lines.append("")
+            if has_plot(pi):
+                lines.append(f"![{pi.upper()} Commits per Repository](images/{pi}.png)")
+                lines.append("")
             lines.append("| # | Objective | Contributors | Repos |")
             lines.append("|---|-----------|--------------|-------|")
 
@@ -80,23 +93,12 @@ def generate_objectives_md() -> str:
                 )
 
             lines.append("")
+            if has_plot(pi):
+                lines.append(f"![{pi.upper()} Commits per Repository](images/{pi}.png)")
+                lines.append("")
             lines.append("</details>")
             lines.append("")
 
-    lines.append("---")
-    lines.append("")
-    lines.append("## Visualization")
-    lines.append("")
-    lines.append(
-        "The commits per repository chart uses color-coding to show which objective each repo contributes to. Repos that contribute to multiple objectives are shown with split bars."
-    )
-    lines.append("")
-    # Add image for the current PI
-    current_pi = sorted_pis[0]
-    lines.append(
-        f"![{current_pi.upper()} Commits per Repository](images/{current_pi}.png)"
-    )
-    lines.append("")
     lines.append("---")
     lines.append("")
     lines.append("## Configuration")
