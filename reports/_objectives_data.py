@@ -348,7 +348,7 @@ OBJECTIVES = {
         {
             "issue_number": 306,
             "title": "ODD PI 26.2 Objective 3: 🤗 Support community adoption of the technologies incubated by EODC and VEDA",
-            "state": "open",
+            "state": "closed",
             "contributors": [
                 ("Chuck Daniels", "chuckwondo"),
                 ("Max Jones", "maxrjones"),
@@ -382,7 +382,7 @@ OBJECTIVES = {
         {
             "issue_number": 308,
             "title": "ODD PI 26.2 Objective 5: 🤪 Expand virtualization support for quirky datasets",
-            "state": "open",
+            "state": "closed",
             "contributors": [
                 ("Max Jones", "maxrjones"),
             ],
