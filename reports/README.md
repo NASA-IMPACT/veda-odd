@@ -8,9 +8,9 @@
 
 ## Configuration
 
-The `config.py` file contains:
-- `TIME_RANGE`: Start and end dates for commit analysis
-- `OBJECTIVES`: Quarterly objectives with repos and contributors per objective
+- `_objectives_data.py`: auto-generated `OBJECTIVES` dict (quarterly objectives with repos and contributors). Do not edit by hand.
+- `objectives.py`: helper functions over `OBJECTIVES` — import from here.
+- `constants.py`: `PI_DATES` and the `get_time_range` / `get_current_pi` helpers.
 
 ### Regenerating objectives from GitHub
 
@@ -20,7 +20,7 @@ To fetch the latest objectives from GitHub issues:
 uv run generate_config.py
 ```
 
-This generates `objectives_config.py` with objectives and contributors from issues labeled `pi-*-objective`. You'll need to manually add repos to each objective, then copy to `config.py`.
+This regenerates `_objectives_data.py` with objectives and contributors from issues labeled `pi-*-objective`. Repos for each objective come from `repo:org/name` labels on the same issues.
 
 ## Generating data
 

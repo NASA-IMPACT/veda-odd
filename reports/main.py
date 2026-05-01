@@ -3,18 +3,18 @@
 Query GitHub API for commits to repositories in parallel.
 """
 
+import argparse
 from github import Github, Auth
 from datetime import datetime
 from typing import List
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import os
 import pandas as pd
-from config import (
-    get_time_range,
-    get_current_pi,
+from objectives import (
     get_repos_for_pi,
     get_contributors_for_pi,
 )
+from constants import get_time_range, get_current_pi
 from settings import TOKEN_ENV_VAR
 
 
@@ -73,7 +73,7 @@ def get_commits_for_repo_author(
         return []
 
 
-def main(token: str = None, pi: str = None, max_workers: int = 10):
+def main(token: str = None, pi: str = None, max_workers: int = 3):
     """
     Query GitHub for commits using parallel requests.
 
@@ -154,5 +154,18 @@ def main(token: str = None, pi: str = None, max_workers: int = 10):
 
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--pi",
+        help="PI name (e.g. pi-26.2). Defaults to the current PI.",
+    )
+    parser.add_argument(
+        "--max-workers",
+        type=int,
+        default=3,
+        help="Parallel API workers (default 3). Raise cautiously — GitHub's "
+        "secondary rate limit triggers on bursty concurrent requests.",
+    )
+    args = parser.parse_args()
     token = os.environ.get(TOKEN_ENV_VAR) or os.environ.get("GITHUB_TOKEN")
-    main(token=token)
+    main(token=token, pi=args.pi, max_workers=args.max_workers)

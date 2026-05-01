@@ -1,3 +1,4 @@
+import argparse
 import re
 from pathlib import Path
 
@@ -6,7 +7,8 @@ import matplotlib.pyplot as plt
 from matplotlib.patches import Patch
 from matplotlib.ticker import MaxNLocator
 
-from config import get_current_pi, OBJECTIVES
+from objectives import OBJECTIVES
+from constants import get_current_pi
 from settings import TEAM_NAME, TEAM_DISPLAY_NAME, OBJECTIVES_PAGE_URL
 
 
@@ -74,8 +76,27 @@ def main(pi: str = None, show_labels: bool = False):
     if pi is None:
         pi = get_current_pi()
 
-    csv_filename = f"output/{pi}.csv"
-    df = pd.read_csv(csv_filename)
+    csv_filename = Path(f"output/{pi}.csv")
+    if not csv_filename.exists():
+        print(
+            f"No commit data for {pi} ({csv_filename} not found). "
+            f"Run `uv run main.py --pi {pi}` first; nothing to plot."
+        )
+        return
+
+    try:
+        df = pd.read_csv(csv_filename)
+    except pd.errors.EmptyDataError:
+        df = pd.DataFrame()
+
+    required_cols = {"organization", "repository"}
+    if df.empty or not required_cols.issubset(df.columns):
+        print(
+            f"{csv_filename} has no commits — likely no repos/contributors are "
+            f"configured for {pi}, or no commits landed in this PI's time range. "
+            f"Skipping plot."
+        )
+        return
 
     # Build repo to objectives mapping and colors
     repo_to_objectives = get_repo_objectives(pi)
@@ -147,23 +168,24 @@ def main(pi: str = None, show_labels: bool = False):
         fontweight="bold",
     )
 
-    # Legend for objectives with titles
-    objective_titles = get_objective_titles(pi)
-    legend_elements = [
-        Patch(
-            facecolor=color,
-            edgecolor="black",
-            label=objective_titles.get(num, f"#{num}"),
+    # Legend for objectives with titles (skip when no objectives are configured)
+    if objective_colors:
+        objective_titles = get_objective_titles(pi)
+        legend_elements = [
+            Patch(
+                facecolor=color,
+                edgecolor="black",
+                label=objective_titles.get(num, f"#{num}"),
+            )
+            for num, color in objective_colors.items()
+        ]
+        ax.legend(
+            handles=legend_elements,
+            loc="upper right",
+            fontsize=9,
+            title=f"{pi.upper()} Objectives",
+            title_fontsize=10,
         )
-        for num, color in objective_colors.items()
-    ]
-    ax.legend(
-        handles=legend_elements,
-        loc="upper right",
-        fontsize=9,
-        title=f"{pi.upper()} Objectives",
-        title_fontsize=10,
-    )
 
     # Caveats and link in bottom right of plot area
     caveats = (
@@ -200,4 +222,10 @@ def main(pi: str = None, show_labels: bool = False):
 
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--pi",
+        help="PI name (e.g. pi-26.2). Defaults to the current PI.",
+    )
+    args = parser.parse_args()
+    main(pi=args.pi)
