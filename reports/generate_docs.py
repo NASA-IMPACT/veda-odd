@@ -68,6 +68,9 @@ def generate_objectives_md() -> str:
             lines.append("")
         else:
             # Historical PIs - collapsible
+            if i == 1:
+                lines.append("## Past PIs")
+                lines.append("")
             closed_count = sum(1 for o in objectives if o["state"] == "closed")
 
             lines.append("<details markdown>")

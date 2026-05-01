@@ -21,15 +21,17 @@ The commits per repository chart for each PI uses color-coding to show which obj
 
 ---
 
+## Past PIs
+
 <details markdown>
-<summary>PI 26.2 (7 objectives, 2 closed)</summary>
+<summary>PI 26.2 (7 objectives, 4 closed)</summary>
 
 | # | Objective | State | Contributors |
 |---|-----------|-------|--------------|
 | [#304](https://github.com/NASA-IMPACT/veda-odd/issues/304) | 🤖Create virtual Zarr stores for high priority data... | closed | tylanderson |
 | [#305](https://github.com/NASA-IMPACT/veda-odd/issues/305) | 🛠️ TiTiler-CMR maintenance + performance | open | chuckwondo, hrodmn |
-| [#306](https://github.com/NASA-IMPACT/veda-odd/issues/306) | 🤗 Support community adoption of the technologies i... | open | chuckwondo, maxrjones, abarciauskas-bgse |
-| [#308](https://github.com/NASA-IMPACT/veda-odd/issues/308) | 🤪 Expand virtualization support for quirky dataset... | open | maxrjones |
+| [#306](https://github.com/NASA-IMPACT/veda-odd/issues/306) | 🤗 Support community adoption of the technologies i... | closed | chuckwondo, maxrjones, abarciauskas-bgse |
+| [#308](https://github.com/NASA-IMPACT/veda-odd/issues/308) | 🤪 Expand virtualization support for quirky dataset... | closed | maxrjones |
 | [#309](https://github.com/NASA-IMPACT/veda-odd/issues/309) | 🛰️ Propose unified strategy for virtualization of ... | open | sharkinsspatial, maxrjones, hrodmn |
 | [#319](https://github.com/NASA-IMPACT/veda-odd/issues/319) | 🌐 Client-side raster rendering (deck.gl-raster) | closed | kylebarron |
 | [#331](https://github.com/NASA-IMPACT/veda-odd/issues/331) | WASM chunk codec research and PoC | open | jkeifer |
