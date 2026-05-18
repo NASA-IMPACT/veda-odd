@@ -12,3 +12,7 @@ uv run -- mkdocs serve
 ```
 
 The documentation is deployed automatically via GitHub pages and the [deploy workflow](.github/workflows/deploy.yml).
+
+## Reports
+
+See [reports/README.md](reports/README.md) for the OSS commit statistics tooling that generates the charts and tables on the objectives page.
