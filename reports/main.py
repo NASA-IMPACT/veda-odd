@@ -1,171 +1,35 @@
 #!/usr/bin/env python3
-"""
-Query GitHub API for commits to repositories in parallel.
-"""
+"""Fetch authored commits and resolved issues/PRs for one PI."""
 
 import argparse
-from github import Github, Auth
-from datetime import datetime
-from typing import List
-from concurrent.futures import ThreadPoolExecutor, as_completed
+import logging
 import os
-import pandas as pd
-from objectives import (
-    get_repos_for_pi,
-    get_contributors_for_pi,
-)
-from constants import get_time_range, get_current_pi
-from settings import TOKEN_ENV_VAR
 
+from dse_oss_reports.cli import run_commits_report
 
-def get_commits_for_repo_author(
-    g: Github,
-    owner: str,
-    repo: str,
-    author: str,
-    start_date: datetime,
-    end_date: datetime,
-) -> List[dict]:
-    """
-    Query GitHub API for commits by a specific author in a repo.
-
-    Returns list of commit detail dicts (not commit objects) to avoid
-    thread safety issues with PyGithub objects.
-    """
-    try:
-        repository = g.get_repo(f"{owner}/{repo}")
-        commits = repository.get_commits(
-            author=author, since=start_date, until=end_date
-        )
-
-        # Group commits by PR
-        prs = []
-        pr_commits = []
-        standalone_commits = []
-
-        for commit in commits:
-            pulls = commit.get_pulls()
-            if pulls.totalCount == 1:
-                if (number := pulls[0].number) not in prs:
-                    pr_commits.append(commit)
-                    prs.append(number)
-            elif pulls.totalCount == 0:
-                standalone_commits.append(commit)
-
-        # Extract details immediately (avoid returning PyGithub objects)
-        results = []
-        for commit in pr_commits + standalone_commits:
-            results.append(
-                {
-                    "sha": commit.sha,
-                    "message": commit.commit.message.split("\n")[0],
-                    "author": commit.commit.author.name,
-                    "committer": commit.commit.committer.name,
-                    "url": commit.html_url,
-                    "total_changes": commit.stats.total if commit.stats else 0,
-                    "organization": owner,
-                    "repository": repo,
-                }
-            )
-        return results
-    except Exception as e:
-        print(f"  Error processing {owner}/{repo} for {author}: {e}")
-        return []
-
-
-def main(token: str = None, pi: str = None, max_workers: int = 3):
-    """
-    Query GitHub for commits using parallel requests.
-
-    Args:
-        token: GitHub personal access token
-        pi: Optional PI to filter repos/contributors (e.g., "pi-26.1").
-            If None, uses current PI based on today's date.
-        max_workers: Number of parallel threads (default 10)
-    """
-    # Default to current PI if not specified
-    if pi is None:
-        pi = get_current_pi()
-
-    time_range = get_time_range(pi)
-    if not time_range:
-        raise ValueError(f"No date range found for PI: {pi}")
-
-    time_start = datetime.strptime(time_range[0], "%Y%m%d")
-    time_end = datetime.strptime(time_range[1], "%Y%m%d")
-
-    # Get repos and contributors for the PI
-    repos = get_repos_for_pi(pi)
-    contributors = get_contributors_for_pi(pi)
-    print(
-        f"PI: {pi} ({time_start.strftime('%Y-%m-%d')} to {time_end.strftime('%Y-%m-%d')})"
-    )
-    print(f"  {len(repos)} repos, {len(contributors)} contributors")
-
-    if len(contributors) < 1:
-        raise ValueError("No contributors found in config.")
-
-    # Build list of (repo, contributor) tasks
-    tasks = []
-    for owner, repo in repos:
-        for name, username in contributors:
-            tasks.append((owner, repo, username))
-
-    print(
-        f"Querying {len(tasks)} repo×contributor combinations with {max_workers} workers..."
-    )
-
-    all_commits = []
-
-    # Use thread pool for parallel API calls
-    # Each thread gets its own Github client to avoid rate limit issues
-    def process_task(task):
-        owner, repo, username = task
-        if token:
-            auth = Auth.Token(token)
-            g = Github(auth=auth)
-        else:
-            g = Github()
-        try:
-            return get_commits_for_repo_author(
-                g, owner, repo, username, time_start, time_end
-            )
-        finally:
-            g.close()
-
-    completed = 0
-    with ThreadPoolExecutor(max_workers=max_workers) as executor:
-        futures = {executor.submit(process_task, task): task for task in tasks}
-        for future in as_completed(futures):
-            completed += 1
-            if completed % 50 == 0:
-                print(f"  Progress: {completed}/{len(tasks)}")
-            commits = future.result()
-            all_commits.extend(commits)
-
-    print(f"Found {len(all_commits)} commits")
-
-    df = pd.DataFrame(all_commits)
-    csv_filename = f"output/{pi}.csv"
-    df.to_csv(csv_filename, index=False)
-    print(f"Saved to {csv_filename}")
-
-    return df
+from constants import PI_DATES
+from objectives import OBJECTIVES
+from settings import TEAM_SETTINGS, TOKEN_ENV_VAR
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument(
-        "--pi",
-        help="PI name (e.g. pi-26.2). Defaults to the current PI.",
-    )
-    parser.add_argument(
-        "--max-workers",
-        type=int,
-        default=3,
-        help="Parallel API workers (default 3). Raise cautiously — GitHub's "
-        "secondary rate limit triggers on bursty concurrent requests.",
-    )
+    parser.add_argument("--pi", help="PI name (e.g. pi-26.2). Defaults to current PI.")
+    parser.add_argument("--max-workers", type=int, default=3)
+    parser.add_argument("-v", "--verbose", action="store_true")
     args = parser.parse_args()
+
+    logging.basicConfig(
+        level=logging.INFO if args.verbose else logging.WARNING,
+        format="%(message)s",
+    )
+
     token = os.environ.get(TOKEN_ENV_VAR) or os.environ.get("GITHUB_TOKEN")
-    main(token=token, pi=args.pi, max_workers=args.max_workers)
+    run_commits_report(
+        token,
+        TEAM_SETTINGS,
+        PI_DATES,
+        OBJECTIVES,
+        pi=args.pi,
+        max_workers=args.max_workers,
+    )

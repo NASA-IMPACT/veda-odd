@@ -12,32 +12,22 @@
 - `objectives.py`: helper functions over `OBJECTIVES` — import from here.
 - `constants.py`: `PI_DATES` and the `get_time_range` / `get_current_pi` helpers.
 
-### Regenerating objectives from GitHub
+## Run the full pipeline
 
-To fetch the latest objectives from GitHub issues:
-
-```bash
-uv run generate_config.py
-```
-
-This regenerates `_objectives_data.py` with objectives and contributors from issues labeled `pi-*-objective`. Repos for each objective come from `repo:org/name` labels on the same issues.
-
-## Generating data
-
-1. Run `uv run main.py` (uses 10 parallel workers by default)
-2. Run `uv run plot.py`
-
-`TIME_RANGE` is automatically set to the current fiscal quarter (Q1: Oct-Dec, Q2: Jan-Mar, Q3: Apr-Jun, Q4: Jul-Sep).
-
-The generated chart colors bars by PI objective (see the objectives page on the deployed site for details).
-
-### Regenerating docs/objectives.md
-
-To regenerate the objectives documentation page from config:
+This mirrors the [update-reports workflow](../.github/workflows/update-reports.yml) — regenerates objectives, fetches commit data, plots charts, and rewrites the objectives docs page:
 
 ```bash
-uv run generate_docs.py
+uv run generate_config.py && uv run main.py && uv run plot.py && uv run generate_docs.py
 ```
+
+`TIME_RANGE` / PI defaults to the current fiscal quarter (Q1: Oct-Dec, Q2: Jan-Mar, Q3: Apr-Jun, Q4: Jul-Sep). Pass `--pi pi-26.2` to `main.py` / `plot.py` to target a specific PI.
+
+## Running individual steps
+
+- `uv run generate_config.py` — refresh `_objectives_data.py` from GitHub issues labeled `pi-*-objective`.
+- `uv run main.py` — fetch authored commits and resolved issues/PRs (10 parallel workers by default).
+- `uv run plot.py` — render charts (colored by PI objective).
+- `uv run generate_docs.py` — regenerate `docs/objectives.md` from `OBJECTIVES`.
 
 ## Performance
 
