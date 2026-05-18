@@ -2,7 +2,7 @@
 
 from dse_oss_reports.settings import TeamSettings
 
-TOKEN_ENV_VAR = "GH_PAT"
+TOKEN_ENV_VAR = "GH_ODD_PAT"
 
 TEAM_SETTINGS = TeamSettings(
     team_name="ODD",
