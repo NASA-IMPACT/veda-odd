@@ -12,7 +12,7 @@ This page tracks quarterly objectives for the VEDA/EODC ODD team and the open-so
 |---|-----------|--------------|-------|
 | [#307](https://github.com/NASA-IMPACT/veda-odd/issues/307) | 📈 Finalize Design for Zarr + VirtualiZarr Time Series API... | hrodmn | titiler, titiler-lambda-layer, titiler-md-demo |
 | [#346](https://github.com/NASA-IMPACT/veda-odd/issues/346) | 🤖 Develop + Maintain the Virtual Zarr Ecosystem | maxrjones, tylanderson, HarshiniGirish | virtualizarr, virtual-tiff, icechunk, virtualzarr.cloud |
-| [#347](https://github.com/NASA-IMPACT/veda-odd/issues/347) | 🌳 Evolve the Zarr Ecosystem | d-v-b, chuckwondo, maxrjones | geozarr-spec, zarr-python, multiscales, geo-proj, spatial, zarr-specs, zarr-extensions, geozarr-toolkit, numcodecs, geozarr-site, zarr-developers.github.io |
+| [#347](https://github.com/NASA-IMPACT/veda-odd/issues/347) | 🌳 Evolve the Zarr Ecosystem | d-v-b, chuckwondo, maxrjones | geozarr-spec, zarr-python, multiscales, proj, spatial, zarr-specs, zarr-extensions, geozarr-toolkit, numcodecs, geozarr-site, zarr-developers.github.io |
 | [#348](https://github.com/NASA-IMPACT/veda-odd/issues/348) | 📝 Cloud-Optimized Data Guidance | abarciauskas-bgse, hrodmn, siddharth0248 | - |
 | [#349](https://github.com/NASA-IMPACT/veda-odd/issues/349) | 🤗 Community Engagement | sharkinsspatial, chuckwondo, maxrjones, abarciauskas-bgse | pangeo.io |
 | [#350](https://github.com/NASA-IMPACT/veda-odd/issues/350) | 🛠️ TiTiler-CMR Support | chuckwondo, abarciauskas-bgse | titiler, titiler-cmr, titiler-lambda-layer, titiler-md-demo, rio-tiler |
