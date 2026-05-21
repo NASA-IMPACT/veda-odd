@@ -1,0 +1,8 @@
+[team]
+name = "ODD"
+display_name = "VEDA/EODC ODD"
+github_org = "NASA-IMPACT"
+github_repo = "veda-odd"
+site_url = "nasa-impact.github.io/veda-odd"
+objectives_page_url = "https://nasa-impact.github.io/veda-odd/objectives"
+token_env_var = "GH_ODD_PAT"
