@@ -13,6 +13,6 @@ jobs:
       contents: write
       pull-requests: write
     with:
-        dse-oss-reports-ref: 82a1ac63978b5440d0f0d1de83fc46419171bdb8
+      dse-oss-reports-ref: 82a1ac63978b5440d0f0d1de83fc46419171bdb8
     secrets:
       pat: ${{ secrets.GH_ODD_PAT }}
