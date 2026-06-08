@@ -2,7 +2,7 @@ site_name: Optimized Data Delivery
 repo_name: NASA-IMPACT/veda-odd
 site_author: ODD Team
 docs_dir: docs
-site_url: !ENV [READTHEDOCS_CANONICAL_URL, 'https://nasa-impact.github.io/veda-odd/']
+site_url: !ENV [READTHEDOCS_CANONICAL_URL, "https://nasa-impact.github.io/veda-odd/"]
 
 extra:
   version:
@@ -11,7 +11,7 @@ extra:
 
 nav:
   - "index.md"
-  - FY26 Roadmap: "fy26-roadmap.md"
+  - Roadmap: "roadmap.md"
   - PI Objectives: "objectives.md"
   - ODD Products: "products.md"
   - Tech Tips: "tech-tips.md"
