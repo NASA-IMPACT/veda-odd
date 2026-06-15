@@ -1,13 +1,12 @@
 ---
 name: Task List for PI Planning
 about: List of tasks for a thorough PI planning process
-title: 'PI Planning 25.x Tasks'
+title: 'PI Planning 26.x Tasks'
 labels:
 assignees: ''
 
 ---
 
-```[tasklist]
 - [ ] Solicit information from VEDA instances on their dataset needs using https://github.com/NASA-IMPACT/titiler-multidim-user-survey/blob/main/.github/ISSUE_TEMPLATE/dataset-needs.md or something comparable
 - [ ] Complete a brainstorming exercise, such as dumping all ideas and known needs into a document. Include DS VEDA lead. This can start at any time.
 - [ ] Organize those into various categories of work, such as "Dataset generation", "Community, or "titiler-xarray". This will help identify associated or dependent tasks as well as help team members identify which categories of work they are most interested in.
@@ -19,4 +18,3 @@ assignees: ''
 - [ ] Meet about proposed plan with the project lead at IMPACT (i.e. Brian). This meeting is usually coordinated by the NASA project coordinator for all VEDA sub teams.
 - [ ] Increment the PI number in the [objective template](https://github.com/NASA-IMPACT/veda-odd/blob/main/.github/ISSUE_TEMPLATE/objective.md)
 - [ ] Create objective tickets (delegate to owners of each objective).
-```
