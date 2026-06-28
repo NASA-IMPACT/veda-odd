@@ -56,17 +56,45 @@ Every objective of this team should trace to at least one vision story and one p
 
 ## Phases
 
-While the grid above tracks *what* moves through our portfolio, the phases below sketch *when* — a notional sequence (timelines are notional, not concrete). Foundational work continues throughout.
+While the grid above tracks *what* moves through our portfolio, the phases below sketch *when* — a notional sequence (timelines are notional, not concrete).
 
-![ODD phases — notional timeline](./roadmap-phases.svg)
+<svg viewBox="0 0 1200 380" width="100%" style="max-width:100%;height:auto;" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif" role="img" aria-label="ODD phases notional timeline">
+  <text x="20" y="26" font-size="18" font-weight="bold" fill="#0b2545">ODD phases — notional timeline</text>
+  <text x="1180" y="26" font-size="12" fill="#64748b" text-anchor="end">timelines are notional, not concrete</text>
+  <g fill="#475569" font-size="13" font-weight="bold" text-anchor="middle">
+    <text x="152" y="56">FY26.4</text>
+    <text x="376" y="56">FY27.1</text>
+    <text x="600" y="56">FY27.2</text>
+    <text x="824" y="56">FY27.3</text>
+    <text x="1048" y="56">FY27.4</text>
+  </g>
+  <g stroke="#e2e8f0" stroke-width="1">
+    <line x1="264" y1="64" x2="264" y2="250"/>
+    <line x1="488" y1="64" x2="488" y2="250"/>
+    <line x1="712" y1="64" x2="712" y2="250"/>
+    <line x1="936" y1="64" x2="936" y2="250"/>
+  </g>
+  <line x1="40" y1="64" x2="40" y2="250" stroke="#cbd5e1"/>
+  <line x1="1160" y1="64" x2="1160" y2="250" stroke="#cbd5e1"/>
+  <rect x="40" y="80" width="448" height="48" rx="8" fill="#0e7490"/>
+  <text x="60" y="109" font-size="14" font-weight="bold" fill="#ffffff">Demonstrate the data lake &#8212; varied datasets</text>
+  <rect x="264" y="138" width="448" height="48" rx="8" fill="#0e7490"/>
+  <text x="284" y="167" font-size="13.5" font-weight="bold" fill="#ffffff">Demonstrate the query engine + service integration</text>
+  <rect x="712" y="196" width="448" height="48" rx="8" fill="#0e7490"/>
+  <text x="732" y="225" font-size="14" font-weight="bold" fill="#ffffff">Demonstrate caching + AI use</text>
+  <rect x="40" y="266" width="1120" height="46" rx="8" fill="#f1f5f9" stroke="#64748b" stroke-width="1.5"/>
+  <text x="56" y="294" font-size="13" fill="#0f172a"><tspan font-weight="bold">Throughout: </tspan>socialization of the plan &#183; external-team integration &#183; iterating on the plan as we incorporate varied datasets</text>
+  <rect x="40" y="322" width="1120" height="46" rx="8" fill="#f1f5f9" stroke="#64748b" stroke-width="1.5"/>
+  <text x="56" y="350" font-size="13" fill="#0f172a"><tspan font-weight="bold">Foundational libraries: </tspan>Zarr &#183; Icechunk &#183; obstore (IO) &#183; warp / resampling / projection performance &#183; in-browser Zarr + COG &#183; GeoZarr &amp; standards</text>
+</svg>
 
-**FY26.4 · Now — Demonstrate the data lake.** Demonstrate the utility and performance of Icechunk stores as a data lake platform across varied data types (HLS, NISAR, GPM IMERG, NLDAS, TEMPO, …). VEDA instances demonstrate the data lake in action with scientists. Migrate the data services component (starting with TiTiler-CMR) to the Data Services team so ODD can prototype other services. Continue socialization (virtual stores coworking group, feasibility study) and capacity building (a guide on integrating with the data lake).
+**FY26.4–27.1 — Demonstrate the data lake.** Demonstrate the utility and performance of Icechunk stores as a data lake platform across varied data types (HLS, NISAR, GPM IMERG, NLDAS, TEMPO, …). VEDA instances demonstrate the data lake in action with scientists, and we migrate the data services component (starting with TiTiler-CMR) to the Data Services team so ODD can prototype other services.
 
-**FY27 · Next — AI integration + caching performance.** Work with the AI/ML teams to demonstrate use of the data lake by AI (e.g. Water Insight or EIE): LLMs discover, reason about, and ingest data from the lake. Demonstrate caching performance using multiscales held in the Icechunk store and cached as a *data cache* (cached Zarr arrays), not a per-service tiling cache.
+**FY27.1–27.2 — Demonstrate the query engine + service integration.** Show discovery and query across the lake via the query engine (DataFusion), and integrate it with the data services so a single interface serves discovery, query, and access.
 
-**Foundational & ongoing — throughout.** Continuation of foundational work in Zarr, Icechunk, and the underlying libraries for geospatial data processing: IO libraries (obstore), warp / resampling / projection, reading and handling Zarr + COG directly in the browser, and geospatial data standards (GeoZarr).
+**FY27.3–27.4 — Demonstrate caching + AI use.** Demonstrate caching performance using multiscales held in the Icechunk store and cached as a *data cache* (cached Zarr arrays), not a per-service tiling cache. Work with the AI/ML teams to demonstrate use of the data lake by AI (e.g. Water Insight or EIE): LLMs discover, reason about, and ingest data from the lake.
 
-**Long term — Simplify.** A future architecture that deprecates HDF-specific tooling in favor of supporting only Zarr tooling, focusing data lake access on the query engine (DataFusion) and Zarr interfaces — not CMR and not archival files, which are comparatively slow, costly, and error-prone.
+**Throughout — alongside every phase.** Socialization of the plan, integration of external teams, and iterating on the plan as we work to incorporate varied datasets. Plus continuation of foundational work in Zarr, Icechunk, and the underlying geospatial libraries: IO (obstore), warp / resampling / projection **performance**, reading and handling Zarr + COG directly in the browser, and geospatial data standards (GeoZarr).
 
 ## How we work
 

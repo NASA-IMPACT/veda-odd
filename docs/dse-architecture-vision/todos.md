@@ -1,0 +1,3 @@
+- [ ] add stac, stac-geoparquet to services
+- [x] revise roles and responsibilities
+- [x] review roadmap

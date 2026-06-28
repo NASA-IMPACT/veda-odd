@@ -133,16 +133,16 @@
   <h2>Why Now?</h2>
   <p class="sub">NASA has successfully migrated many of its collections to cloud storage. However, it still lacks a unifying vision for a cloud-native architecture.</p>
   <div class="row cols-2">
-    <div class="panel bad c-red"><div class="ph"><b>TODAY</b><span>Earthdata is mission-centric &amp; fragmented</span></div><ul>
-      <li>Each mission picks its own formats &amp; chunking; there is little cross-mission consistency in data structure.</li>
+    <div class="panel bad c-red"><div class="ph"><b>TODAY</b><span>Earthdata Cloud is mission-centric &amp; fragmented</span></div><ul>
+      <li>Each mission picks its own formats and chunking. There is little cross-mission consistency in data structure.</li>
       <li>Even cloud-optimized HDF5 granules fall short of delivering the optimal performance from cloud object storage.</li>
       <li>Differentiated metadata makes comparing similar products hard; data fusion is painful.</li>
       <li>There is no structural incentive for missions to invest in downstream usability.</li>
-      <li>Metadata and data management are still distinct; risking incnsistency</li>
+      <li>Metadata and data management are still distinct, risking inconsistency</li>
       <li>Download + process is still a primary access pattern (e.g. Download is the only access method available in the Earthdata search user interface)</li>
       <li>CMR is strained by analytics &amp; AI-agent traffic</li>
     </ul></div>
-    <div class="panel good c-serv"><div class="ph"><b>3-5 YEARS IN THE FUTURE</b><span>Earthdata cloud is a unified, cloud-native data lake</span></div><ul>
+    <div class="panel good c-serv"><div class="ph"><b>3-5 YEARS IN THE FUTURE</b><span>Earthdata Cloud is anchored by a unified, cloud-native data lake</span></div><ul>
       <li>Organizing data around a single data model (i.e. Zarr), means building a tool or service once and it can be used for many datasets.</li>
       <li>Mission data product requirements are adopted: consistent cloud-friendly structure (sharding, chunking), consistent and standards-compliant metadata.</li>
       <li>Chunk manifests create a bridge between archival file formats and a single data model.</li>
@@ -190,44 +190,6 @@
   </ul>
 </section>
 
-<!-- 2 OVERVIEW (hidden — muddles the story)
-<section data-background-color="#ffffff" class="content">
-  <h2>End-to-End Architecture Vision</h2>
-  <p class="sub">From "lift and shift" granules to a unified, cloud-native data lake with integrated services.</p>
-  <div class="row cols-5">
-    <div class="ccard c-l0"><div class="ch">1 · Mission Products</div><ul>
-      <li>Problem: Mission Products are produced in mission silos today, with little cross-mission consistency</li>
-      <li>Solution: Additional requirements for cloud-friendly chunking + storage and standards (CF)-compliant metadata</li>
-      <li>Assumption: Archival format for L0-L2; higher levels may be produced in cloud-native formats (w/ requirement a repeatable pipeline)</li>
-    </ul></div>
-    <div class="ccard c-lake"><div class="ch">2 · Data Lake</div><ul>
-      <li>Archival data files will be archived in cloud object storage</li>
-      <li>Event-driven pipelines (S3 manifests and new object notifications → queue → processing) will build analysis-ready data products (ARD)</li>
-      <li>Tabular data stored in Apache Iceberg; multi-dimensional arrays stored in Icechunk (Zarr)</li>
-    </ul></div>
-    <div class="ccard c-disc"><div class="ch">3 · Discoverability</div><ul>
-      <li>Collections will be discoverable via CMR or via query engine provider (see next box)</li>
-      <li>CMR collection records will store location references to "views" into the collection (entry points for query and access to entire collection)</li>
-      <li>Find &amp; compare datasets, for example search for all precipitation datasets. Consistent metadata standards will help users pick one.</li>
-      <li>STAC API is a downstream, user-facing representation of the data (a discovery view) — distinct from how metadata is stored at rest. Metadata also supports semantic / LLM retrieval for AI agents.</li>
-    </ul></div>
-    <div class="ccard c-query"><div class="ch">4 · Queryability</div><ul>
-      <li>A DataFusion query-engine provider over every collection or collection views</li>
-      <li>Users can query across collections and within a collection</li>
-      <li>Collection "views" open many files as one logical collection</li>
-    </ul></div>
-    <div class="ccard c-serv"><div class="ch">5 · Data Services</div><ul>
-      <li>Subsetting &amp; reformatting (Harmony, SlideRule)</li>
-      <li>Custom product generation via algorithm services (SlideRule, MAAP)</li>
-      <li>Access + Analytics (notebooks + sync/async HTTP)</li>
-      <li>Visualization</li>
-    </ul></div>
-  </div>
-  <div class="band c-query"><b>Access modes:</b> cloud-hosted notebooks (co-located in AWS us-west-2) · HTTP endpoints · web browsers · AI agents</div>
-  <div class="band c-serv"><b>Cross-cutting principle:</b> uniform data models (Zarr/Icechunk for n-D, Iceberg for tabular) enable services to be used across many collections.</div>
-</section>
--->
-
 <!-- 3 REFERENCE ARCHITECTURE (SVG) -->
 <section data-background-color="#ffffff" style="padding:0;">
   <h3 style="float:left">NASA ESDIS Architecture Cloud-Native Data Evolution</h3>
@@ -235,137 +197,29 @@
   <div class="editnote">SVG: diagrams_svg/nasa-esdis-evolution.svg</div>
 </section>
 
-<!-- 5 DATA LAKE FOUNDATION
-<section data-background-color="#ffffff" class="content">
-  <h2>Data Lake Foundation</h2>
-  <p class="sub">Cloud-native ingest, sidecar chunk-manifest indices, event-driven pipelines, and a queryable analytics-ready store.</p>
-  <div class="row cols-4">
-    <div class="ccard c-l0"><div class="ch">Level 0 Mission Products</div><ul>
-      <li>Examples: ICESat-2, GPM IMERG, SMAP, TEMPO</li>
-      <li>L0 requirements: consistent chunking + storage, metadata &amp; formatting standards</li>
-    </ul></div>
-    <div class="ccard c-lake"><div class="ch">Archive · L0–L2</div><ul>
-      <li>Cloud object storage (S3)</li>
-      <li>Sidecar metadata: chunk manifests as virtual Icechunk stores</li>
-      <li>One index per granule — no whole-file reads</li>
-    </ul></div>
-    <div style="display:flex;flex-direction:column;gap:10px;">
-      <div class="ccard c-query"><div class="ch">Event-driven batch pipelines</div><ul>
-        <li>S3 object manifests + notifications → queue → distributed processing (established algorithms)</li>
-      </ul></div>
-      <div class="ccard c-viz"><div class="ch">SlideRule · on-demand</div><ul>
-        <li>Custom ARD on demand from lower-level products</li>
-        <li>Optimization: use virtual chunk-manifest indices</li>
-      </ul></div>
-    </div>
-    <div class="ccard c-serv"><div class="ch">L3–L4 Analytics-Ready Data</div><ul>
-      <li>Produced by either path</li>
-      <li>TBD: cloud-friendly archival + virtual Icechunk, OR native Zarr Icechunk store</li>
-    </ul></div>
-  </div>
-  <div class="band c-l0"><b>Assumption:</b> L0 kept in archival format; higher levels may be cloud-native with a provenance record — making product generation repeatable and reprocessing streamlined.</div>
-  <div class="row cols-3" style="margin-top:10px;">
-    <div class="box c-query"><b>Tabular → Apache Iceberg</b>tabular table store</div>
-    <div class="box c-lake"><b>n-D arrays → Icechunk (Zarr)</b>array store (virtual or native)</div>
-    <div class="box c-disc"><b>Metadata store</b>dedicated metadata layer</div>
-  </div>
-  <div class="darkbar">Query-engine layer → queryability across the lake</div>
-</section> -->
-
-<!-- 6 DISCOVERABILITY & QUERYABILITY
-<section data-background-color="#ffffff" class="content">
-  <h2>Discoverability &amp; Queryability</h2>
-  <p class="sub">One seamless path: find and compare the right collection, then query within it — no manual file wrangling.</p>
-  <div class="row cols-3">
-    <div class="ccard c-disc"><div class="ch">1 · Discover across collections</div><ul>
-      <li>Within- and cross-collection metadata registered together</li>
-      <li>Find all datasets for a variable — e.g. every precipitation product</li>
-      <li>Compare &amp; contrast their value to choose the right one</li>
-    </ul></div>
-    <div class="ccard c-query"><div class="ch">2 · Query within a collection</div><ul>
-      <li>Each collection is its own table in the same database</li>
-      <li>Filter in four dimensions: time, space, quality, variable</li>
-      <li>No download-and-preprocess step</li>
-    </ul></div>
-    <div class="ccard c-lake"><div class="ch">3 · Collection "Views"</div><ul>
-      <li>One or more logical Views span all files in a collection</li>
-      <li>Open many files as a single logical dataset / endpoint</li>
-    </ul></div>
-  </div>
-  <div class="row cols-2" style="margin-top:10px;">
-    <div class="box c-disc"><b>Collections table (registry)</b>
-      <div class="muted" style="margin-top:4px;">precipitation · GPM IMERG &nbsp;|&nbsp; precipitation · SMAP L3 &nbsp;|&nbsp; elevation · ICESat-2 ATL03 &nbsp;|&nbsp; air quality · TEMPO NO2</div>
-      <div class="muted" style="margin-top:4px;">Each collection is a record here <b>and</b> its own table in the same database.</div>
-    </div>
-    <div class="box c-query"><b>Per-collection tables → Views</b>
-      <div class="muted" style="margin-top:4px;">GPM IMERG — gridded global · regional subset</div>
-      <div class="muted">ICESat-2 ATL03 — along-track · gridded · quality-filtered</div>
-      <div class="muted">TEMPO NO2 — hourly tiles · regional</div>
-    </div>
-  </div>
-  <div class="band c-lake"><b>Backed by CMR + a distributed CMR data lake:</b>
-    <span class="chip c-query">Apache Iceberg</span><span class="chip c-lake">Apache Arrow Flight</span><span class="chip c-disc">DataFusion (SQL)</span>
-    — serves analytics-scale &amp; consumer-scale low-latency queries, plus a growing AI-agent ecosystem.</div>
-</section> -->
-
-<!-- 7 DATA SERVICES
-<section data-background-color="#ffffff" class="content">
-  <h2>Data Services</h2>
-  <p class="sub">Subsetting, custom products, analytics and visualization — build a service once, reuse it for every dataset.</p>
-  <div class="band c-query"><b>Access modes:</b> cloud-hosted notebooks · HTTP endpoints · web browsers &nbsp;(Earthdata Cloud — AWS us-west-2)</div>
-  <div class="row cols-4" style="margin-top:10px;">
-    <div class="ccard c-lake"><div class="ch">Subsetting &amp; Reformatting</div><ul>
-      <li>NASA Harmony provides subsetting + reformatting today</li>
-      <li>Integrate virtual chunk-manifest indices → subset faster &amp; cheaper (no whole-file reads)</li>
-      <li>Offloads SlideRule, currently overused for subsetting</li>
-    </ul></div>
-    <div class="ccard c-viz"><div class="ch">Custom Products &amp; Algorithms</div><ul>
-      <li>Generate new products on demand via algorithms</li>
-      <li>SlideRule produces custom ARD at request time</li>
-      <li>Leverages chunk-manifest indices for speed</li>
-    </ul></div>
-    <div class="ccard c-query"><div class="ch">Analytics</div><ul>
-      <li>Cloud notebooks (required for Earthdata Cloud, us-west-2)</li>
-      <li>HTTP service: small queries → synchronous response</li>
-      <li>Large queries → async job → signed URL returns "pending"; poll until ready</li>
-    </ul></div>
-    <div class="ccard c-disc"><div class="ch">Visualization</div><ul>
-      <li>Uniform tile generation for any Zarr-accessible dataset</li>
-      <li>NASA chooses: static tile pyramids · on-demand tiles · hybrid + caching</li>
-    </ul></div>
-  </div>
-  <div class="darkbar">Unified data lake · uniform data models — Zarr/Icechunk (n-D) · Iceberg (tabular) · virtual chunk-manifest indices</div>
-  <div class="band c-serv"><b>Governance:</b> NASA leadership decides which services to maintain for which datasets — uniform data models make build-once / reuse-everywhere feasible.</div>
-</section> -->
-
 <!-- 8 RESPONSIBILITIES -->
 <section data-background-color="#ffffff" class="content">
   <h2>Roles &amp; Responsibilities</h2>
-  <p class="sub">Multiple teams, one shared interface.</p>
+  <p class="sub">Clear roles, responsibilities and well-defined interfaces will be required to transition from data silos and disparate systems to a shared cloud-native data lake.</p>
   <div class="row" style="grid-template-columns:1fr 0.05fr 1.05fr 0.05fr 1fr; gap:8px;">
     <div class="panel good c-l0"><div class="ph"><b>Data Producer Teams</b><span>all NASA-funded data production (mission, science investigator &amp; DAAC)</span></div><ul>
-      <li>All NASA-funded teams produce across Levels 0–4: mission-funded standard + project-funded value-added products</li>
-      <li>Mission data processing (e.g. HySDS, with MAAP as one platform built on it) is a complementary system — not part of the data lake; missions choose whether to adopt it</li>
-      <li>Scope &amp; standards documented in each mission's Data Management Plan (DMP)</li>
-      <li>DMPs should require: CF conventions, object-store-optimized chunking, Icechunk / Iceberg delivery</li>
-      <li>Publish chunk indices (virtual Icechunk manifests) to the shared stores</li>
-      <li>Register collections + collection-level metadata so products are discoverable &amp; queryable</li>
+      <li><b>Who?</b> All NASA-funded teams who produce all levels of products; mission science teams to project-funded value-added products</li>
+      <li>Mission data processing is a complementary system which will feed into the data lake</li>
+      <li>Each mission's Data Management Plan (DMP) should require a detailed plan for adhering to data lake conventions, such as CF conventions, GeoZarr and object-store-optimized chunking.</li>
+      <li>DMPs should require a detalied plan for  Icechunk or Iceberg delivery</li>
     </ul></div>
     <div class="arrowlbl">publish →</div>
-    <div class="panel good c-lake"><div class="ph"><b>Shared Data Lake</b><span>the contract / interface between the teams</span></div><ul style="list-style:none;">
-      <li>CF conventions — the common metadata standard</li>
-      <li>Apache Iceberg — tabular data + indices</li>
-      <li>Icechunk / Zarr — n-D array stores</li>
-      <li>Virtual chunk-manifest indices — published by producers → queryable</li>
-      <li>Collection &amp; metadata registry — discovery across &amp; within collections</li>
+    <div class="panel good c-lake"><div class="ph"><b>Data System Team</b><span>Maintains the data lake contract and infrastructure.</span></div><ul style="list-style:none;">
+      <li>Develop and maintain the standards for the data lake.</li>
+      <li>Develop and maintain interfaces for data producers to submit products to the data lake.</li>
+      <li>Maintain, monitor and secure the data storarge and query engine infrastructure. Ensure durability and reliability. Validate incoming data.</li>
+      <li>Maintain supporting libraries for data integration.</li>
     </ul></div>
     <div class="arrowlbl">→ consume</div>
-    <div class="panel good c-serv"><div class="ph"><b>Cross-Product Services Team</b><span>data lake consumers</span></div><ul>
-      <li>Operate the shared Iceberg + Icechunk stores and the query engine</li>
-      <li>Discoverability &amp; queryability (CMR + DataFusion federation)</li>
-      <li>Subsetting &amp; reformatting (Harmony); on-demand products (SlideRule)</li>
-      <li>Analytics &amp; visualization services</li>
-      <li>Build once on uniform data models — reuse across every dataset</li>
+    <div class="panel good c-serv"><div class="ph"><b>Data Services Teams</b><span>data lake consumers</span></div><ul>
+      <li>E.g. Subsetting & reformatting (Harmony); on-demand products (SlideRule)</li>
+      <li>Analytics & visualization services (TiTiler-CMR, Worldview, VEDA)</li>
+      <li>Build once on shared data models to support extensibility to many datasets.</li>
     </ul></div>
   </div>
 </section>
@@ -395,7 +249,7 @@
 <section data-background-color="#0b2545" class="dark">
   <h2>References</h2><div class="rule"></div>
   <ul class="reflist">
-    <li><span class="rname">Original reference architecture</span> —
+    <li><span class="rname">Architecture Diagrams</span> —
       <a href="https://app.excalidraw.com/s/66b8kXd4wid/3M1qblQjtJk" target="_blank" rel="noopener">app.excalidraw.com/s/66b8kXd4wid/3M1qblQjtJk</a></li>
     <li><span class="rname">Harmony</span> —
       <a href="https://harmony.earthdata.nasa.gov/" target="_blank" rel="noopener">harmony.earthdata.nasa.gov</a></li>
@@ -410,28 +264,45 @@
 
 <!-- Extra slides -->
 <section data-background-color="#0b2545" class="dark">
-  <h1 style="font-size:2em;">Extra</h1>
+  <h1 style="font-size:2em;">Extras</h1>
+</section>
+
+<!-- EXTRA: array stack vs tabular stack -->
+<section data-background-color="#ffffff" class="content">
+  <h2>Extra — the array stack vs. the tabular stack</h2>
+  <p class="sub">Two parallel stacks, one query engine. Choose the store by data shape: dense arrays &rarr; Zarr / Icechunk; records (points, swaths, features) &rarr; Parquet / Iceberg.</p>
+  <table class="cmp">
+    <thead><tr><th>Layer</th><th>Array / n-D world</th><th>Tabular world</th></tr></thead>
+    <tbody>
+      <tr><th>On-disk format</th><td class="tlake">Zarr</td><td class="tlake">Parquet &nbsp;(GeoParquet for vector)</td></tr>
+      <tr><th>Transactional store</th><td class="tlake">Icechunk</td><td class="tlake">Iceberg &nbsp;(+ <code>pyiceberg</code> for snapshots)</td></tr>
+      <tr><th>Format reader (decode &rarr; memory)</th><td><code>zarr-python</code></td><td><code>pyarrow</code></td></tr>
+      <tr><th>In-memory analysis</th><td><code>xarray</code></td><td><code>pandas</code> · <code>polars</code> · <code>GeoPandas</code></td></tr>
+      <tr><th>Query engine</th><td>DataFusion &nbsp;(via <code>zarr-datafusion</code>)</td><td>DataFusion &nbsp;(<code>polars</code> overlaps)</td></tr>
+      <tr><th>Example NASA products</th><td>gridded L3/L4 &mdash; GPM IMERG · NLDAS · MUR SST · TEMPO L3 · HLS · model reanalysis</td><td>points / records &mdash; ICESat-2 photons · GEDI footprints · swath L1B/L2 · in-situ &amp; vector · STAC catalog</td></tr>
+    </tbody>
+  </table>
+  <div class="band c-lake"><b>One query engine over both:</b> DataFusion spans the two stacks. <code>polars</code> is a dataframe library that also acts as a mini query engine, so it overlaps DataFusion rather than matching <code>zarr-python</code>'s decode-only role.</div>
 </section>
 
 <!-- 10 IO LAYER -->
 <section data-background-color="#0b2545" class="dark">
-  <h3 style="font-size:1.3em;">Object-store IO layer — what drives efficient, low-cost access</h3>
-  <p class="subt" style="margin-top:.2em;">The IO library sets the number and size of S3 GET requests and compute time — i.e. the cost of access. The two are complementary.</p>
+  <h3 style="font-size:1em;">Object-store IO layer — what drives efficient, low-cost access</h3>
+  <p style="font-size: 0.5em;">The IO library manages manages S3 GET requests (parallelism, synchronicity, request block size).</p>
   <div class="cols">
-    <div class="col a"><h3>Rust <code>object_store</code></h3><div class="csub">cloud-native · general purpose</div><ul>
+    <div class="col a"><h3><code>object_store</code></h3><div class="csub">cloud-native · general purpose</div><ul>
       <li>Unified async API over S3 / GCS / Azure (Apache Arrow project)</li>
       <li>Powers the Rust data ecosystem: DataFusion, Iceberg, Icechunk / Zarr</li>
       <li>Concurrent range reads + connection pooling for chunk-level access</li>
-      <li>Best for cloud-native formats — Zarr, Parquet, Iceberg tables</li>
     </ul></div>
     <div class="col b"><h3><code>h5coro</code></h3><div class="csub">cloud-optimized HDF5 · file-level</div><ul>
       <li>Reads HDF5 directly from S3 without the HDF5 library</li>
-      <li>Minimizes requests by smart caching of metadata / B-trees</li>
-      <li>Efficient access to existing archival granules — no reformatting</li>
+      <li>Minimizes requests by smart caching of metadata and B-trees</li>
+      <li>Efficient access to existing archival granules, no reformatting</li>
       <li>File-level and HDF5-specific by design</li>
     </ul></div>
   </div>
-  <p class="bottomline">Bottom line: object_store for cloud-native stores; h5coro for legacy HDF5 in place — a cost-vs-migration tradeoff.</p>
+  <p class="bottomline">Bottom line: object_store for cloud-native stores; h5coro for legacy HDF5 in place.</p>
 </section>
 
 <!-- 10b CACHING & MULTISCALES -->
@@ -453,11 +324,11 @@
   <div class="step">Discover</div>
   <div class="stepbody">Rich, consistent metadata makes datasets findable by agents &mdash; and discovery will broaden beyond STAC. In two years, semantic search over ATBDs may matter as much as a STAC endpoint; the metadata layer is designed for both structured (STAC / query) and semantic / LLM retrieval.</div>
   <div class="step">Reason</div>
-  <div class="stepbody">Consistent CF metadata plus a uniform query interface (DataFusion / SQL) let agents compare datasets and compose queries without per-dataset glue code.</div>
+  <div class="stepbody">Consistent metadata (CF, GeoZarr) plus a uniform query interface (DataFusion / SQL) let agents compare datasets and compose queries without per-dataset glue code.</div>
   <div class="step">Ingest</div>
   <div class="stepbody">Cloud-friendly Zarr / Icechunk chunking and cached multiscales give agents efficient, low-cost array access at the resolution they need &mdash; direct over S3.</div>
   <div class="step">On the roadmap</div>
-  <div class="stepbody">Work with the AI/ML teams to demonstrate use of the data lake (e.g. Water Insight or EIE) in the first two quarters of FY27.</div>
+  <div class="stepbody">Work with the AI/ML teams to demonstrate use of the data lake.</div>
 </section>
 
 <!-- 10d LONG TERM: SIMPLIFY -->
@@ -469,24 +340,6 @@
   <div class="stepbody">A future architecture focuses on data lake access through the query engine (DataFusion) and Zarr interfaces only &mdash; not CMR and not archival files. Direct CMR and archival-file access are slow, costly, and error-prone by comparison.</div>
   <div class="step">Why this is feasible</div>
   <div class="stepbody">The DataFusion query layer is stateless and horizontally scalable over partitioned metadata in object storage &mdash; replacing CMR's single-database (RDS) bottleneck &mdash; so discovery and query scale with object storage and absorb analytics- and AI-agent-scale traffic.</div>
-</section>
-
-<!-- EXTRA: array stack vs tabular stack -->
-<section data-background-color="#ffffff" class="content">
-  <h2>Extra — the array stack vs. the tabular stack</h2>
-  <p class="sub">Two parallel stacks, one query engine. Choose the store by data shape: dense arrays &rarr; Zarr / Icechunk; records (points, swaths, features) &rarr; Parquet / Iceberg.</p>
-  <table class="cmp">
-    <thead><tr><th>Layer</th><th>Array / n-D world</th><th>Tabular world</th></tr></thead>
-    <tbody>
-      <tr><th>On-disk format</th><td class="tlake">Zarr</td><td class="tlake">Parquet &nbsp;(GeoParquet for vector)</td></tr>
-      <tr><th>Transactional store</th><td class="tlake">Icechunk</td><td class="tlake">Iceberg &nbsp;(+ <code>pyiceberg</code> for snapshots)</td></tr>
-      <tr><th>Format reader (decode &rarr; memory)</th><td><code>zarr-python</code></td><td><code>pyarrow</code></td></tr>
-      <tr><th>In-memory analysis</th><td><code>xarray</code></td><td><code>pandas</code> · <code>polars</code> · <code>GeoPandas</code></td></tr>
-      <tr><th>Query engine</th><td>DataFusion &nbsp;(via <code>zarr-datafusion</code>)</td><td>DataFusion &nbsp;(<code>polars</code> overlaps)</td></tr>
-      <tr><th>Example NASA products</th><td>gridded L3/L4 &mdash; GPM IMERG · NLDAS · MUR SST · TEMPO L3 · HLS · model reanalysis</td><td>points / records &mdash; ICESat-2 photons · GEDI footprints · swath L1B/L2 · in-situ &amp; vector · STAC catalog</td></tr>
-    </tbody>
-  </table>
-  <div class="band c-lake"><b>One query engine over both:</b> DataFusion spans the two stacks. <code>polars</code> is a dataframe library that also acts as a mini query engine, so it overlaps DataFusion rather than matching <code>zarr-python</code>'s decode-only role.</div>
 </section>
 
 </div></div>
