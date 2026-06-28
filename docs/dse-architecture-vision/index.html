@@ -37,9 +37,9 @@
 /* panels with check/cross */
 .panel{ border:2.5px solid var(--c); border-radius:14px; background:#fff; overflow:hidden; }
 .panel .ph{ background:var(--c); color:#fff; padding:7px 12px; }
-.panel .ph b{ font-size:15px; } .panel .ph span{ font-size:11.5px; font-style:italic; opacity:.92; display:block; }
+.panel .ph b{ font-size:13.5px; } .panel .ph span{ font-size:10.5px; font-style:italic; opacity:.92; display:block; }
 .panel ul{ margin:8px 12px; padding:0; list-style:none; }
-.panel li{ font-size:12px; margin:7px 0; padding-left:22px; position:relative; line-height:1.3; }
+.panel li{ font-size:10.5px; margin:5px 0; padding-left:20px; position:relative; line-height:1.28; }
 .panel.good li:before{ content:"✓"; position:absolute; left:0; color:var(--c); font-weight:700; }
 .panel.bad li:before{ content:"✕"; position:absolute; left:0; color:var(--c); font-weight:700; }
 
@@ -62,8 +62,8 @@
 .reveal section.dark .subt{ color:var(--ice); font-style:italic; font-size:.9em; }
 .reveal section.dark .meta{ color:#6f97b8; font-size:.5em; margin-top:1.3em; }
 .reveal section.dark .rule{ height:4px; width:160px; background:var(--teal); margin:.5em 0 .7em; border-radius:2px; }
-.reveal section.dark .step{ color:var(--teal); font-weight:700; font-size:.74em; margin:.5em 0 .04em;}
-.reveal section.dark .stepbody{ color:#cfe0ee; font-size:.6em; margin:0 0 .15em;}
+.reveal section.dark .step{ color:var(--teal); font-weight:700; font-size:.62em; margin:.45em 0 .04em;}
+.reveal section.dark .stepbody{ color:#cfe0ee; font-size:.5em; margin:0 0 .12em;}
 .reveal .cols{ display:flex; gap:26px; margin-top:16px; }
 .reveal .col{ flex:1; background:var(--navy2); border-radius:14px; padding:18px 22px; text-align:left; }
 .reveal .col.a{ border:1.5px solid #4f9de0; } .reveal .col.b{ border:1.5px solid #e08a3a; }
@@ -75,12 +75,45 @@
 .reveal .slide-number{ background:transparent; color:var(--mute); }
 .editnote{ position:absolute; bottom:6px; left:10px; font-size:9px; color:#cbd5e1; }
 
+/* 10k architecture — HTML diagram (editable text) */
+.arch{ position:relative; width:1180px; height:470px; margin:14px auto 0; }
+.arch .abox{ position:absolute; top:0; width:200px; height:88px; box-sizing:border-box; border:2px solid #64748b; border-radius:8px; background:#fff; padding:9px 12px; }
+.arch .abox b{ display:block; font-size:15px; color:#0f172a; font-weight:700; line-height:1.1; }
+.arch .abox small{ display:block; font-size:11px; color:#475569; line-height:1.4; margin-top:5px; }
+.arch .abox.hl{ border:3px solid #0e7490; background:#0e7490; box-shadow:0 3px 14px rgba(14,116,144,.45); }
+.arch .abox.hl b{ color:#fff; }
+.arch .abox.hl small{ color:#d8eef3; }
+.arch .aarrow{ position:absolute; top:24px; width:45px; text-align:center; color:#64748b; font-size:36px; font-weight:700; line-height:1; }
+.arch .adev{ position:absolute; left:0; top:300px; width:980px; height:96px; box-sizing:border-box; border:2px solid #64748b; border-radius:12px; background:#f1f5f9; text-align:center; padding-top:14px; }
+.arch .adev b{ font-size:16px; color:#0f172a; }
+.arch .adev small{ display:block; font-size:12px; color:#475569; margin:5px 16px 0; line-height:1.45; }
+.arch .vline{ position:absolute; border-left:2px solid #aab4c2; }
+.arch .hline{ position:absolute; border-top:2px solid #aab4c2; }
+.arch .dline{ position:absolute; border-left:2px dashed #64748b; }
+.arch .dline.teal{ border-left:3px dashed #0e7490; }
+.arch .tri{ position:absolute; width:0; height:0; }
+.arch .tri.up{ border-left:6px solid transparent; border-right:6px solid transparent; border-bottom:9px solid #64748b; }
+.arch .tri.up.teal{ border-bottom-color:#0e7490; }
+.arch .tri.left{ border-top:6px solid transparent; border-bottom:6px solid transparent; border-right:9px solid #aab4c2; }
+.arch .lbl{ position:absolute; font-size:12px; font-weight:700; white-space:nowrap; }
+.arch .lbl.teal{ color:#0e7490; }
+.arch .lbl.grey{ color:#64748b; }
+
 /* references slide */
 .reveal section.dark .reflist{ list-style:none; margin:.2em 0 0; padding:0; }
 .reveal section.dark .reflist > li{ margin:.55em 0; font-size:.7em; line-height:1.35; }
 .reveal section.dark .reflist .rname{ color:var(--ice); font-weight:700; }
 .reveal section.dark a{ color:#7ec8f2; text-decoration:none; }
 .reveal section.dark a:hover{ text-decoration:underline; }
+
+/* comparison table (extra slide) */
+.reveal .content table.cmp{ width:100%; border-collapse:collapse; font-size:15px; margin-top:8px; }
+.reveal .content table.cmp th,.reveal .content table.cmp td{ border:1px solid #cbd5e1; padding:8px 12px; text-align:left; vertical-align:top; }
+.reveal .content table.cmp thead th{ background:#0b2545; color:#fff; font-weight:700; }
+.reveal .content table.cmp tbody th{ background:#f1f5f9; color:#0f172a; font-weight:700; width:24%; }
+.reveal .content table.cmp tbody tr:nth-child(even) td{ background:#f8fafc; }
+.reveal .content table.cmp td.tlake{ color:#0e7490; font-weight:700; }
+.reveal .content table.cmp code{ font-family:"SFMono-Regular",Menlo,Consolas,monospace; font-size:13.5px; }
 </style>
 </head>
 <body>
@@ -89,13 +122,75 @@
 <!-- 1 TITLE -->
 <section data-background-color="#0b2545" class="dark">
   <p class="kicker">NASA EARTHDATA CLOUD DATA SYSTEM EVOLUTION (DSE)</p>
-  <h1 style="font-size:2.3em;">Architecture Vision</h1>
+  <h1 style="font-size:2.3em;">Cloud-Native Data Lake</h1>
   <div class="rule"></div>
   <p class="subt">From "lift and shift" granules to a unified, cloud-native data lake.</p>
   <p class="meta">Working draft · June 2026 &nbsp;·&nbsp; JP Swinski, Sean Harkins &amp; Aimee Barciauskas</p>
 </section>
 
-<!-- 2 OVERVIEW -->
+<!-- 1a WHY NOW (moved to lead with the "why") -->
+<section data-background-color="#ffffff" class="content">
+  <h2>Why Now?</h2>
+  <p class="sub">NASA has successfully migrated many of its collections to cloud storage. However, it still lacks a unifying vision for a cloud-native architecture.</p>
+  <div class="row cols-2">
+    <div class="panel bad c-red"><div class="ph"><b>TODAY</b><span>Earthdata is mission-centric &amp; fragmented</span></div><ul>
+      <li>Each mission picks its own formats &amp; chunking; there is little cross-mission consistency in data structure.</li>
+      <li>Even cloud-optimized HDF5 granules fall short of delivering the optimal performance from cloud object storage.</li>
+      <li>Differentiated metadata makes comparing similar products hard; data fusion is painful.</li>
+      <li>There is no structural incentive for missions to invest in downstream usability.</li>
+      <li>Metadata and data management are still distinct; risking incnsistency</li>
+      <li>Download + process is still a primary access pattern (e.g. Download is the only access method available in the Earthdata search user interface)</li>
+      <li>CMR is strained by analytics &amp; AI-agent traffic</li>
+    </ul></div>
+    <div class="panel good c-serv"><div class="ph"><b>3-5 YEARS IN THE FUTURE</b><span>Earthdata cloud is a unified, cloud-native data lake</span></div><ul>
+      <li>Organizing data around a single data model (i.e. Zarr), means building a tool or service once and it can be used for many datasets.</li>
+      <li>Mission data product requirements are adopted: consistent cloud-friendly structure (sharding, chunking), consistent and standards-compliant metadata.</li>
+      <li>Chunk manifests create a bridge between archival file formats and a single data model.</li>
+      <li>Compliant data products are all available through a centralized data lake, utilizing a storage engine which supports ACID transactions for metadata and data.</li>
+      <li>SlideRule and Harmony leverage chunk-manifest indices for product generation and subsetting.</li>
+      <li>An integrated query engine enables frictionless discovery to acccess.</li>
+      <li>A horizontally scalable query engine supports analytics and operational-scale consumers.</li>
+      <li>AI agents would be able to utilize the query engine and suite of tools to more reliably discover, access and interpret data for consumers.</li>
+    </ul></div>
+  </div>
+</section>
+
+<!-- 1b 10K OVERVIEW (HTML — editable text) -->
+<!-- 1b High-level Architecture (SVG) -->
+<section data-background-color="#ffffff" style="padding:0;">
+  <h3 style="float: left;">High-level Data Lake Architecture</h2>
+  <img class="diagram" src="diagrams_svg/cloud-data-lake-simple.svg" alt="High-level architecture">
+  <div class="editnote">SVG: diagrams_svg/cloud-data-lake-simple.svg</div>
+</section>
+
+
+<section data-background-color="#0b2545" class="dark">
+  <h1 styel="font-size:2em;">Benefits</h1>
+</section>
+
+<!-- 1d OPTIMAL ACCESS: IN-BROWSER -->
+<section data-background-color="#0b2545" class="dark">
+  <h2>The Data Lake supports direct, in-browser access</h2><div class="rule"></div>
+  <p class="subt" style="margin-top:.2em;">Put the effort into good data and metadata and <b>the data does the work, not servers and not users</b>.</p>
+  <div class="step">Our job: instruct providers</div>
+  <div class="stepbody">Instruct NASA data providers on good metadata and cloud-friendly data delivery into the data lake, so users and services can get data out in an optimal way.</div>
+  <div class="step">Optimal = direct in-browser</div>
+  <div class="stepbody">The optimal path is direct, in-browser access: users explore the data in the browser: no files to download, no libraries to install.</div>
+  <div class="step">Why it's optimal</div>
+  <div class="stepbody">With well-structured data, consistent metadata, and caching, in-browser access is fast and cost-effective: versus server-side processing (NASA must build and maintain services that do all the work) or data egress (users do all the work and pay to move data).</div>
+</section>
+
+<!-- 1c PARALLEL SYSTEM -->
+<section data-background-color="#0b2545" class="dark">
+  <h2>The Data Lake compliments existing systems</h2><div class="rule"></div>
+  <ul>
+    <li>The data lake will compliment existing systems, not replace them.</li>
+    <li>Traditional access methods currently in use will keep working.</li>
+    <li>As datasets get integrated with Icechunk / Iceberg, users start seeing the benefits of more efficient and more powerful access.</li>
+  </ul>
+</section>
+
+<!-- 2 OVERVIEW (hidden — muddles the story)
 <section data-background-color="#ffffff" class="content">
   <h2>End-to-End Architecture Vision</h2>
   <p class="sub">From "lift and shift" granules to a unified, cloud-native data lake with integrated services.</p>
@@ -114,6 +209,7 @@
       <li>Collections will be discoverable via CMR or via query engine provider (see next box)</li>
       <li>CMR collection records will store location references to "views" into the collection (entry points for query and access to entire collection)</li>
       <li>Find &amp; compare datasets, for example search for all precipitation datasets. Consistent metadata standards will help users pick one.</li>
+      <li>STAC API is a downstream, user-facing representation of the data (a discovery view) — distinct from how metadata is stored at rest. Metadata also supports semantic / LLM retrieval for AI agents.</li>
     </ul></div>
     <div class="ccard c-query"><div class="ch">4 · Queryability</div><ul>
       <li>A DataFusion query-engine provider over every collection or collection views</li>
@@ -127,39 +223,16 @@
       <li>Visualization</li>
     </ul></div>
   </div>
-  <div class="band c-query"><b>Access modes:</b> cloud-hosted notebooks (co-located in AWS us-west-2) · HTTP endpoints · web browsers</div>
+  <div class="band c-query"><b>Access modes:</b> cloud-hosted notebooks (co-located in AWS us-west-2) · HTTP endpoints · web browsers · AI agents</div>
   <div class="band c-serv"><b>Cross-cutting principle:</b> uniform data models (Zarr/Icechunk for n-D, Iceberg for tabular) enable services to be used across many collections.</div>
 </section>
+-->
 
 <!-- 3 REFERENCE ARCHITECTURE (SVG) -->
 <section data-background-color="#ffffff" style="padding:0;">
-  <img class="diagram" src="diagrams_svg/07_reference.svg" alt="Reference architecture: concrete tools and flows">
-  <div class="editnote">This slide stays an editable SVG: diagrams_svg/07_reference.svg</div>
-</section>
-
-<!-- 4 VISION -->
-<section data-background-color="#ffffff" class="content">
-  <h2>Why Now — From Fragmentation to a Unified Vision</h2>
-  <p class="sub">A 3-5 year transition: cloud-native production for new data, plus virtualization of existing collections.</p>
-  <div class="row cols-2">
-    <div class="panel bad c-red"><div class="ph"><b>TODAY</b><span>mission-centric &amp; fragmented</span></div><ul>
-      <li>Each mission picks its own formats &amp; chunking — little cross-mission consistency</li>
-      <li>Suboptimal HDF5 granules; even cloud-optimized files fall short</li>
-      <li>Scattered metadata makes comparing similar products hard — data fusion is painful</li>
-      <li>No structural incentive for missions to invest in downstream usability</li>
-      <li>Discovery to use is manual: find a collection, then download &amp; preprocess every file</li>
-      <li>SlideRule overloaded with subsetting; CMR strained by analytics &amp; AI-agent traffic</li>
-    </ul></div>
-    <div class="panel good c-serv"><div class="ph"><b>VISION</b><span>unified, cloud-native data lake</span></div><ul>
-      <li>Mission data product requirements: consistent cloud-friendly chunking + storage / metadata / formatting standards</li>
-      <li>One data lake: Icechunk (n-D / Zarr) + Iceberg (tabular), leveraging virtual chunk-manifest indices</li>
-      <li>Federated query engine (DataFusion): discovery → cross-collection → within-collection</li>
-      <li>Uniform data models → build a service once, reuse it for every dataset</li>
-      <li>SlideRule and Harmony leverage chunk-manifest indices for product generation and subsetting</li>
-      <li>Distributed CMR data lake scales for analytics, consumer &amp; AI-agent traffic</li>
-    </ul></div>
-  </div>
-  <div class="darkbar">3-5 year transition: virtualize existing collections (via DAACs / external teams) while shifting new missions to cloud-native production.</div>
+  <h3 style="float:left">NASA ESDIS Architecture Cloud-Native Data Evolution</h3>
+  <img class="diagram" src="diagrams_svg/nasa-esdis-evolution.svg" alt="Reference architecture: tools and flows">
+  <div class="editnote">SVG: diagrams_svg/nasa-esdis-evolution.svg</div>
 </section>
 
 <!-- 5 DATA LAKE FOUNDATION
@@ -272,7 +345,7 @@
   <div class="row" style="grid-template-columns:1fr 0.05fr 1.05fr 0.05fr 1fr; gap:8px;">
     <div class="panel good c-l0"><div class="ph"><b>Data Producer Teams</b><span>all NASA-funded data production (mission, science investigator &amp; DAAC)</span></div><ul>
       <li>All NASA-funded teams produce across Levels 0–4: mission-funded standard + project-funded value-added products</li>
-      <li>Could share one platform (e.g. MAAP) — today they use distinct tools</li>
+      <li>Mission data processing (e.g. HySDS, with MAAP as one platform built on it) is a complementary system — not part of the data lake; missions choose whether to adopt it</li>
       <li>Scope &amp; standards documented in each mission's Data Management Plan (DMP)</li>
       <li>DMPs should require: CF conventions, object-store-optimized chunking, Icechunk / Iceberg delivery</li>
       <li>Publish chunk indices (virtual Icechunk manifests) to the shared stores</li>
@@ -299,18 +372,50 @@
 
 <!-- 9 OUT OF SCOPE -->
 <section data-background-color="#0b2545" class="dark">
-  <h2>Additions to reference architecture</h2><div class="rule"></div>
-  <div class="step">AI tooling for mission product teams</div>
-  <div class="stepbody">Guidance on creating optimized archival formats and Icechunk / Iceberg stores.</div>
-  <div class="step">IO layer choice</div>
+  <h2>Additional recommendations</h2><div class="rule"></div>
+  <div class="step">Mission product teams should be provided with AI tooling</div>
+  <div class="stepbody">Guidance on creating optimized archival formats and deliveryo to the Icechunk or Iceberg stores.</div>
+  <div class="step">Enterprise tools accessing the data should pay special attention to the IO layer choice and configuration</div>
   <div class="stepbody">What matters for efficient (fast, cost-minimizing) access is the object-store IO-layer library: 2 high performance options are <code>object_store</code> used in <a href="https://github.com/zarr-developers/zarr-python/blob/main/docs/user-guide/storage.md#object-store" target="_blank" rel="noopener">zarr-python</a> and <code>h5coro</code> used by SlideRule. Both offer advantages (next slide).</div>
-  <div class="step">Caching</div>
-  <div class="stepbody">Within reason, caching should be a feature of every data service, but the implementation is out of scope for this document.</div>
+  <div class="step">Implement a shared data cache</div>
+  <div class="stepbody">Services with high demand and low-latency requirements should consider using a data cache. Such a data cache could be shared by multiple services.</div>
+</section>
+
+
+<!-- 11 DISCUSSION QUESTIONS -->
+<section data-background-color="#0b2545" class="dark">
+  <h2>Discussion questions</h2><div class="rule"></div>
+  <div class="step">1 — Consolidate the interfaces?</div>
+  <div class="stepbody">Should investment be consolidated into accessing data via the Zarr and Query Engine interfaces, ultimately divesting from CMR and HDF-specific tooling?</div>
+  <div class="step">2 — The future of HDF</div>
+  <div class="stepbody">Would the natural outcome be moving away from HDF entirely? Or does NASA see archival file formats as having a role indefinitely?</div>
+</section>
+
+<!-- 13 REFERENCES -->
+<section data-background-color="#0b2545" class="dark">
+  <h2>References</h2><div class="rule"></div>
+  <ul class="reflist">
+    <li><span class="rname">Original reference architecture</span> —
+      <a href="https://app.excalidraw.com/s/66b8kXd4wid/3M1qblQjtJk" target="_blank" rel="noopener">app.excalidraw.com/s/66b8kXd4wid/3M1qblQjtJk</a></li>
+    <li><span class="rname">Harmony</span> —
+      <a href="https://harmony.earthdata.nasa.gov/" target="_blank" rel="noopener">harmony.earthdata.nasa.gov</a></li>
+    <li><span class="rname">SlideRule</span> —
+      <a href="https://docs.google.com/presentation/d/138ngY4ju-BobWi04Z14s03CYQ9gx4d3hZNz8Zgf8LFI/edit?usp=sharing" target="_blank" rel="noopener">overview slides</a>
+      ·
+      <a href="https://slideruleearth.io" target="_blank" rel="noopener">slideruleearth.io</a></li>
+    <li><span class="rname">MAAP</span> —
+      <a href="https://maap-project.org/" target="_blank" rel="noopener">maap-project.org</a></li>
+  </ul>
+</section>
+
+<!-- Extra slides -->
+<section data-background-color="#0b2545" class="dark">
+  <h1 style="font-size:2em;">Extra</h1>
 </section>
 
 <!-- 10 IO LAYER -->
 <section data-background-color="#0b2545" class="dark">
-  <h2 style="font-size:1.3em;">Object-store IO layer — what drives efficient, low-cost access</h2>
+  <h3 style="font-size:1.3em;">Object-store IO layer — what drives efficient, low-cost access</h3>
   <p class="subt" style="margin-top:.2em;">The IO library sets the number and size of S3 GET requests and compute time — i.e. the cost of access. The two are complementary.</p>
   <div class="cols">
     <div class="col a"><h3>Rust <code>object_store</code></h3><div class="csub">cloud-native · general purpose</div><ul>
@@ -329,43 +434,59 @@
   <p class="bottomline">Bottom line: object_store for cloud-native stores; h5coro for legacy HDF5 in place — a cost-vs-migration tradeoff.</p>
 </section>
 
-<!-- 11 DISCUSSION QUESTIONS -->
+<!-- 10b CACHING & MULTISCALES -->
 <section data-background-color="#0b2545" class="dark">
-  <h2>Discussion questions</h2><div class="rule"></div>
-  <div class="step">1 — Consolidate the interfaces?</div>
-  <div class="stepbody">Should investment be consolidated into accessing data via the Zarr / DataFusion interfaces, ultimately divesting from HDF-specific tooling?</div>
-  <div class="step">2 — The future of HDF</div>
-  <div class="stepbody">Would the natural outcome be moving away from HDF entirely? Or does NASA see archival file formats as having a role indefinitely?</div>
+  <h2>Caching &mdash; a data cache, not a tiling cache</h2><div class="rule"></div>
+  <p class="subt" style="margin-top:.2em;">Cache the data, not the rendered pixels &mdash; so every service benefits, not just visualization. (FY27 focus: demonstrate caching performance.)</p>
+  <div class="step">Multiscales live in the Icechunk store</div>
+  <div class="stepbody">The Icechunk store includes multiscales (overview / pyramid resolutions of the arrays), so coarse-resolution reads don't require pulling full-resolution chunks.</div>
+  <div class="step">Cache the multiscales as data</div>
+  <div class="stepbody">These multiscales are cached as a <b>data cache</b> &mdash; cached Zarr arrays / chunks &mdash; <b>not a tiling cache</b>. The same cached data serves tiles, timeseries, analytics, and AI workloads alike.</div>
+  <div class="step">Why a data cache wins</div>
+  <div class="stepbody">A tiling cache accelerates only one visualization service. A data cache accelerates every consumer of the array, is reused across services, and avoids re-rendering the same pixels repeatedly.</div>
 </section>
 
-<!-- 12 NEXT STEPS -->
+<!-- 10c AI AS A PRIMARY OBJECTIVE -->
 <section data-background-color="#0b2545" class="dark">
-  <h2>For discussion &amp; next steps</h2><div class="rule"></div>
-  <div class="step">Align internally</div>
-  <div class="stepbody">Brief leadership on the discussion and confirm next steps.</div>
-  <div class="step">Document the strategy (roadmap)</div>
-  <div class="stepbody">Outline the transition plan and long-term objectives behind this vision.</div>
-  <div class="step">Socialize the vision</div>
-  <div class="stepbody">Share the architecture vision with leadership to align on goals.</div>
-  <div class="step">Open questions</div>
-  <div class="stepbody">ARD storage format (archival + virtual Icechunk vs. native Zarr Icechunk) · which services NASA maintains for which datasets · funding &amp; incentives for cloud-native mission product requirements.</div>
+  <h2>AI as a primary objective</h2><div class="rule"></div>
+  <p class="subt" style="margin-top:.2em;">Access is shifting from web / Python / in-house systems toward AI agents. The architecture must let LLMs discover, reason about, and ingest NASA Earth data.</p>
+  <div class="step">Discover</div>
+  <div class="stepbody">Rich, consistent metadata makes datasets findable by agents &mdash; and discovery will broaden beyond STAC. In two years, semantic search over ATBDs may matter as much as a STAC endpoint; the metadata layer is designed for both structured (STAC / query) and semantic / LLM retrieval.</div>
+  <div class="step">Reason</div>
+  <div class="stepbody">Consistent CF metadata plus a uniform query interface (DataFusion / SQL) let agents compare datasets and compose queries without per-dataset glue code.</div>
+  <div class="step">Ingest</div>
+  <div class="stepbody">Cloud-friendly Zarr / Icechunk chunking and cached multiscales give agents efficient, low-cost array access at the resolution they need &mdash; direct over S3.</div>
+  <div class="step">On the roadmap</div>
+  <div class="stepbody">Work with the AI/ML teams to demonstrate use of the data lake (e.g. Water Insight or EIE) in the first two quarters of FY27.</div>
 </section>
 
-<!-- 13 REFERENCES -->
+<!-- 10d LONG TERM: SIMPLIFY -->
 <section data-background-color="#0b2545" class="dark">
-  <h2>References</h2><div class="rule"></div>
-  <ul class="reflist">
-    <li><span class="rname">Original reference architecture</span> —
-      <a href="https://app.excalidraw.com/s/66b8kXd4wid/3M1qblQjtJk" target="_blank" rel="noopener">app.excalidraw.com/s/66b8kXd4wid/3M1qblQjtJk</a></li>
-    <li><span class="rname">Harmony</span> —
-      <a href="https://harmony.earthdata.nasa.gov/" target="_blank" rel="noopener">harmony.earthdata.nasa.gov</a></li>
-    <li><span class="rname">SlideRule</span> —
-      <a href="https://docs.google.com/presentation/d/138ngY4ju-BobWi04Z14s03CYQ9gx4d3hZNz8Zgf8LFI/edit?usp=sharing" target="_blank" rel="noopener">overview slides</a>
-      ·
-      <a href="https://slideruleearth.io" target="_blank" rel="noopener">slideruleearth.io</a></li>
-    <li><span class="rname">MAAP</span> —
-      <a href="https://maap-project.org/" target="_blank" rel="noopener">maap-project.org</a></li>
-  </ul>
+  <h2>Long term &mdash; a simpler vision</h2><div class="rule"></div>
+  <div class="step">Deprecate HDF tooling in favor of Zarr</div>
+  <div class="stepbody">Once the data lake is established, support for HDF-specific tooling is deprecated in favor of supporting only Zarr tooling &mdash; a single, cloud-native access stack to build and maintain.</div>
+  <div class="step">Access only via the query engine + Zarr interfaces</div>
+  <div class="stepbody">A future architecture focuses on data lake access through the query engine (DataFusion) and Zarr interfaces only &mdash; not CMR and not archival files. Direct CMR and archival-file access are slow, costly, and error-prone by comparison.</div>
+  <div class="step">Why this is feasible</div>
+  <div class="stepbody">The DataFusion query layer is stateless and horizontally scalable over partitioned metadata in object storage &mdash; replacing CMR's single-database (RDS) bottleneck &mdash; so discovery and query scale with object storage and absorb analytics- and AI-agent-scale traffic.</div>
+</section>
+
+<!-- EXTRA: array stack vs tabular stack -->
+<section data-background-color="#ffffff" class="content">
+  <h2>Extra — the array stack vs. the tabular stack</h2>
+  <p class="sub">Two parallel stacks, one query engine. Choose the store by data shape: dense arrays &rarr; Zarr / Icechunk; records (points, swaths, features) &rarr; Parquet / Iceberg.</p>
+  <table class="cmp">
+    <thead><tr><th>Layer</th><th>Array / n-D world</th><th>Tabular world</th></tr></thead>
+    <tbody>
+      <tr><th>On-disk format</th><td class="tlake">Zarr</td><td class="tlake">Parquet &nbsp;(GeoParquet for vector)</td></tr>
+      <tr><th>Transactional store</th><td class="tlake">Icechunk</td><td class="tlake">Iceberg &nbsp;(+ <code>pyiceberg</code> for snapshots)</td></tr>
+      <tr><th>Format reader (decode &rarr; memory)</th><td><code>zarr-python</code></td><td><code>pyarrow</code></td></tr>
+      <tr><th>In-memory analysis</th><td><code>xarray</code></td><td><code>pandas</code> · <code>polars</code> · <code>GeoPandas</code></td></tr>
+      <tr><th>Query engine</th><td>DataFusion &nbsp;(via <code>zarr-datafusion</code>)</td><td>DataFusion &nbsp;(<code>polars</code> overlaps)</td></tr>
+      <tr><th>Example NASA products</th><td>gridded L3/L4 &mdash; GPM IMERG · NLDAS · MUR SST · TEMPO L3 · HLS · model reanalysis</td><td>points / records &mdash; ICESat-2 photons · GEDI footprints · swath L1B/L2 · in-situ &amp; vector · STAC catalog</td></tr>
+    </tbody>
+  </table>
+  <div class="band c-lake"><b>One query engine over both:</b> DataFusion spans the two stacks. <code>polars</code> is a dataframe library that also acts as a mini query engine, so it overlaps DataFusion rather than matching <code>zarr-python</code>'s decode-only role.</div>
 </section>
 
 </div></div>
