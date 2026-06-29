@@ -4,6 +4,7 @@
       "issue_number": 31,
       "title": "ODD PI 25.2 Objective 7: Increase data format support in VirtualiZarr",
       "state": "closed",
+      "state_reason": "completed",
       "contributors": [
         [
           "Chuck Daniels",
@@ -20,6 +21,7 @@
       "issue_number": 34,
       "title": "ODD PI 25.2 Objective 3: Visualize OCO-3 Datasets in VEDA",
       "state": "closed",
+      "state_reason": "completed",
       "contributors": [
         [
           "Aimee Barciauskas",
@@ -32,6 +34,7 @@
       "issue_number": 35,
       "title": "ODD PI 25.2 Objective 5: Deliver Virtual Zarr Stores for NASA Datasets Using Icechunk",
       "state": "closed",
+      "state_reason": "completed",
       "contributors": [
         [
           "Aimee Barciauskas",
@@ -44,6 +47,7 @@
       "issue_number": 36,
       "title": "ODD PI 25.2 Objective 6: Support for Modernizing VirtualiZarr to use zarr-python 3.0",
       "state": "closed",
+      "state_reason": "completed",
       "contributors": [
         [
           "Sean Harkins",
@@ -60,6 +64,7 @@
       "issue_number": 37,
       "title": "ODD PI 25.2 Objective 8: Support CMR Modernization",
       "state": "closed",
+      "state_reason": "completed",
       "contributors": [
         [
           "Sean Harkins",
@@ -76,6 +81,7 @@
       "issue_number": 40,
       "title": "ODD PI 25.2 Objective 1: Upgrade titiler and titiler-xarray to zarr-Python 3.0 and deploy to staging",
       "state": "closed",
+      "state_reason": "completed",
       "contributors": [
         [
           "Max Jones",
@@ -88,6 +94,7 @@
       "issue_number": 41,
       "title": "ODD PI 25.2 Objective 4: Draft Web-Optimized Zarr (WOZ) Standard",
       "state": "closed",
+      "state_reason": "completed",
       "contributors": [
         [
           "Max Jones",
@@ -100,6 +107,7 @@
       "issue_number": 76,
       "title": "ODD PI 25.2 Objective 2: Demonstrate how to tile HLS using titiler-cmr",
       "state": "closed",
+      "state_reason": "completed",
       "contributors": [
         [
           "Henry Rodman",
@@ -114,6 +122,7 @@
       "issue_number": 118,
       "title": "ODD PI 25.3 Objective 1: Support CMR Modernization",
       "state": "closed",
+      "state_reason": "not_planned",
       "contributors": [
         [
           "Sean Harkins",
@@ -130,6 +139,7 @@
       "issue_number": 119,
       "title": "ODD PI 25.3 Objective 2: Continue to Build Out the VirtualiZarr Ecosystem",
       "state": "closed",
+      "state_reason": "completed",
       "contributors": [
         [
           "Sean Harkins",
@@ -146,6 +156,7 @@
       "issue_number": 124,
       "title": "ODD PI 25.3 Objective 3: Publish Cloud-Optimized Datasets",
       "state": "closed",
+      "state_reason": "completed",
       "contributors": [
         [
           "Chuck Daniels",
@@ -162,6 +173,7 @@
       "issue_number": 126,
       "title": "ODD PI 25.3 Objective 4: Support TiTiler-CMR Adoption",
       "state": "closed",
+      "state_reason": "completed",
       "contributors": [
         [
           "Sean Harkins",
@@ -178,6 +190,7 @@
       "issue_number": 127,
       "title": "ODD PI 25.3 Objective 6: Community Involvement",
       "state": "closed",
+      "state_reason": "completed",
       "contributors": [
         [
           "Max Jones",
@@ -198,6 +211,7 @@
       "issue_number": 165,
       "title": "ODD PI 25.3 Objective 5: Foundational Zarr-Python and Xarray Contributions",
       "state": "closed",
+      "state_reason": "completed",
       "contributors": [
         [
           "Davis Bennett",
@@ -216,6 +230,7 @@
       "issue_number": 121,
       "title": "Potential ODD PI 25.4 Objective: Visualize Web-Optimized Zarr (WOZ) in VEDA (preview)",
       "state": "closed",
+      "state_reason": "completed",
       "contributors": [
         [
           "Max Jones",
@@ -228,6 +243,7 @@
       "issue_number": 122,
       "title": "Potential 25.4 ODD Objective: Research, develop and document methods for Zarr and VirtualiZarr visualization",
       "state": "closed",
+      "state_reason": "completed",
       "contributors": [
         [
           "Max Jones",
@@ -244,6 +260,7 @@
       "issue_number": 197,
       "title": "ODD PI 25.4 Objective 1: \ud83c\udfac TiTiler-CMR is production ready",
       "state": "open",
+      "state_reason": null,
       "contributors": [
         [
           "Aimee Barciauskas",
@@ -260,6 +277,7 @@
       "issue_number": 198,
       "title": "ODD PI 25.4 Objective 2: \ud83d\ude80 Dataset support for VEDA instances",
       "state": "closed",
+      "state_reason": "completed",
       "contributors": [
         [
           "Max Jones",
@@ -276,6 +294,7 @@
       "issue_number": 203,
       "title": "ODD PI 25.4 Objective 3: \ud83d\uddfa\ufe0fResearch, develop and document methods for Zarr and VirtualiZarr data services",
       "state": "closed",
+      "state_reason": "completed",
       "contributors": [
         [
           "Max Jones",
@@ -288,6 +307,7 @@
       "issue_number": 204,
       "title": "ODD PI 25.4 Objective 4: \ud83d\udee0\ufe0f Zarr Development",
       "state": "closed",
+      "state_reason": "completed",
       "contributors": [
         [
           "Davis Bennett",
@@ -304,6 +324,7 @@
       "issue_number": 205,
       "title": "ODD PI 25.4 Objective 5: \ud83e\udd17 Community engagement",
       "state": "closed",
+      "state_reason": "completed",
       "contributors": [
         [
           "Sean Harkins",
@@ -328,6 +349,7 @@
       "issue_number": 206,
       "title": "ODD PI 25.4 Objective 6: \ud83d\udce6 Obstore outreach",
       "state": "closed",
+      "state_reason": "completed",
       "contributors": [
         [
           "Chuck Daniels",
@@ -346,6 +368,7 @@
       "issue_number": 244,
       "title": "ODD PI 26.1 Objective 1: \ud83d\uddfa\ufe0f Add dynamic tiling and timeseries support for Virtual Zarr Stores",
       "state": "open",
+      "state_reason": null,
       "contributors": [
         [
           "Julius Busecke",
@@ -371,6 +394,7 @@
       "issue_number": 245,
       "title": "ODD PI 26.1 Objective 2: \ud83c\udf0d Add dynamic tiling and timeseries support for datasets in CMR",
       "state": "open",
+      "state_reason": null,
       "contributors": [
         [
           "Aimee Barciauskas",
@@ -408,6 +432,7 @@
       "issue_number": 246,
       "title": "ODD PI 26.1 Objective 3: \ud83e\udd16 Support virtualization of additional data products",
       "state": "closed",
+      "state_reason": "completed",
       "contributors": [
         [
           "Sean Harkins",
@@ -457,6 +482,7 @@
       "issue_number": 247,
       "title": "ODD PI 26.1 Objective 4: \ud83d\udef0 Explore scalable, cloud native approaches for search, discovery and access of non-gridded data",
       "state": "closed",
+      "state_reason": "completed",
       "contributors": [
         [
           "Sean Harkins",
@@ -494,6 +520,7 @@
       "issue_number": 248,
       "title": "ODD PI 26.1 Objective 5: \ud83e\udd17 Support community adoption of the technologies incubated by EODC and VEDA",
       "state": "closed",
+      "state_reason": "completed",
       "contributors": [
         [
           "Sean Harkins",
@@ -527,7 +554,7 @@
         ],
         [
           "zarr-conventions",
-          "geo-proj"
+          "proj"
         ],
         [
           "zarr-conventions",
@@ -565,6 +592,7 @@
       "issue_number": 304,
       "title": "ODD PI 26.2 Objective 1: \ud83e\udd16Create virtual Zarr stores for high priority dataset(s)",
       "state": "closed",
+      "state_reason": "completed",
       "contributors": [
         [
           "Tyler",
@@ -582,6 +610,7 @@
       "issue_number": 305,
       "title": "ODD PI 26.2 Objective 2: \ud83d\udee0\ufe0f TiTiler-CMR maintenance + performance",
       "state": "open",
+      "state_reason": null,
       "contributors": [
         [
           "Chuck Daniels",
@@ -619,6 +648,7 @@
       "issue_number": 306,
       "title": "ODD PI 26.2 Objective 3: \ud83e\udd17 Support community adoption of the technologies incubated by EODC and VEDA",
       "state": "closed",
+      "state_reason": "completed",
       "contributors": [
         [
           "Chuck Daniels",
@@ -648,7 +678,7 @@
         ],
         [
           "zarr-conventions",
-          "geo-proj"
+          "proj"
         ],
         [
           "zarr-conventions",
@@ -728,6 +758,7 @@
       "issue_number": 308,
       "title": "ODD PI 26.2 Objective 5: \ud83e\udd2a Expand virtualization support for quirky datasets",
       "state": "closed",
+      "state_reason": "completed",
       "contributors": [
         [
           "Max Jones",
@@ -789,6 +820,7 @@
       "issue_number": 309,
       "title": "ODD PI 26.2 Objective 6: \ud83d\udef0\ufe0f Propose unified strategy for virtualization of orbital swath (\u201cL2\u201d) data",
       "state": "open",
+      "state_reason": null,
       "contributors": [
         [
           "Sean Harkins",
@@ -846,6 +878,7 @@
       "issue_number": 319,
       "title": "ODD PI 26.2 Objective 7: \ud83c\udf10 Client-side raster rendering (deck.gl-raster)",
       "state": "closed",
+      "state_reason": "completed",
       "contributors": [
         [
           "Kyle Barron",
@@ -863,6 +896,7 @@
       "issue_number": 331,
       "title": "ODD PI 26.? Objective ?: WASM chunk codec research and PoC",
       "state": "open",
+      "state_reason": null,
       "contributors": [
         [
           "Jarrett Keifer",
@@ -882,6 +916,7 @@
       "issue_number": 307,
       "title": "ODD PI 26.3 Objective 8: \ud83d\udcc8 Finalize Design for Zarr + VirtualiZarr Time Series API [Carry over from 26.2] [Stretch: start implementation]",
       "state": "open",
+      "state_reason": null,
       "contributors": [
         [
           "Henry Rodman",
@@ -907,6 +942,7 @@
       "issue_number": 346,
       "title": "ODD PI 26.3 Objective 1: \ud83e\udd16 Develop + Maintain the Virtual Zarr Ecosystem",
       "state": "open",
+      "state_reason": null,
       "contributors": [
         [
           "Max Jones",
@@ -944,6 +980,7 @@
       "issue_number": 347,
       "title": "ODD PI 26.3 Objective 2: \ud83c\udf33 Evolve the Zarr Ecosystem",
       "state": "open",
+      "state_reason": "reopened",
       "contributors": [
         [
           "Davis Bennett",
@@ -973,7 +1010,7 @@
         ],
         [
           "zarr-conventions",
-          "geo-proj"
+          "proj"
         ],
         [
           "zarr-conventions",
@@ -1009,6 +1046,7 @@
       "issue_number": 348,
       "title": "ODD PI 26.3 Objective 3: \ud83d\udcdd Cloud-Optimized Data Guidance",
       "state": "open",
+      "state_reason": null,
       "contributors": [
         [
           "Aimee Barciauskas",
@@ -1029,6 +1067,7 @@
       "issue_number": 349,
       "title": "ODD PI 26.3 Objective 4: \ud83e\udd17 Community Engagement",
       "state": "open",
+      "state_reason": null,
       "contributors": [
         [
           "Sean Harkins",
@@ -1058,6 +1097,7 @@
       "issue_number": 350,
       "title": "ODD PI 26.3 Objective 5: \ud83d\udee0\ufe0f TiTiler-CMR Support",
       "state": "open",
+      "state_reason": null,
       "contributors": [
         [
           "Chuck Daniels",
@@ -1095,6 +1135,7 @@
       "issue_number": 351,
       "title": "ODD PI 26.3 Objective 6: \ud83d\udef0\ufe0f Analytics-scale metadata stores",
       "state": "open",
+      "state_reason": null,
       "contributors": [
         [
           "Sean Harkins",
@@ -1120,6 +1161,7 @@
       "issue_number": 352,
       "title": "ODD PI 26.3 Objective 7: \ud83c\udf10 Browser-based visualization + analysis",
       "state": "open",
+      "state_reason": null,
       "contributors": [
         [
           "Aimee Barciauskas",
