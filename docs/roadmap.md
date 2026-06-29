@@ -87,13 +87,13 @@ While the grid above tracks *what* moves through our portfolio, the phases below
   <text x="56" y="350" font-size="13" fill="#0f172a"><tspan font-weight="bold">Foundational libraries: </tspan>Zarr &#183; Icechunk &#183; obstore (IO) &#183; warp / resampling / projection performance &#183; in-browser Zarr + COG &#183; GeoZarr &amp; standards</text>
 </svg>
 
-**FY26.4–27.1 — Demonstrate the data lake.** Demonstrate the utility and performance of Icechunk stores as a data lake platform across varied data types (HLS, NISAR, GPM IMERG, NLDAS, TEMPO, …). VEDA instances demonstrate the data lake in action with scientists, and we migrate the data services component (starting with TiTiler-CMR) to the Data Services team so ODD can prototype other services.
+**FY26.4–27.1 — Demonstrate the data lake.** Demonstrate the utility and performance of Icechunk stores as a data lake platform across varied data types (HLS, NISAR, GPM IMERG, NLDAS, TEMPO, ...). Leverage VEDA instances to demonstrate the value of the data lake through services, and direct access the value to scientists. Simultaneously, we will migrate the data services components, specifically TiTiler-CMR, to the Data Services team.
 
-**FY27.1–27.2 — Demonstrate the query engine + service integration.** Show discovery and query across the lake via the query engine (DataFusion), and integrate it with the data services so a single interface serves discovery, query, and access.
+**FY27.1–27.2 — Demonstrate the query engine + service integration.** Showcase integrated discovery, query and access via the query engine. Integrate the query engine with data services so a single interface serves discovery, query, and access.
 
-**FY27.3–27.4 — Demonstrate caching + AI use.** Demonstrate caching performance using multiscales held in the Icechunk store and cached as a *data cache* (cached Zarr arrays), not a per-service tiling cache. Work with the AI/ML teams to demonstrate use of the data lake by AI (e.g. Water Insight or EIE): LLMs discover, reason about, and ingest data from the lake.
+**FY27.3–27.4 — Demonstrate caching + AI use.** Demonstrate performance using multiscales and a *data cache* (i.e. a distributed in-memory store). Work with the AI/ML teams to demonstrate use of the data lake by AI (e.g. Water Insight or EIE); LLMs discover, reason about, and ingest data from the lake.
 
-**Throughout — alongside every phase.** Socialization of the plan, integration of external teams, and iterating on the plan as we work to incorporate varied datasets. Plus continuation of foundational work in Zarr, Icechunk, and the underlying geospatial libraries: IO (obstore), warp / resampling / projection **performance**, reading and handling Zarr + COG directly in the browser, and geospatial data standards (GeoZarr).
+**Throughout — alongside every phase.** Socialize the vision with other teams and incoporate feedback. Iterate on the plan as we work to incorporate varied datasets. Continue foundational work in Zarr, Icechunk, and other underlying geospatial libraries: IO (obstore), warp / resampling / projection performance, reading and handling Zarr + COG directly in the browser, and geospatial data standards (GeoZarr).
 
 
 ## How we work

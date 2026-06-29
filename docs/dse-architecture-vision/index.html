@@ -36,8 +36,9 @@
 
 /* panels with check/cross */
 .panel{ border:2.5px solid var(--c); border-radius:14px; background:#fff; overflow:hidden; }
-.panel .ph{ background:var(--c); color:#fff; padding:7px 12px; }
+.panel .ph{ background:var(--c); color:#fff; padding:5px 12px; line-height:1.2; }
 .panel .ph b{ font-size:13.5px; } .panel .ph span{ font-size:10.5px; font-style:italic; opacity:.92; display:block; }
+.panel .psub{ font-size:10.5px; font-style:italic; color:#475569; margin:7px 12px 0; line-height:1.3; }
 .panel ul{ margin:8px 12px; padding:0; list-style:none; }
 .panel li{ font-size:10.5px; margin:5px 0; padding-left:20px; position:relative; line-height:1.28; }
 .panel.good li:before{ content:"✓"; position:absolute; left:0; color:var(--c); font-weight:700; }
@@ -170,23 +171,24 @@
 
 <!-- 1d OPTIMAL ACCESS: IN-BROWSER -->
 <section data-background-color="#0b2545" class="dark">
-  <h2>The Data Lake supports direct, in-browser access</h2><div class="rule"></div>
-  <p class="subt" style="margin-top:.2em;">Put the effort into good data and metadata and <b>the data does the work, not servers and not users</b>.</p>
-  <div class="step">Our job: instruct providers</div>
-  <div class="stepbody">Instruct NASA data providers on good metadata and cloud-friendly data delivery into the data lake, so users and services can get data out in an optimal way.</div>
-  <div class="step">Optimal = direct in-browser</div>
-  <div class="stepbody">The optimal path is direct, in-browser access: users explore the data in the browser: no files to download, no libraries to install.</div>
+  <p class="subt">Put effort into data and metadata and <b>the data does the work, not servers or users</b>.</p>
+  <div class="rule"></div>
+  <div class="step">Optimal access is direct in-browser</div>
+  <div class="stepbody">The optimal path is direct, in-browser access: users explore the data in the browser: no files to download, no libraries to install.</div>  
   <div class="step">Why it's optimal</div>
-  <div class="stepbody">With well-structured data, consistent metadata, and caching, in-browser access is fast and cost-effective: versus server-side processing (NASA must build and maintain services that do all the work) or data egress (users do all the work and pay to move data).</div>
+  <div class="stepbody">With well-structured data, consistent metadata, and caching, in-browser access is fast and cost-effective: versus server-side processing (NASA must build and maintain services that do all the work) or data egress (users do all the work and NASA pays to move data).</div>
+  <div class="step">Instruct providers</div>
+  <div class="stepbody">Instruct NASA data providers on good metadata and cloud-friendly data delivery into the data lake, so users and services can get data out in 
+  an optimal way.</div>  
 </section>
 
 <!-- 1c PARALLEL SYSTEM -->
 <section data-background-color="#0b2545" class="dark">
-  <h2>The Data Lake compliments existing systems</h2><div class="rule"></div>
+  <p class="subt">The data lake compliments existing systems</p><div class="rule"></div>
   <ul>
-    <li>The data lake will compliment existing systems, not replace them.</li>
-    <li>Traditional access methods currently in use will keep working.</li>
-    <li>As datasets get integrated with Icechunk / Iceberg, users start seeing the benefits of more efficient and more powerful access.</li>
+    <li class="stepbody">The data lake will compliment existing systems, not replace them.</li>
+    <li class="stepbody">Traditional access methods currently in use will keep working.</li>
+    <li class="stepbody">As datasets get integrated with Icechunk / Iceberg, users start seeing the benefits of more efficient and more powerful access.</li>
   </ul>
 </section>
 
@@ -202,21 +204,21 @@
   <h2>Roles &amp; Responsibilities</h2>
   <p class="sub">Clear roles, responsibilities and well-defined interfaces will be required to transition from data silos and disparate systems to a shared cloud-native data lake.</p>
   <div class="row" style="grid-template-columns:1fr 0.05fr 1.05fr 0.05fr 1fr; gap:8px;">
-    <div class="panel good c-l0"><div class="ph"><b>Data Producer Teams</b><span>all NASA-funded data production (mission, science investigator &amp; DAAC)</span></div><ul>
+    <div class="panel good c-l0"><div class="ph"><b>Data Producer Teams</b></div><div class="psub">all NASA-funded data production (mission, science investigator &amp; DAAC)</div><ul>
       <li><b>Who?</b> All NASA-funded teams who produce all levels of products; mission science teams to project-funded value-added products</li>
       <li>Mission data processing is a complementary system which will feed into the data lake</li>
       <li>Each mission's Data Management Plan (DMP) should require a detailed plan for adhering to data lake conventions, such as CF conventions, GeoZarr and object-store-optimized chunking.</li>
       <li>DMPs should require a detalied plan for  Icechunk or Iceberg delivery</li>
     </ul></div>
     <div class="arrowlbl">publish →</div>
-    <div class="panel good c-lake"><div class="ph"><b>Data System Team</b><span>Maintains the data lake contract and infrastructure.</span></div><ul style="list-style:none;">
+    <div class="panel good c-lake"><div class="ph"><b>Data System Team</b></div><div class="psub">Maintains the data lake contract and infrastructure.</div><ul style="list-style:none;">
       <li>Develop and maintain the standards for the data lake.</li>
       <li>Develop and maintain interfaces for data producers to submit products to the data lake.</li>
       <li>Maintain, monitor and secure the data storarge and query engine infrastructure. Ensure durability and reliability. Validate incoming data.</li>
       <li>Maintain supporting libraries for data integration.</li>
     </ul></div>
     <div class="arrowlbl">→ consume</div>
-    <div class="panel good c-serv"><div class="ph"><b>Data Services Teams</b><span>data lake consumers</span></div><ul>
+    <div class="panel good c-serv"><div class="ph"><b>Data Services Teams</b></div><div class="psub">data lake consumers</div><ul>
       <li>E.g. Subsetting & reformatting (Harmony); on-demand products (SlideRule)</li>
       <li>Analytics & visualization services (TiTiler-CMR, Worldview, VEDA)</li>
       <li>Build once on shared data models to support extensibility to many datasets.</li>
