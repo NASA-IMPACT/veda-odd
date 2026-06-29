@@ -123,10 +123,10 @@
 <!-- 1 TITLE -->
 <section data-background-color="#0b2545" class="dark">
   <p class="kicker">NASA EARTHDATA CLOUD DATA SYSTEM EVOLUTION (DSE)</p>
-  <h1 style="font-size:2.3em;">Cloud-Native Data Lake</h1>
+  <h1 style="font-size:2.3em;">Cloud-Native Data Lakehouse</h1>
   <div class="rule"></div>
-  <p class="subt">From "lift and shift" granules to a unified, cloud-native data lake.</p>
-  <p class="meta">Working draft · June 2026 &nbsp;·&nbsp; JP Swinski, Sean Harkins &amp; Aimee Barciauskas</p>
+  <p class="subt">From "lift and shift" granules to a cloud-native data lakehouse (lake + warehouse).</p>
+  <p class="meta">Working draft · June 2026 &nbsp;·&nbsp; JP Swinski, &amp; ODD Team</p>
 </section>
 
 <!-- 1a WHY NOW (moved to lead with the "why") -->
@@ -143,26 +143,35 @@
       <li>Download + process is still a primary access pattern (e.g. Download is the only access method available in the Earthdata search user interface)</li>
       <li>CMR is strained by analytics &amp; AI-agent traffic</li>
     </ul></div>
-    <div class="panel good c-serv"><div class="ph"><b>3-5 YEARS IN THE FUTURE</b><span>Earthdata Cloud is anchored by a unified, cloud-native data lake</span></div><ul>
-      <li>Organizing data around a single data model (i.e. Zarr), means building a tool or service once and it can be used for many datasets.</li>
-      <li>Mission data product requirements are adopted: consistent cloud-friendly structure (sharding, chunking), consistent and standards-compliant metadata.</li>
-      <li>Chunk manifests create a bridge between archival file formats and a single data model.</li>
-      <li>Compliant data products are all available through a centralized data lake, utilizing a storage engine which supports ACID transactions for metadata and data.</li>
-      <li>SlideRule and Harmony leverage chunk-manifest indices for product generation and subsetting.</li>
-      <li>An integrated query engine enables frictionless discovery to acccess.</li>
+    <div class="panel good c-serv"><div class="ph"><b>5 YEARS IN THE FUTURE</b><span>Earthdata Cloud is anchored by a shared cloud-native data lakehouse</span></div><ul>
+      <li>Data lake for L0-L1C: Self-describing files still have a place as archival files for low-level data products, initial sensor outputs.</li>
+      <li>Data warehouse for L2-L4: Higher level data products are stored in a structured data store.</li>
+      <li>Lower level products still leverage chunk manifests for higher-level product generation. Processing workflows are recorded so they can be replayed easily in reprocessing campaigns.</li>
+      <li>The data warehouse can be accessed through a few data models (Zarr, Arrow). Building a tool or service once means it can be used for many datasets.</li>
+      <li>Mission and science data product teams are provided requirements for the lakehouse such as consistent cloud-friendly structure (sharding, chunking), consistent and standards-compliant metadata</li>
+      <li>Chunk manifests create a bridge between archival file formats the data warehouse.</li>
+      <li>Not all datasets can make it in the warehouse, but those that do have more services available (levels of service paradigm).</li>
       <li>A horizontally scalable query engine supports analytics and operational-scale consumers.</li>
-      <li>AI agents would be able to utilize the query engine and suite of tools to more reliably discover, access and interpret data for consumers.</li>
+      <li>AI agents would be able to utilize the system to more reliably discover, access and interpret data for consumers.</li>
     </ul></div>
   </div>
 </section>
 
 <!-- 1b 10K OVERVIEW (HTML — editable text) -->
 <!-- 1b High-level Architecture (SVG) -->
-<section data-background-color="#ffffff" style="padding:0;">
-  <h3 style="float: left;">High-level Data Lake Architecture</h2>
+<!-- <section data-background-color="#ffffff" style="padding:0;">
+  <h2 style="float: left;">High-level Data Lake Architecture</h2>
   <img class="diagram" src="diagrams_svg/cloud-data-lake-simple.svg" alt="High-level architecture">
   <div class="editnote">SVG: diagrams_svg/cloud-data-lake-simple.svg</div>
-</section>
+</section> -->
+
+<!-- 1b High-level Architecture (SVG) -->
+<!-- <section data-background-color="#ffffff" style="padding:0;">
+  <h2>From download to service discovery</h2><div class="rule"></div>
+  <p class="subt">Uniform interfaces into data means one service can work for many datasets.</p>
+  <img class="diagram" style="width: 75%" src="diagrams_svg/data-marketplace.svg" alt="High-level architecture">
+  <div class="editnote">SVG: diagrams_svg/data-marketplace.svg</div>
+</section> -->
 
 
 <section data-background-color="#0b2545" class="dark">
@@ -171,22 +180,24 @@
 
 <!-- 1d OPTIMAL ACCESS: IN-BROWSER -->
 <section data-background-color="#0b2545" class="dark">
+  <h2>Optimized Access Patterns</h2>
   <p class="subt">Put effort into data and metadata and <b>the data does the work, not servers or users</b>.</p>
   <div class="rule"></div>
-  <div class="step">Optimal access is direct in-browser</div>
-  <div class="stepbody">The optimal path is direct, in-browser access: users explore the data in the browser: no files to download, no libraries to install.</div>  
-  <div class="step">Why it's optimal</div>
-  <div class="stepbody">With well-structured data, consistent metadata, and caching, in-browser access is fast and cost-effective: versus server-side processing (NASA must build and maintain services that do all the work) or data egress (users do all the work and NASA pays to move data).</div>
-  <div class="step">Instruct providers</div>
-  <div class="stepbody">Instruct NASA data providers on good metadata and cloud-friendly data delivery into the data lake, so users and services can get data out in 
-  an optimal way.</div>  
+  <div class="step">How data does the work</div>
+  <div class="stepbody">With well-structured data, consistent metadata, and caching, access is fast and cost-effective; contrast with server-side processing (NASA must build and maintain services that do all the work) or data egress (users do all the work and NASA pays to move data).</div>  
+  <div class="step">Access Pattern 1: Client-side access for limited exploration</div>
+  <div class="stepbody">Direct, client-side access: users explore the data in the browser. No files to download, no libraries to install.</div>
+  <div class="step">Access Pattern 2: Co-located compute for heavy workloads</div>
+  <div class="stepbody">Co-located compute incurs no egress costs and delivers the best network performance.</div>
+  <div class="step">Access Pattern 3: Managed streaming</div>
+  <div class="stepbody">Not all users will be able to use co-located compute. Managed streaming should be available to those users.</div>    
 </section>
 
 <!-- 1c PARALLEL SYSTEM -->
 <section data-background-color="#0b2545" class="dark">
-  <p class="subt">The data lake compliments existing systems</p><div class="rule"></div>
+  <p class="subt">The data lakehouse compliments existing systems</p><div class="rule"></div>
   <ul>
-    <li class="stepbody">The data lake will compliment existing systems, not replace them.</li>
+    <li class="stepbody">The data lakehouse will compliment existing systems, not replace them.</li>
     <li class="stepbody">Traditional access methods currently in use will keep working.</li>
     <li class="stepbody">As datasets get integrated with Icechunk / Iceberg, users start seeing the benefits of more efficient and more powerful access.</li>
   </ul>
@@ -207,7 +218,7 @@
     <div class="panel good c-l0"><div class="ph"><b>Data Producer Teams</b></div><div class="psub">all NASA-funded data production (mission, science investigator &amp; DAAC)</div><ul>
       <li><b>Who?</b> All NASA-funded teams who produce all levels of products; mission science teams to project-funded value-added products</li>
       <li>Mission data processing is a complementary system which will feed into the data lake</li>
-      <li>Each mission's Data Management Plan (DMP) should require a detailed plan for adhering to data lake conventions, such as CF conventions, GeoZarr and object-store-optimized chunking.</li>
+      <li>Each mission's Data Management Plan (DMP) should require a detailed plan for adhering to data lakehouse conventions, such as CF conventions, GeoZarr and object-store-optimized chunking.</li>
       <li>DMPs should require a detalied plan for  Icechunk or Iceberg delivery</li>
     </ul></div>
     <div class="arrowlbl">publish →</div>
@@ -218,7 +229,7 @@
       <li>Maintain supporting libraries for data integration.</li>
     </ul></div>
     <div class="arrowlbl">→ consume</div>
-    <div class="panel good c-serv"><div class="ph"><b>Data Services Teams</b></div><div class="psub">data lake consumers</div><ul>
+    <div class="panel good c-serv"><div class="ph"><b>Data Services Teams</b></div><div class="psub">data warehouse consumers</div><ul>
       <li>E.g. Subsetting & reformatting (Harmony); on-demand products (SlideRule)</li>
       <li>Analytics & visualization services (TiTiler-CMR, Worldview, VEDA)</li>
       <li>Build once on shared data models to support extensibility to many datasets.</li>
@@ -234,7 +245,7 @@
   <div class="step">Enterprise tools accessing the data should pay special attention to the IO layer choice and configuration</div>
   <div class="stepbody">What matters for efficient (fast, cost-minimizing) access is the object-store IO-layer library: 2 high performance options are <code>object_store</code> used in <a href="https://github.com/zarr-developers/zarr-python/blob/main/docs/user-guide/storage.md#object-store" target="_blank" rel="noopener">zarr-python</a> and <code>h5coro</code> used by SlideRule. Both offer advantages (next slide).</div>
   <div class="step">Implement a shared data cache</div>
-  <div class="stepbody">Services with high demand and low-latency requirements should consider using a data cache. Such a data cache could be shared by multiple services.</div>
+  <div class="stepbody">Services with high demand and low-latency requirements should consider utilizing a shared data cache. Such a data cache could be shared by multiple services.</div>
 </section>
 
 
@@ -243,8 +254,8 @@
   <h2>Discussion questions</h2><div class="rule"></div>
   <div class="step">1 — Consolidate the interfaces?</div>
   <div class="stepbody">Should investment be consolidated into accessing data via the Zarr and Query Engine interfaces, ultimately divesting from CMR and HDF-specific tooling?</div>
-  <div class="step">2 — The future of HDF</div>
-  <div class="stepbody">Would the natural outcome be moving away from HDF entirely? Or does NASA see archival file formats as having a role indefinitely?</div>
+  <div class="step">2 — Transition Plan</div>
+  <div class="stepbody">What is our transition plan?</div>
 </section>
 
 <!-- 13 REFERENCES -->

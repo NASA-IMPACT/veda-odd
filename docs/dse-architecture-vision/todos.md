@@ -1,3 +1,8 @@
-- [ ] add stac, stac-geoparquet to services
-- [x] revise roles and responsibilities
-- [x] review roadmap
+- [ ] add icestac, stac, stac-geoparquet to services
+- [ ] remove unified insofar as it indicates the data lake has uniform, data lake to data lakehouse
+- [ ] data lake: unstructured + low levels of data are a part of the data lake
+- [ ] data warehouse: the high levels of data, with clear processing pipelines.
+- [ ] levels of service: datasets in the warehouse will benefit from more services than those in the data lake.
+- [ ] optimal access slide should be a combination of (1) co-located compute for heavy workloads (limit egress); (2) direct client access for limited exploration and (3) managed streaming for users who still want direct access to the data but do not have co-located compute access
+- [ ] diagram: separate diagram into more logical layers
+- [ ] diagram: include a transition strategy phases of development + deployment
