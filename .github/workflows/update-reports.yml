@@ -8,11 +8,11 @@ on:
 
 jobs:
   reports:
-    uses: NASA-IMPACT/dse-oss-reports/.github/workflows/reports.yml@8d70a3e05fa6d906486228ca383fd310a3f8ba60
+    uses: NASA-IMPACT/dse-oss-reports/.github/workflows/reports.yml@e51addeb6bce68bc6320f8ff3f33289ec40b3772
     permissions:
       contents: write
       pull-requests: write
     with:
-      dse-oss-reports-ref: 8d70a3e05fa6d906486228ca383fd310a3f8ba60
+      dse-oss-reports-ref: e51addeb6bce68bc6320f8ff3f33289ec40b3772
     secrets:
       pat: ${{ secrets.GH_ODD_PAT }}
