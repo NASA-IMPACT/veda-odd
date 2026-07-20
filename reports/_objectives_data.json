@@ -1183,5 +1183,109 @@
         ]
       ]
     }
+  ],
+  "pi-26.4": [
+    {
+      "issue_number": 438,
+      "title": "\ud83d\udca8 ODD PI 26.4 Objective 1: TEMPO optimized data delivery for AIR4US",
+      "state": "open",
+      "state_reason": null,
+      "contributors": [
+        [
+          "Max Jones",
+          "maxrjones"
+        ]
+      ],
+      "repos": []
+    },
+    {
+      "issue_number": 439,
+      "title": "\u0f04 ODD PI 26.4 Objective 2: NAQFC optimized data delivery for AIR4US",
+      "state": "open",
+      "state_reason": null,
+      "contributors": [
+        [
+          "Sean Harkins",
+          "sharkinsspatial"
+        ]
+      ],
+      "repos": []
+    },
+    {
+      "issue_number": 440,
+      "title": "\ud83e\udd17 ODD PI 26.4 Objective 3: Community engagement",
+      "state": "open",
+      "state_reason": null,
+      "contributors": [
+        [
+          "Max Jones",
+          "maxrjones"
+        ],
+        [
+          "Aimee Barciauskas",
+          "abarciauskas-bgse"
+        ],
+        [
+          "Siddharth Chaudhary",
+          "siddharth0248"
+        ]
+      ],
+      "repos": []
+    },
+    {
+      "issue_number": 441,
+      "title": "\ud83c\udf33 ODD PI 26.4 Objective 4: Performance improvements for the Python Zarr ecosystem",
+      "state": "open",
+      "state_reason": null,
+      "contributors": [
+        [
+          "Davis Bennett",
+          "d-v-b"
+        ],
+        [
+          "Chuck Daniels",
+          "chuckwondo"
+        ],
+        [
+          "Kyle Barron",
+          "kylebarron"
+        ]
+      ],
+      "repos": []
+    },
+    {
+      "issue_number": 442,
+      "title": "\ud83d\udee0\ufe0f ODD PI 26.4 Objective 5: TiTiler-CMR Handoff",
+      "state": "open",
+      "state_reason": null,
+      "contributors": [
+        [
+          "Henry Rodman",
+          "hrodmn"
+        ]
+      ],
+      "repos": []
+    },
+    {
+      "issue_number": 443,
+      "title": "\u2139\ufe0f ODD PI 26.4 Objective 6: EIE Dataset Evaluation Support",
+      "state": "open",
+      "state_reason": null,
+      "contributors": [
+        [
+          "Siddharth Chaudhary",
+          "siddharth0248"
+        ]
+      ],
+      "repos": []
+    },
+    {
+      "issue_number": 444,
+      "title": "\ud83e\udd38\ud83c\udffb ODD PI 26.4 Stretch Objectives",
+      "state": "open",
+      "state_reason": null,
+      "contributors": [],
+      "repos": []
+    }
   ]
 }
