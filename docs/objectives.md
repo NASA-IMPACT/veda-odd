@@ -19,17 +19,17 @@ This page tracks quarterly objectives for the VEDA/EODC ODD team and the open-so
 ## Past PIs
 
 <details markdown>
-<summary>PI 26.3 (8 original objectives; 0 closed as completed; 0 closed as not planned; 8 still open)</summary>
+<summary>PI 26.3 (8 original objectives; 4 closed as completed; 0 closed as not planned; 4 still open)</summary>
 
 | # | Objective | State | Contributors |
 |---|-----------|-------|--------------|
 | [#307](https://github.com/NASA-IMPACT/veda-odd/issues/307) | 📈 Finalize Design for Zarr + VirtualiZarr Time ... | open | hrodmn |
-| [#346](https://github.com/NASA-IMPACT/veda-odd/issues/346) | 🤖 Develop + Maintain the Virtual Zarr Ecosystem | open | maxrjones, tylanderson, HarshiniGirish |
-| [#347](https://github.com/NASA-IMPACT/veda-odd/issues/347) | 🌳 Evolve the Zarr Ecosystem | open | d-v-b, chuckwondo, maxrjones |
+| [#346](https://github.com/NASA-IMPACT/veda-odd/issues/346) | 🤖 Develop + Maintain the Virtual Zarr Ecosystem | closed (completed) | sharkinsspatial, maxrjones, tylanderson, HarshiniGirish |
+| [#347](https://github.com/NASA-IMPACT/veda-odd/issues/347) | 🌳 Evolve the Zarr Ecosystem | closed (completed) | d-v-b, chuckwondo, maxrjones |
 | [#348](https://github.com/NASA-IMPACT/veda-odd/issues/348) | 📝 Cloud-Optimized Data Guidance | open | abarciauskas-bgse, hrodmn, siddharth0248 |
 | [#349](https://github.com/NASA-IMPACT/veda-odd/issues/349) | 🤗 Community Engagement | open | sharkinsspatial, chuckwondo, maxrjones, abarciauskas-bgse |
-| [#350](https://github.com/NASA-IMPACT/veda-odd/issues/350) | 🛠️ TiTiler-CMR Support | open | chuckwondo, abarciauskas-bgse |
-| [#351](https://github.com/NASA-IMPACT/veda-odd/issues/351) | 🛰️ Analytics-scale metadata stores | open | sharkinsspatial, hrodmn |
+| [#350](https://github.com/NASA-IMPACT/veda-odd/issues/350) | 🛠️ TiTiler-CMR Support | closed (completed) | chuckwondo, abarciauskas-bgse |
+| [#351](https://github.com/NASA-IMPACT/veda-odd/issues/351) | 🛰️ Analytics-scale metadata stores | closed (completed) | sharkinsspatial, hrodmn |
 | [#352](https://github.com/NASA-IMPACT/veda-odd/issues/352) | 🌐 Browser-based visualization + analysis | open | abarciauskas-bgse, kylebarron |
 
 ![PI-26.3 authored commits](images/pi-26.3-authored-commits.png)
