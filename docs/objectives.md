@@ -4,13 +4,19 @@ This page tracks quarterly objectives for the VEDA/EODC ODD team and the open-so
 
 ## Current PI: 26.4
 
+![PI-26.4 authored commits](images/pi-26.4-authored-commits.png)
+
+![PI-26.4 resolved issues and PRs](images/pi-26.4-resolved-issues-prs.png)
+
+![PI-26.4 foundational engagement](images/pi-26.4-engagement.png)
+
 | # | Objective | Contributors | Repos |
 |---|-----------|--------------|-------|
-| [#438](https://github.com/NASA-IMPACT/veda-odd/issues/438) | TEMPO optimized data delivery for AIR4US | maxrjones | - |
-| [#439](https://github.com/NASA-IMPACT/veda-odd/issues/439) | NAQFC optimized data delivery for AIR4US | sharkinsspatial | - |
-| [#440](https://github.com/NASA-IMPACT/veda-odd/issues/440) | Community engagement | maxrjones, abarciauskas-bgse, siddharth0248 | - |
-| [#441](https://github.com/NASA-IMPACT/veda-odd/issues/441) | Performance improvements for the Python Zarr ecosystem | d-v-b, chuckwondo, kylebarron | - |
-| [#442](https://github.com/NASA-IMPACT/veda-odd/issues/442) | TiTiler-CMR Handoff | hrodmn | - |
+| [#438](https://github.com/NASA-IMPACT/veda-odd/issues/438) | TEMPO optimized data delivery for AIR4US | maxrjones | virtualizarr, virtualizarr-data-pipelines |
+| [#439](https://github.com/NASA-IMPACT/veda-odd/issues/439) | NAQFC optimized data delivery for AIR4US | sharkinsspatial | virtualizarr, virtualizarr-data-pipelines |
+| [#440](https://github.com/NASA-IMPACT/veda-odd/issues/440) | Community engagement | maxrjones, abarciauskas-bgse, siddharth0248 | geozarr-spec, multiscales, proj, spatial, geozarr-examples, geozarr-toolkit, geozarr-site, template, zarr-conventions-spec, cloud-optimized-geospatial-formats-guide |
+| [#441](https://github.com/NASA-IMPACT/veda-odd/issues/441) | Performance improvements for the Python Zarr ecosystem | d-v-b, chuckwondo, kylebarron | zarr-python, numcodecs, xarray, zarrista |
+| [#442](https://github.com/NASA-IMPACT/veda-odd/issues/442) | TiTiler-CMR Handoff | hrodmn | titiler, titiler-cmr, titiler-lambda-layer, titiler-md-demo, rio-tiler |
 | [#443](https://github.com/NASA-IMPACT/veda-odd/issues/443) | EIE Dataset Evaluation Support | siddharth0248 | - |
 | [#444](https://github.com/NASA-IMPACT/veda-odd/issues/444) | 🤸🏻 ODD PI 26.4 Stretch Objectives | - | - |
 

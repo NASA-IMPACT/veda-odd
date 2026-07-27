@@ -1204,7 +1204,16 @@
           "maxrjones"
         ]
       ],
-      "repos": []
+      "repos": [
+        [
+          "zarr-developers",
+          "virtualizarr"
+        ],
+        [
+          "developmentseed",
+          "virtualizarr-data-pipelines"
+        ]
+      ]
     },
     {
       "issue_number": 439,
@@ -1217,7 +1226,16 @@
           "sharkinsspatial"
         ]
       ],
-      "repos": []
+      "repos": [
+        [
+          "zarr-developers",
+          "virtualizarr"
+        ],
+        [
+          "developmentseed",
+          "virtualizarr-data-pipelines"
+        ]
+      ]
     },
     {
       "issue_number": 440,
@@ -1238,7 +1256,48 @@
           "siddharth0248"
         ]
       ],
-      "repos": []
+      "repos": [
+        [
+          "zarr-developers",
+          "geozarr-spec"
+        ],
+        [
+          "zarr-conventions",
+          "multiscales"
+        ],
+        [
+          "zarr-conventions",
+          "proj"
+        ],
+        [
+          "zarr-conventions",
+          "spatial"
+        ],
+        [
+          "developmentseed",
+          "geozarr-examples"
+        ],
+        [
+          "zarr-developers",
+          "geozarr-toolkit"
+        ],
+        [
+          "zarr-developers",
+          "geozarr-site"
+        ],
+        [
+          "zarr-conventions",
+          "template"
+        ],
+        [
+          "zarr-conventions",
+          "zarr-conventions-spec"
+        ],
+        [
+          "cng",
+          "cloud-optimized-geospatial-formats-guide"
+        ]
+      ]
     },
     {
       "issue_number": 441,
@@ -1259,7 +1318,24 @@
           "kylebarron"
         ]
       ],
-      "repos": []
+      "repos": [
+        [
+          "zarr-developers",
+          "zarr-python"
+        ],
+        [
+          "zarr-developers",
+          "numcodecs"
+        ],
+        [
+          "pydata",
+          "xarray"
+        ],
+        [
+          "developmentseed",
+          "zarrista"
+        ]
+      ]
     },
     {
       "issue_number": 442,
@@ -1272,7 +1348,28 @@
           "hrodmn"
         ]
       ],
-      "repos": []
+      "repos": [
+        [
+          "developmentseed",
+          "titiler"
+        ],
+        [
+          "developmentseed",
+          "titiler-cmr"
+        ],
+        [
+          "developmentseed",
+          "titiler-lambda-layer"
+        ],
+        [
+          "developmentseed",
+          "titiler-md-demo"
+        ],
+        [
+          "cogeotiff",
+          "rio-tiler"
+        ]
+      ]
     },
     {
       "issue_number": 443,
