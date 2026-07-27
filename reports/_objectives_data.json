@@ -941,9 +941,13 @@
     {
       "issue_number": 346,
       "title": "ODD PI 26.3 Objective 1: \ud83e\udd16 Develop + Maintain the Virtual Zarr Ecosystem",
-      "state": "open",
-      "state_reason": null,
+      "state": "closed",
+      "state_reason": "completed",
       "contributors": [
+        [
+          "Sean Harkins",
+          "sharkinsspatial"
+        ],
         [
           "Max Jones",
           "maxrjones"
@@ -979,8 +983,8 @@
     {
       "issue_number": 347,
       "title": "ODD PI 26.3 Objective 2: \ud83c\udf33 Evolve the Zarr Ecosystem",
-      "state": "open",
-      "state_reason": "reopened",
+      "state": "closed",
+      "state_reason": "completed",
       "contributors": [
         [
           "Davis Bennett",
@@ -1039,6 +1043,10 @@
         [
           "zarr-developers",
           "zarr-developers.github.io"
+        ],
+        [
+          "zarr-developers",
+          "zarr-book"
         ]
       ]
     },
@@ -1096,8 +1104,8 @@
     {
       "issue_number": 350,
       "title": "ODD PI 26.3 Objective 5: \ud83d\udee0\ufe0f TiTiler-CMR Support",
-      "state": "open",
-      "state_reason": null,
+      "state": "closed",
+      "state_reason": "completed",
       "contributors": [
         [
           "Chuck Daniels",
@@ -1134,8 +1142,8 @@
     {
       "issue_number": 351,
       "title": "ODD PI 26.3 Objective 6: \ud83d\udef0\ufe0f Analytics-scale metadata stores",
-      "state": "open",
-      "state_reason": null,
+      "state": "closed",
+      "state_reason": "completed",
       "contributors": [
         [
           "Sean Harkins",
