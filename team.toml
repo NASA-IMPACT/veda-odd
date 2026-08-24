@@ -6,3 +6,10 @@ github_repo = "veda-odd"
 site_url = "nasa-impact.github.io/veda-odd"
 objectives_page_url = "https://nasa-impact.github.io/veda-odd/objectives"
 token_env_var = "GH_ODD_PAT"
+
+[long_org_name_mapping]   # optional — aliases for `repo:` labels whose org exceeds GH's label length
+cng = "cloudnativegeo"
+ds = "developmentseed"
+odsi = "NASA-IMPACT"
+vz = "virtual-zarr"
+zarr = "zarr-developers"
