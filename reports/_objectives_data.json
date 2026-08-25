@@ -1212,6 +1212,22 @@
         [
           "developmentseed",
           "virtualizarr-data-pipelines"
+        ],
+        [
+          "earthaccess-dev",
+          "earthaccess"
+        ],
+        [
+          "virtual-zarr",
+          "tempo-virtual-zarr-pipeline"
+        ],
+        [
+          "developmentseed",
+          "titiler-multidim"
+        ],
+        [
+          " earthaccess-dev",
+          "earthaccess-auth"
         ]
       ]
     },
@@ -1234,6 +1250,14 @@
         [
           "developmentseed",
           "virtualizarr-data-pipelines"
+        ],
+        [
+          "developmentseed",
+          "naqfc-virtualizarr-data-pipelines"
+        ],
+        [
+          "developmentseed",
+          "titiler-multidim"
         ]
       ]
     },
@@ -1294,7 +1318,7 @@
           "zarr-conventions-spec"
         ],
         [
-          "cng",
+          "cloudnativegeo",
           "cloud-optimized-geospatial-formats-guide"
         ]
       ]

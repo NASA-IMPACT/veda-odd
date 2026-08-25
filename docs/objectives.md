@@ -12,8 +12,8 @@ This page tracks quarterly objectives for the VEDA/EODC ODD team and the open-so
 
 | # | Objective | Contributors | Repos |
 |---|-----------|--------------|-------|
-| [#438](https://github.com/NASA-IMPACT/veda-odd/issues/438) | TEMPO optimized data delivery for AIR4US | maxrjones | virtualizarr, virtualizarr-data-pipelines |
-| [#439](https://github.com/NASA-IMPACT/veda-odd/issues/439) | NAQFC optimized data delivery for AIR4US | sharkinsspatial | virtualizarr, virtualizarr-data-pipelines |
+| [#438](https://github.com/NASA-IMPACT/veda-odd/issues/438) | TEMPO optimized data delivery for AIR4US | maxrjones | virtualizarr, virtualizarr-data-pipelines, earthaccess, tempo-virtual-zarr-pipeline, titiler-multidim, earthaccess-auth |
+| [#439](https://github.com/NASA-IMPACT/veda-odd/issues/439) | NAQFC optimized data delivery for AIR4US | sharkinsspatial | virtualizarr, virtualizarr-data-pipelines, naqfc-virtualizarr-data-pipelines, titiler-multidim |
 | [#440](https://github.com/NASA-IMPACT/veda-odd/issues/440) | Community engagement | maxrjones, abarciauskas-bgse, siddharth0248 | geozarr-spec, multiscales, proj, spatial, geozarr-examples, geozarr-toolkit, geozarr-site, template, zarr-conventions-spec, cloud-optimized-geospatial-formats-guide |
 | [#441](https://github.com/NASA-IMPACT/veda-odd/issues/441) | Performance improvements for the Python Zarr ecosystem | d-v-b, chuckwondo, kylebarron | zarr-python, numcodecs, xarray, zarrista |
 | [#442](https://github.com/NASA-IMPACT/veda-odd/issues/442) | TiTiler-CMR Handoff | hrodmn | titiler, titiler-cmr, titiler-lambda-layer, titiler-md-demo, rio-tiler |
