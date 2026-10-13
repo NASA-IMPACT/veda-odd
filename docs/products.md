@@ -9,6 +9,9 @@ This is a non-exhaustive list of presentations by the VEDA ODD team:
 - [2025-10-16 - The GeoZarr Challenge](https://zenodo.org/records/17437725)
 - [2025-07-22 - VirtualiZarr 2.0 - Create virtual Zarr stores for cloud-friendly access to archival data, using familiar xarray syntax](https://zenodo.org/records/17428985)
 - [2025-05-02 - A community oriented approach to enabling open science with Earth science data at scale](https://zenodo.org/records/15346670)
+- [2026-10-08 - Level 2 data collections in Zarr](https://slides.earthmover.io/main/cng-forum-2026-level2-datacollections/)
+- [2026-10-06 - Beyond COGs and Zarr: Building truly cloud-native raster workflows at NASA with virtual zarr](https://siddharth0248.github.io/presentation-deck/nasa_virtual_zarr_odsi_benchmarks_audience.html#/slide-01)
+- [2026-10-06 - Choosing between COG, Zarr, and Virtual Zarr: Lessons from NASA on Cloud-Native Format Decisions](https://siddharth0248.github.io/presentation-deck/nasa_cloud_native_format_decisions_odsi_benchmarks_audience.html#/slide-01)
 
 ## Documentation
 
