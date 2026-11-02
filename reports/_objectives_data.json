@@ -367,8 +367,8 @@
     {
       "issue_number": 244,
       "title": "ODD PI 26.1 Objective 1: \ud83d\uddfa\ufe0f Add dynamic tiling and timeseries support for Virtual Zarr Stores",
-      "state": "open",
-      "state_reason": null,
+      "state": "closed",
+      "state_reason": "completed",
       "contributors": [
         [
           "Julius Busecke",
@@ -393,8 +393,8 @@
     {
       "issue_number": 245,
       "title": "ODD PI 26.1 Objective 2: \ud83c\udf0d Add dynamic tiling and timeseries support for datasets in CMR",
-      "state": "open",
-      "state_reason": null,
+      "state": "closed",
+      "state_reason": "completed",
       "contributors": [
         [
           "Aimee Barciauskas",
@@ -609,8 +609,8 @@
     {
       "issue_number": 305,
       "title": "ODD PI 26.2 Objective 2: \ud83d\udee0\ufe0f TiTiler-CMR maintenance + performance",
-      "state": "open",
-      "state_reason": null,
+      "state": "closed",
+      "state_reason": "completed",
       "contributors": [
         [
           "Chuck Daniels",
@@ -819,8 +819,8 @@
     {
       "issue_number": 309,
       "title": "ODD PI 26.2 Objective 6: \ud83d\udef0\ufe0f Propose unified strategy for virtualization of orbital swath (\u201cL2\u201d) data",
-      "state": "open",
-      "state_reason": null,
+      "state": "closed",
+      "state_reason": "completed",
       "contributors": [
         [
           "Sean Harkins",
@@ -915,8 +915,8 @@
     {
       "issue_number": 307,
       "title": "ODD PI 26.3 Objective 8: \ud83d\udcc8 Finalize Design for Zarr + VirtualiZarr Time Series API [Carry over from 26.2] [Stretch: start implementation]",
-      "state": "open",
-      "state_reason": null,
+      "state": "closed",
+      "state_reason": "completed",
       "contributors": [
         [
           "Henry Rodman",
@@ -1074,8 +1074,8 @@
     {
       "issue_number": 349,
       "title": "ODD PI 26.3 Objective 4: \ud83e\udd17 Community Engagement",
-      "state": "open",
-      "state_reason": null,
+      "state": "closed",
+      "state_reason": "completed",
       "contributors": [
         [
           "Sean Harkins",
@@ -1196,8 +1196,8 @@
     {
       "issue_number": 438,
       "title": "\ud83d\udca8 ODD PI 26.4 Objective 1: TEMPO optimized data delivery for AIR4US",
-      "state": "open",
-      "state_reason": null,
+      "state": "closed",
+      "state_reason": "completed",
       "contributors": [
         [
           "Max Jones",
@@ -1234,8 +1234,8 @@
     {
       "issue_number": 439,
       "title": "\u0f04 ODD PI 26.4 Objective 2: NAQFC optimized data delivery for AIR4US",
-      "state": "open",
-      "state_reason": "reopened",
+      "state": "closed",
+      "state_reason": "completed",
       "contributors": [
         [
           "Sean Harkins",
@@ -1264,8 +1264,8 @@
     {
       "issue_number": 440,
       "title": "\ud83e\udd17 ODD PI 26.4 Objective 3: Community engagement",
-      "state": "open",
-      "state_reason": null,
+      "state": "closed",
+      "state_reason": "completed",
       "contributors": [
         [
           "Max Jones",
