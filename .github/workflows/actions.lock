@@ -4,37 +4,32 @@
 version: 'v0.0.3'
 workflows:
     '.github/workflows/deploy.yml':
-        - 'actions/checkout@v5.0.1'
-        - 'astral-sh/setup-uv@v7.6.0'
+        - 'actions/checkout@v7.0.1'
+        - 'astral-sh/setup-uv@v10.3.3'
     '.github/workflows/update-reports.yml': []
     '.github/workflows/zizmor.yml':
-        - 'actions/checkout@v6.0.2'
-        - 'zizmorcore/zizmor-action@v0.5.2'
+        - 'actions/checkout@v7.0.1'
+        - 'zizmorcore/zizmor-action@v0.8.1'
 dependencies:
-    'actions/checkout@v5.0.1':
-        ref: 'v5.0.1'
-        commit: 'sha1-93cb6efe18208431cddfb8368fd83d5badbf9bfd'
+    'actions/checkout@v7.0.1':
+        ref: 'v7.0.1'
+        commit: 'sha1-3d3c42e5aac5ba805825da76410c181273ba90b1'
         owner_id: 44036562
         repo_id: 197814629
-    'actions/checkout@v6.0.2':
-        ref: 'v6.0.2'
-        commit: 'sha1-de0fac2e4500dabe0009e67214ff5f5447ce83dd'
-        owner_id: 44036562
-        repo_id: 197814629
-    'astral-sh/setup-uv@v7.6.0':
-        ref: 'v7.6.0'
-        commit: 'sha1-37802adc94f370d6bfd71619e3f0bf239e1f3b78'
+    'astral-sh/setup-uv@v10.3.3':
+        ref: 'v10.3.3'
+        commit: 'sha1-68559e99cc807c1eb7e9238fd43a15bba460eec2'
         owner_id: 115962839
         repo_id: 846733598
-    'github/codeql-action@89a39a4e59826350b863aa6b6252a07ad50cf83e':
-        ref: 'v4.32.4'
-        commit: 'sha1-89a39a4e59826350b863aa6b6252a07ad50cf83e'
+    'github/codeql-action@9b3254085494b55a0f7c4c2b3d2d52cc712ce370':
+        ref: 'v4.39.1'
+        commit: 'sha1-9b3254085494b55a0f7c4c2b3d2d52cc712ce370'
         owner_id: 9919
         repo_id: 259445878
-    'zizmorcore/zizmor-action@v0.5.2':
-        ref: 'v0.5.2'
-        commit: 'sha1-71321a20a9ded102f6e9ce5718a2fcec2c4f70d8'
+    'zizmorcore/zizmor-action@v0.8.1':
+        ref: 'v0.8.1'
+        commit: 'sha1-45d7276c9ca790aabd705e31ca99c6185c3e76dd'
         owner_id: 210636713
         repo_id: 985558803
         uses:
-            - 'github/codeql-action@89a39a4e59826350b863aa6b6252a07ad50cf83e'
+            - 'github/codeql-action@9b3254085494b55a0f7c4c2b3d2d52cc712ce370'

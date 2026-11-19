@@ -27,9 +27,9 @@ jobs:
       security-events: write # Required by zizmor-action to upload SARIF files
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v6.0.2
+        uses: actions/checkout@v7.0.1
         with:
           persist-credentials: false
 
       - name: Run zizmor
-        uses: zizmorcore/zizmor-action@v0.5.2
+        uses: zizmorcore/zizmor-action@v0.8.1
