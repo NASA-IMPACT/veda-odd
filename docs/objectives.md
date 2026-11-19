@@ -2,7 +2,41 @@
 
 This page tracks quarterly objectives for the VEDA/EODC ODD team and the open-source repositories they touch across Program Increments (PIs).
 
-## Current PI: 26.4
+## Current PI: 27.1
+
+![PI-27.1 authored commits](images/pi-27.1-authored-commits.png)
+
+![PI-27.1 resolved issues and PRs](images/pi-27.1-resolved-issues-prs.png)
+
+![PI-27.1 foundational engagement](images/pi-27.1-engagement.png)
+
+| # | Objective | Contributors | Repos |
+|---|-----------|--------------|-------|
+| [#485](https://github.com/NASA-IMPACT/veda-odd/issues/485) | CODA Trade Study Engagement | maxrjones | - |
+| [#486](https://github.com/NASA-IMPACT/veda-odd/issues/486) | Virtualization Pipeline Handoff Process (TEMPO) | maxrjones | tempo-virtual-zarr-pipeline |
+| [#487](https://github.com/NASA-IMPACT/veda-odd/issues/487) | Library [TiTiler-*, VirtualiZarr and Zarr] Maintenance | ceholden, jsignell, kafitzgerald, hrodmn | virtualizarr, zarr-python, titiler, titiler-cmr, virtualizarr-data-pipelines, rio-tiler, numcodecs, titiler-multidim |
+| [#488](https://github.com/NASA-IMPACT/veda-odd/issues/488) | HLS Custom NDVI color mapping | kafitzgerald | - |
+| [#489](https://github.com/NASA-IMPACT/veda-odd/issues/489) | Community activities (AGU, ESIP, Pangeo, GeoZarr) | chuckwondo, kafitzgerald, maxrjones | geozarr-spec, geozarr-examples, geozarr-toolkit, geozarr-site |
+| [#490](https://github.com/NASA-IMPACT/veda-odd/issues/490) | TiTiler-Multidim area-based time series endpoint | jsignell | - |
+| [#491](https://github.com/NASA-IMPACT/veda-odd/issues/491) | AIR4US Dataset Support | ceholden, kafitzgerald | - |
+| [#506](https://github.com/NASA-IMPACT/veda-odd/issues/506) | icestac | gadomski | - |
+
+---
+
+## Past PIs
+
+<details markdown>
+<summary>PI 26.4 (7 original objectives; 3 closed as completed; 0 closed as not planned; 4 still open)</summary>
+
+| # | Objective | State | Contributors |
+|---|-----------|-------|--------------|
+| [#438](https://github.com/NASA-IMPACT/veda-odd/issues/438) | TEMPO optimized data delivery for AIR4US | closed (completed) | maxrjones |
+| [#439](https://github.com/NASA-IMPACT/veda-odd/issues/439) | NAQFC optimized data delivery for AIR4US | closed (completed) | sharkinsspatial |
+| [#440](https://github.com/NASA-IMPACT/veda-odd/issues/440) | Community engagement | closed (completed) | maxrjones, abarciauskas-bgse, siddharth0248 |
+| [#441](https://github.com/NASA-IMPACT/veda-odd/issues/441) | Performance improvements for the Python Zarr ec... | open | d-v-b, chuckwondo, kylebarron |
+| [#442](https://github.com/NASA-IMPACT/veda-odd/issues/442) | TiTiler-CMR Handoff | open | hrodmn |
+| [#443](https://github.com/NASA-IMPACT/veda-odd/issues/443) | EIE Dataset Evaluation Support | open | siddharth0248 |
+| [#444](https://github.com/NASA-IMPACT/veda-odd/issues/444) | 🤸🏻 ODD PI 26.4 Stretch Objectives | open | - |
 
 ![PI-26.4 authored commits](images/pi-26.4-authored-commits.png)
 
@@ -10,30 +44,18 @@ This page tracks quarterly objectives for the VEDA/EODC ODD team and the open-so
 
 ![PI-26.4 foundational engagement](images/pi-26.4-engagement.png)
 
-| # | Objective | Contributors | Repos |
-|---|-----------|--------------|-------|
-| [#438](https://github.com/NASA-IMPACT/veda-odd/issues/438) | TEMPO optimized data delivery for AIR4US | maxrjones | virtualizarr, virtualizarr-data-pipelines, earthaccess, tempo-virtual-zarr-pipeline, titiler-multidim, earthaccess-auth |
-| [#439](https://github.com/NASA-IMPACT/veda-odd/issues/439) | NAQFC optimized data delivery for AIR4US | sharkinsspatial | virtualizarr, virtualizarr-data-pipelines, naqfc-virtualizarr-data-pipelines, titiler-multidim |
-| [#440](https://github.com/NASA-IMPACT/veda-odd/issues/440) | Community engagement | maxrjones, abarciauskas-bgse, siddharth0248 | geozarr-spec, multiscales, proj, spatial, geozarr-examples, geozarr-toolkit, geozarr-site, template, zarr-conventions-spec, cloud-optimized-geospatial-formats-guide |
-| [#441](https://github.com/NASA-IMPACT/veda-odd/issues/441) | Performance improvements for the Python Zarr ecosystem | d-v-b, chuckwondo, kylebarron | zarr-python, numcodecs, xarray, zarrista |
-| [#442](https://github.com/NASA-IMPACT/veda-odd/issues/442) | TiTiler-CMR Handoff | hrodmn | titiler, titiler-cmr, titiler-lambda-layer, titiler-md-demo, rio-tiler |
-| [#443](https://github.com/NASA-IMPACT/veda-odd/issues/443) | EIE Dataset Evaluation Support | siddharth0248 | - |
-| [#444](https://github.com/NASA-IMPACT/veda-odd/issues/444) | 🤸🏻 ODD PI 26.4 Stretch Objectives | - | - |
-
----
-
-## Past PIs
+</details>
 
 <details markdown>
-<summary>PI 26.3 (8 original objectives; 4 closed as completed; 0 closed as not planned; 4 still open)</summary>
+<summary>PI 26.3 (8 original objectives; 6 closed as completed; 0 closed as not planned; 2 still open)</summary>
 
 | # | Objective | State | Contributors |
 |---|-----------|-------|--------------|
-| [#307](https://github.com/NASA-IMPACT/veda-odd/issues/307) | 📈 Finalize Design for Zarr + VirtualiZarr Time ... | open | hrodmn |
+| [#307](https://github.com/NASA-IMPACT/veda-odd/issues/307) | 📈 Finalize Design for Zarr + VirtualiZarr Time ... | closed (completed) | hrodmn |
 | [#346](https://github.com/NASA-IMPACT/veda-odd/issues/346) | 🤖 Develop + Maintain the Virtual Zarr Ecosystem | closed (completed) | sharkinsspatial, maxrjones, tylanderson, HarshiniGirish |
 | [#347](https://github.com/NASA-IMPACT/veda-odd/issues/347) | 🌳 Evolve the Zarr Ecosystem | closed (completed) | d-v-b, chuckwondo, maxrjones |
 | [#348](https://github.com/NASA-IMPACT/veda-odd/issues/348) | 📝 Cloud-Optimized Data Guidance | open | abarciauskas-bgse, hrodmn, siddharth0248 |
-| [#349](https://github.com/NASA-IMPACT/veda-odd/issues/349) | 🤗 Community Engagement | open | sharkinsspatial, chuckwondo, maxrjones, abarciauskas-bgse |
+| [#349](https://github.com/NASA-IMPACT/veda-odd/issues/349) | 🤗 Community Engagement | closed (completed) | sharkinsspatial, chuckwondo, maxrjones, abarciauskas-bgse |
 | [#350](https://github.com/NASA-IMPACT/veda-odd/issues/350) | 🛠️ TiTiler-CMR Support | closed (completed) | chuckwondo, abarciauskas-bgse |
 | [#351](https://github.com/NASA-IMPACT/veda-odd/issues/351) | 🛰️ Analytics-scale metadata stores | closed (completed) | sharkinsspatial, hrodmn |
 | [#352](https://github.com/NASA-IMPACT/veda-odd/issues/352) | 🌐 Browser-based visualization + analysis | open | abarciauskas-bgse, kylebarron |
@@ -47,15 +69,15 @@ This page tracks quarterly objectives for the VEDA/EODC ODD team and the open-so
 </details>
 
 <details markdown>
-<summary>PI 26.2 (7 original objectives; 4 closed as completed; 0 closed as not planned; 3 still open)</summary>
+<summary>PI 26.2 (7 original objectives; 6 closed as completed; 0 closed as not planned; 1 still open)</summary>
 
 | # | Objective | State | Contributors |
 |---|-----------|-------|--------------|
 | [#304](https://github.com/NASA-IMPACT/veda-odd/issues/304) | 🤖Create virtual Zarr stores for high priority d... | closed (completed) | tylanderson |
-| [#305](https://github.com/NASA-IMPACT/veda-odd/issues/305) | 🛠️ TiTiler-CMR maintenance + performance | open | chuckwondo, hrodmn |
+| [#305](https://github.com/NASA-IMPACT/veda-odd/issues/305) | 🛠️ TiTiler-CMR maintenance + performance | closed (completed) | chuckwondo, hrodmn |
 | [#306](https://github.com/NASA-IMPACT/veda-odd/issues/306) | 🤗 Support community adoption of the technologie... | closed (completed) | chuckwondo, maxrjones, abarciauskas-bgse |
 | [#308](https://github.com/NASA-IMPACT/veda-odd/issues/308) | 🤪 Expand virtualization support for quirky data... | closed (completed) | maxrjones |
-| [#309](https://github.com/NASA-IMPACT/veda-odd/issues/309) | 🛰️ Propose unified strategy for virtualization ... | open | sharkinsspatial, maxrjones, hrodmn |
+| [#309](https://github.com/NASA-IMPACT/veda-odd/issues/309) | 🛰️ Propose unified strategy for virtualization ... | closed (completed) | sharkinsspatial, maxrjones, hrodmn |
 | [#319](https://github.com/NASA-IMPACT/veda-odd/issues/319) | 🌐 Client-side raster rendering (deck.gl-raster) | closed (completed) | kylebarron |
 | [#331](https://github.com/NASA-IMPACT/veda-odd/issues/331) | WASM chunk codec research and PoC | open | jkeifer |
 
@@ -64,12 +86,12 @@ This page tracks quarterly objectives for the VEDA/EODC ODD team and the open-so
 </details>
 
 <details markdown>
-<summary>PI 26.1 (5 original objectives; 3 closed as completed; 0 closed as not planned; 2 still open)</summary>
+<summary>PI 26.1 (5 original objectives; 5 closed as completed; 0 closed as not planned)</summary>
 
 | # | Objective | State | Contributors |
 |---|-----------|-------|--------------|
-| [#244](https://github.com/NASA-IMPACT/veda-odd/issues/244) | 🗺️ Add dynamic tiling and timeseries support fo... | open | jbusecke, hrodmn |
-| [#245](https://github.com/NASA-IMPACT/veda-odd/issues/245) | 🌍 Add dynamic tiling and timeseries support for... | open | abarciauskas-bgse, hrodmn |
+| [#244](https://github.com/NASA-IMPACT/veda-odd/issues/244) | 🗺️ Add dynamic tiling and timeseries support fo... | closed (completed) | jbusecke, hrodmn |
+| [#245](https://github.com/NASA-IMPACT/veda-odd/issues/245) | 🌍 Add dynamic tiling and timeseries support for... | closed (completed) | abarciauskas-bgse, hrodmn |
 | [#246](https://github.com/NASA-IMPACT/veda-odd/issues/246) | 🤖 Support virtualization of additional data pro... | closed (completed) | sharkinsspatial, maxrjones, jbusecke |
 | [#247](https://github.com/NASA-IMPACT/veda-odd/issues/247) | 🛰 Explore scalable, cloud native approaches for... | closed (completed) | sharkinsspatial, kylebarron |
 | [#248](https://github.com/NASA-IMPACT/veda-odd/issues/248) | 🤗 Support community adoption of the technologie... | closed (completed) | sharkinsspatial, chuckwondo, maxrjones, abarciauskas-bgse |

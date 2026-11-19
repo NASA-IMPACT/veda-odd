@@ -367,8 +367,8 @@
     {
       "issue_number": 244,
       "title": "ODD PI 26.1 Objective 1: \ud83d\uddfa\ufe0f Add dynamic tiling and timeseries support for Virtual Zarr Stores",
-      "state": "open",
-      "state_reason": null,
+      "state": "closed",
+      "state_reason": "completed",
       "contributors": [
         [
           "Julius Busecke",
@@ -393,8 +393,8 @@
     {
       "issue_number": 245,
       "title": "ODD PI 26.1 Objective 2: \ud83c\udf0d Add dynamic tiling and timeseries support for datasets in CMR",
-      "state": "open",
-      "state_reason": null,
+      "state": "closed",
+      "state_reason": "completed",
       "contributors": [
         [
           "Aimee Barciauskas",
@@ -609,8 +609,8 @@
     {
       "issue_number": 305,
       "title": "ODD PI 26.2 Objective 2: \ud83d\udee0\ufe0f TiTiler-CMR maintenance + performance",
-      "state": "open",
-      "state_reason": null,
+      "state": "closed",
+      "state_reason": "completed",
       "contributors": [
         [
           "Chuck Daniels",
@@ -819,8 +819,8 @@
     {
       "issue_number": 309,
       "title": "ODD PI 26.2 Objective 6: \ud83d\udef0\ufe0f Propose unified strategy for virtualization of orbital swath (\u201cL2\u201d) data",
-      "state": "open",
-      "state_reason": null,
+      "state": "closed",
+      "state_reason": "completed",
       "contributors": [
         [
           "Sean Harkins",
@@ -915,8 +915,8 @@
     {
       "issue_number": 307,
       "title": "ODD PI 26.3 Objective 8: \ud83d\udcc8 Finalize Design for Zarr + VirtualiZarr Time Series API [Carry over from 26.2] [Stretch: start implementation]",
-      "state": "open",
-      "state_reason": null,
+      "state": "closed",
+      "state_reason": "completed",
       "contributors": [
         [
           "Henry Rodman",
@@ -1074,8 +1074,8 @@
     {
       "issue_number": 349,
       "title": "ODD PI 26.3 Objective 4: \ud83e\udd17 Community Engagement",
-      "state": "open",
-      "state_reason": null,
+      "state": "closed",
+      "state_reason": "completed",
       "contributors": [
         [
           "Sean Harkins",
@@ -1196,8 +1196,8 @@
     {
       "issue_number": 438,
       "title": "\ud83d\udca8 ODD PI 26.4 Objective 1: TEMPO optimized data delivery for AIR4US",
-      "state": "open",
-      "state_reason": null,
+      "state": "closed",
+      "state_reason": "completed",
       "contributors": [
         [
           "Max Jones",
@@ -1234,8 +1234,8 @@
     {
       "issue_number": 439,
       "title": "\u0f04 ODD PI 26.4 Objective 2: NAQFC optimized data delivery for AIR4US",
-      "state": "open",
-      "state_reason": "reopened",
+      "state": "closed",
+      "state_reason": "completed",
       "contributors": [
         [
           "Sean Harkins",
@@ -1264,8 +1264,8 @@
     {
       "issue_number": 440,
       "title": "\ud83e\udd17 ODD PI 26.4 Objective 3: Community engagement",
-      "state": "open",
-      "state_reason": null,
+      "state": "closed",
+      "state_reason": "completed",
       "contributors": [
         [
           "Max Jones",
@@ -1414,6 +1414,191 @@
       "state": "open",
       "state_reason": null,
       "contributors": [],
+      "repos": []
+    }
+  ],
+  "pi-27.1": [
+    {
+      "issue_number": 485,
+      "title": "\ud83e\uddd0 ODD PI 27.1 Objective 1: CODA Trade Study Engagement",
+      "state": "open",
+      "state_reason": null,
+      "contributors": [
+        [
+          "Max Jones",
+          "maxrjones"
+        ]
+      ],
+      "repos": []
+    },
+    {
+      "issue_number": 486,
+      "title": "\ud83e\udd1d ODD PI 27.1 Objective 2: Virtualization Pipeline Handoff Process (TEMPO)",
+      "state": "open",
+      "state_reason": null,
+      "contributors": [
+        [
+          "Max Jones",
+          "maxrjones"
+        ]
+      ],
+      "repos": [
+        [
+          "virtual-zarr",
+          "tempo-virtual-zarr-pipeline"
+        ]
+      ]
+    },
+    {
+      "issue_number": 487,
+      "title": "\ud83d\udee0\ufe0f ODD PI 27.1 Objective 3: Library [TiTiler-*, VirtualiZarr and Zarr] Maintenance",
+      "state": "open",
+      "state_reason": null,
+      "contributors": [
+        [
+          "Chris Holden",
+          "ceholden"
+        ],
+        [
+          "Julia Signell",
+          "jsignell"
+        ],
+        [
+          "Katelyn FitzGerald",
+          "kafitzgerald"
+        ],
+        [
+          "Henry Rodman",
+          "hrodmn"
+        ]
+      ],
+      "repos": [
+        [
+          "zarr-developers",
+          "virtualizarr"
+        ],
+        [
+          "zarr-developers",
+          "zarr-python"
+        ],
+        [
+          "developmentseed",
+          "titiler"
+        ],
+        [
+          "developmentseed",
+          "titiler-cmr"
+        ],
+        [
+          "developmentseed",
+          "virtualizarr-data-pipelines"
+        ],
+        [
+          "cogeotiff",
+          "rio-tiler"
+        ],
+        [
+          "zarr-developers",
+          "numcodecs"
+        ],
+        [
+          "developmentseed",
+          "titiler-multidim"
+        ]
+      ]
+    },
+    {
+      "issue_number": 488,
+      "title": "\ud83d\uddfa\ufe0f ODD PI 27.1 Objective 4: HLS Custom NDVI color mapping",
+      "state": "open",
+      "state_reason": null,
+      "contributors": [
+        [
+          "Katelyn FitzGerald",
+          "kafitzgerald"
+        ]
+      ],
+      "repos": []
+    },
+    {
+      "issue_number": 489,
+      "title": "\ud83e\udd17 ODD PI 27.1 Objective 5: Community activities (AGU, ESIP, Pangeo, GeoZarr)",
+      "state": "open",
+      "state_reason": null,
+      "contributors": [
+        [
+          "Chuck Daniels",
+          "chuckwondo"
+        ],
+        [
+          "Katelyn FitzGerald",
+          "kafitzgerald"
+        ],
+        [
+          "Max Jones",
+          "maxrjones"
+        ]
+      ],
+      "repos": [
+        [
+          "zarr-developers",
+          "geozarr-spec"
+        ],
+        [
+          "developmentseed",
+          "geozarr-examples"
+        ],
+        [
+          "zarr-developers",
+          "geozarr-toolkit"
+        ],
+        [
+          "zarr-developers",
+          "geozarr-site"
+        ]
+      ]
+    },
+    {
+      "issue_number": 490,
+      "title": "\ud83d\udcc8 ODD PI 27.1 Objective 6: TiTiler-Multidim area-based time series endpoint",
+      "state": "open",
+      "state_reason": null,
+      "contributors": [
+        [
+          "Julia Signell",
+          "jsignell"
+        ]
+      ],
+      "repos": []
+    },
+    {
+      "issue_number": 491,
+      "title": "\ud83d\udca8 ODD PI 27.1 Objective 7: AIR4US Dataset Support",
+      "state": "open",
+      "state_reason": null,
+      "contributors": [
+        [
+          "Chris Holden",
+          "ceholden"
+        ],
+        [
+          "Katelyn FitzGerald",
+          "kafitzgerald"
+        ]
+      ],
+      "repos": []
+    },
+    {
+      "issue_number": 506,
+      "title": "\ud83e\uddca ODD PI 27.1 Objective 8: icestac",
+      "state": "open",
+      "state_reason": null,
+      "contributors": [
+        [
+          "Pete Gadomski",
+          "gadomski"
+        ]
+      ],
       "repos": []
     }
   ]
