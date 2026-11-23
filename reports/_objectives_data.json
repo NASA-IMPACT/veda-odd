@@ -259,8 +259,8 @@
     {
       "issue_number": 197,
       "title": "ODD PI 25.4 Objective 1: \ud83c\udfac TiTiler-CMR is production ready",
-      "state": "open",
-      "state_reason": null,
+      "state": "closed",
+      "state_reason": "completed",
       "contributors": [
         [
           "Aimee Barciauskas",

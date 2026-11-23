@@ -1,4 +1,6 @@
 number,title,type,url,engagement_kinds,created_at,updated_at,organization,repository,contributor
+61,smoke tests and cloudwatch alarms,Issue,https://github.com/developmentseed/titiler-cmr/issues/61,comment,2025-06-25T16:45:26Z,2026-11-19T20:42:52Z,developmentseed,titiler-cmr,ceholden
+61,smoke tests and cloudwatch alarms,Issue,https://github.com/developmentseed/titiler-cmr/issues/61,comment,2025-06-25T16:45:26Z,2026-11-19T20:42:52Z,developmentseed,titiler-cmr,hrodmn
 208,fix: check for x/y dimensions when evaluating xarray compatibility,PullRequest,https://github.com/developmentseed/titiler-cmr/pull/208,"comment,review",2026-07-01T13:59:08Z,2026-11-07T16:45:56Z,developmentseed,titiler-cmr,kafitzgerald
 214,`/timeseries/statistics` size guard can never be skipped,Issue,https://github.com/developmentseed/titiler-cmr/issues/214,comment,2026-08-26T17:17:03Z,2026-11-18T16:26:42Z,developmentseed,titiler-cmr,hrodmn
 229,Dependabot uv PRs fail CI because pre-commit hook versions lag uv.lock,Issue,https://github.com/developmentseed/titiler-cmr/issues/229,comment,2026-10-15T10:24:02Z,2026-10-22T14:36:05Z,developmentseed,titiler-cmr,kafitzgerald
@@ -30,7 +32,7 @@ number,title,type,url,engagement_kinds,created_at,updated_at,organization,reposi
 313,ci: validate PR titles on pull_request,PullRequest,https://github.com/developmentseed/titiler-cmr/pull/313,"comment,review",2026-11-10T18:50:42Z,2026-11-10T18:56:04Z,developmentseed,titiler-cmr,kafitzgerald
 314,chore(deps): bump soupsieve from 3.0.4 to 4.0 in the security group across 1 directory,PullRequest,https://github.com/developmentseed/titiler-cmr/pull/314,"comment,review",2026-11-13T23:21:37Z,2026-11-13T23:40:28Z,developmentseed,titiler-cmr,kafitzgerald
 315,fix: size timeseries steps by output size,PullRequest,https://github.com/developmentseed/titiler-cmr/pull/315,"comment,review",2026-11-16T14:24:15Z,2026-11-18T16:29:37Z,developmentseed,titiler-cmr,ceholden
-318,Eliminate event loop blockage in async def endpoints,Issue,https://github.com/developmentseed/titiler-cmr/issues/318,opened,2026-11-18T16:56:32Z,2026-11-18T16:56:32Z,developmentseed,titiler-cmr,ceholden
+318,Eliminate event loop blockage in async def endpoints,Issue,https://github.com/developmentseed/titiler-cmr/issues/318,"comment,opened",2026-11-18T16:56:32Z,2026-11-20T11:30:07Z,developmentseed,titiler-cmr,ceholden
 151,feat: filtering based on multiple variables,PullRequest,https://github.com/developmentseed/titiler-multidim/pull/151,comment,2026-08-31T21:38:30Z,2026-11-18T20:13:01Z,developmentseed,titiler-multidim,hrodmn
 200,feat: add Worldview Rainbow 4 and NAQFC colormaps,PullRequest,https://github.com/developmentseed/titiler-multidim/pull/200,comment,2026-10-15T21:00:28Z,2026-10-20T16:50:43Z,developmentseed,titiler-multidim,hrodmn
 201,chore(deps): bump aiohttp from 3.14.3 to 3.14.4 in the security group across 1 directory,PullRequest,https://github.com/developmentseed/titiler-multidim/pull/201,"comment,review",2026-10-20T06:43:34Z,2026-10-20T18:20:58Z,developmentseed,titiler-multidim,kafitzgerald
