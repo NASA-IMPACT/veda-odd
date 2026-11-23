@@ -101,13 +101,13 @@ This page tracks quarterly objectives for the VEDA/EODC ODD team and the open-so
 </details>
 
 <details markdown>
-<summary>PI 25.4 (8 original objectives; 7 closed as completed; 0 closed as not planned; 1 still open)</summary>
+<summary>PI 25.4 (8 original objectives; 8 closed as completed; 0 closed as not planned)</summary>
 
 | # | Objective | State | Contributors |
 |---|-----------|-------|--------------|
 | [#121](https://github.com/NASA-IMPACT/veda-odd/issues/121) | Visualize Web-Optimized Zarr (WOZ) in VEDA (pre... | closed (completed) | maxrjones |
 | [#122](https://github.com/NASA-IMPACT/veda-odd/issues/122) | Research, develop and document methods for Zarr... | closed (completed) | maxrjones, kylebarron |
-| [#197](https://github.com/NASA-IMPACT/veda-odd/issues/197) | 🎬 TiTiler-CMR is production ready | open | abarciauskas-bgse, hrodmn |
+| [#197](https://github.com/NASA-IMPACT/veda-odd/issues/197) | 🎬 TiTiler-CMR is production ready | closed (completed) | abarciauskas-bgse, hrodmn |
 | [#198](https://github.com/NASA-IMPACT/veda-odd/issues/198) | 🚀 Dataset support for VEDA instances | closed (completed) | maxrjones, jbusecke |
 | [#203](https://github.com/NASA-IMPACT/veda-odd/issues/203) | 🗺️Research, develop and document methods for Za... | closed (completed) | maxrjones |
 | [#204](https://github.com/NASA-IMPACT/veda-odd/issues/204) | 🛠️ Zarr Development | closed (completed) | d-v-b, maxrjones |
