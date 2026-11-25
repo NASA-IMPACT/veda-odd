@@ -46,12 +46,12 @@ Below, the **[Roadmap Items in Detail](#roadmap-items-in-detail)** section provi
 
 The **◆** designation represents a category of ongoing work. 
 
-| Pillar                         | Now · mature | Next · developing| Later · future |
-| ------------------------------ | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
-| **Open standards & FAIR data** | ◆ Array format (Zarr) stewardship · ◆ Geospatial conventions (GeoZarr) | Zarr Ecosystem sustainability · Codec re-architecture ·  variable chunking | Conventions + CRS utilities                                                 |
-| **Performance, cost & scale**  | Data virtualization · Object-store access · Dynamic tiling · In-browser rendering | Virtual stores + lazy array analytics · Analytics-scale metadata · Storage model evaluation | Resampling/warp tooling · Query at scale · Storage cost optimization · Caching |
-| **Empowered users** | Cloud-native guidance · Science support · Format evaluation | In-browser rendering · Cloud-optimized decision framework · Improved access & auth libraries · Dataset + tooling coverage metrics | AI-assisted optimization (skills + tooling) · ESRI / ArcGIS integration    |
-| **Trusted & reliable data**  | ◆ Transactional Zarr (Icechunk) | Virtual stores for ongoing datasets · Synchronized metadata + data | Event-driven (object store notifications) for near-real time (NRT) updates |
+| Pillar                         | Past · maintain | Now · mature | Next · developing| Later · future |
+| ------------------------------ | --------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| **Open standards & FAIR data** | ◆ Array format (Zarr) stewardship | ◆ Geospatial conventions (GeoZarr) | Zarr Ecosystem sustainability · Codec re-architecture ·  variable chunking | Conventions + CRS utilities                                                 |
+| **Performance, cost & scale**  | Object-store access ·  ◆ Dynamic tiling |  ◆ Data virtualization ·  ◆ In-browser rendering | Virtual stores + lazy array analytics ·  ◆ Analytics-scale metadata · Storage model evaluation | Resampling/warp tooling · Query at scale · Storage cost optimization · Caching |
+| **Empowered users** | Cloud-native guidance | Science support · Format evaluation |  ◆ In-browser rendering · Cloud-optimized decision framework · Improved access & auth libraries · Dataset + tooling coverage metrics | AI-assisted optimization (skills + tooling) · ESRI / ArcGIS integration    |
+| **Trusted & reliable data**  | ◆ Transactional Zarr (Icechunk) | ◆ Virtual stores for ongoing datasets | ◆ Synchronized metadata + data | Event-driven (object store notifications) for near-real time (NRT) updates |
 
 ## How we work
 
@@ -63,17 +63,18 @@ We anticipate work to move through four stages: **Later** (future, aspirational)
 
 An item is ready to hand off when it passes three tests:
 
-1. **Someone else can do it.** Documentation, tooling, and skills exist so that a data provider or partner can reproduce the work without us.
-2. **Someone else owns it.** A named owner — a DAAC, a mission team, community maintainers — has accepted responsibility.
+1. **Someone else can do it.** Documentation, tooling, and skills exist so that a data provider or partner can reproduce the work without us. Tooling comes “batteries included” with considerations for operational observability (logging, metrics, and traces) and business analytics.
+2. **Someone else owns it.** A named owner — a DAAC, a mission team, VEDA Data Services team, community maintainers — has accepted responsibility.
 3. **We've stopped learning.** Our remaining contribution is maintenance, not discovery.
 
-Using virtual data stores as an example: today we generate stores ourselves (learning). Next,
-we will ship developer docs and optimization skills (enabling). Then store generation
-graduates to data providers. While we will continue to work on underlying tooling, several
-roadmap items — documentation, decision tooling, and ecosystem sustainability — are not just projects but
-handoff methods.
+Using virtual data stores as an example: today we generate stores ourselves (learning) using
+tooling ([virtual-data-pipelines](https://github.com/developmentseed/virtualizarr-data-pipelines)), developer docs and optimization skills (enabling). At this stage it should be clear how to monitor and re-ingest datasets and it should be possible to answer questions like "How often does the virtual data set fall out of sync with upstream?" and "How many users are accessing the underlying chunks via the virtual data store?".
+Once we are satisfied (we stop learning), store generation
+graduates to data providers and individual users. After store generation has graduated we continue to work on underlying tooling, documentation, decision tooling, and ecosystem sustainability but we no longer create virtual data stores ourselves.
 
-The above steps and example are notional and not established through practice. 
+Using titiler-cmr as an example: in the past we created titiler-cmr (learning). Observability is baked in: titiler-cmr has a [dedicated section of the docs](https://github.com/developmentseed/titiler-cmr/blob/main/docs/architecture.md#observability-otel--x-ray) for configuring application traces (AWS specific) and ensures that emitted logs include a correlation ID. We also provide an example of how to implement observability with the "LGTM" stack: [titiler-observability](https://github.com/developmentseed/titiler-observability). Then we helped deploy instances to staging (enabling). Now VEDA Data Services team owns the the deployments, but we are still available to help out with developing functionality on the titiler-cmr library. Working closely with application-specific deployments help us improve our core technologies and bring them back to "main".
+
+Note: data producers might choose not to use our tooling. There is still value in ODD producing tooling that shows patterns and points out concerns that _any_ tooling should address.
 
 ### Prioritization
 
