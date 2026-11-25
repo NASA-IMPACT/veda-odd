@@ -46,12 +46,12 @@ Below, the **[Roadmap Items in Detail](#roadmap-items-in-detail)** section provi
 
 The **◆** designation represents a category of ongoing work. 
 
-| Pillar                         | Now · mature | Next · developing| Later · future |
-| ------------------------------ | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
-| **Open standards & FAIR data** | ◆ Array format (Zarr) stewardship · ◆ Geospatial conventions (GeoZarr) | Zarr Ecosystem sustainability · Codec re-architecture ·  variable chunking | Conventions + CRS utilities                                                 |
-| **Performance, cost & scale**  | Data virtualization · Object-store access · Dynamic tiling · In-browser rendering | Virtual stores + lazy array analytics · Analytics-scale metadata · Storage model evaluation | Resampling/warp tooling · Query at scale · Storage cost optimization · Caching |
-| **Empowered users** | Cloud-native guidance · Science support · Format evaluation | In-browser rendering · Cloud-optimized decision framework · Improved access & auth libraries · Dataset + tooling coverage metrics | AI-assisted optimization (skills + tooling) · ESRI / ArcGIS integration    |
-| **Trusted & reliable data**  | ◆ Transactional Zarr (Icechunk) | Virtual stores for ongoing datasets · Synchronized metadata + data | Event-driven (object store notifications) for near-real time (NRT) updates |
+| Pillar                         | Past · maintain | Now · mature | Next · developing| Later · future |
+| ------------------------------ | --------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| **Open standards & FAIR data** | ◆ Array format (Zarr) stewardship | ◆ Geospatial conventions (GeoZarr) | Zarr Ecosystem sustainability · Codec re-architecture ·  variable chunking | Conventions + CRS utilities                                                 |
+| **Performance, cost & scale**  | Object-store access ·  ◆ Dynamic tiling |  ◆ Data virtualization ·  ◆ In-browser rendering | Virtual stores + lazy array analytics ·  ◆ Analytics-scale metadata · Storage model evaluation | Resampling/warp tooling · Query at scale · Storage cost optimization · Caching |
+| **Empowered users** | Cloud-native guidance | Science support · Format evaluation |  ◆ In-browser rendering · Cloud-optimized decision framework · Improved access & auth libraries · Dataset + tooling coverage metrics | AI-assisted optimization (skills + tooling) · ESRI / ArcGIS integration    |
+| **Trusted & reliable data**  | ◆ Transactional Zarr (Icechunk) | ◆ Virtual stores for ongoing datasets | ◆ Synchronized metadata + data | Event-driven (object store notifications) for near-real time (NRT) updates |
 
 ## How we work
 
